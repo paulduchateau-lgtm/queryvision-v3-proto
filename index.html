@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <div class="stage rv">
+    <div class="stage rv" id="stage-demo">
       <div class="fc dim" style="left: -3%; top: 2rem; width: 24rem;"><img src="assets/mockups/05-matrice-criticite.svg" alt="Matrice de criticité"></div>
       <div class="fc" style="left: 2%; top: 17rem; width: 21rem;"><img src="assets/mockups/04-anneau-repartition.svg" alt="Répartition par domaine"></div>
       <div class="fc dim" style="right: -3%; top: 1rem; width: 24rem;"><img src="assets/mockups/12-couverture-reglementaire.svg" alt="Couverture réglementaire"></div>
@@ -493,23 +493,41 @@
       </div>
     </div>
 
-    <!-- 4 · hébergement & partenaires -->
-    <p class="sov-block-title rv">Hébergement &amp; partenaires</p>
+    <!-- 4 · hébergement & modèles -->
+    <p class="sov-block-title rv">Hébergement &amp; modèles</p>
     <div class="secnum-card rv">
-      <div class="sn-mark">S</div>
-      <div>
-        <h3>Hébergement en France, par défaut.</h3>
-        <p>Vos infrastructures dédiées sont opérées sur le cloud <b style="color:#fff">Scaleway</b>, engagé dans la qualification <b style="color:#fff">SecNumCloud</b> de l'ANSSI — le plus haut niveau d'exigence français en matière de cloud de confiance. Datacenters en France, hors de portée des législations extraterritoriales.</p>
+      <div class="sn-brand">
+        <div class="sn-mark">
+          <svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round"><path d="M14 8 H10 A4 4 0 0 0 6 12 V28 A4 4 0 0 0 10 32 H14"/><path d="M26 8 H30 A4 4 0 0 1 34 12 V16"/><path d="M34 24 V28 A4 4 0 0 1 30 32 H26"/><path d="M15 20 H25"/></svg>
+        </div>
+        <div style="text-align:center">
+          <div class="sn-word">Scaleway</div>
+          <div class="sn-sub">Cloud souverain — France</div>
+        </div>
       </div>
-      <div class="secnum-chips">
-        <span>SecNumCloud — ANSSI</span>
-        <span>ISO 27001</span>
-        <span>Datacenters FR</span>
-        <span>RGPD natif</span>
+      <div class="sn-copy">
+        <h3>Hébergé en France par défaut, chez Scaleway.</h3>
+        <p>Chaque infrastructure dédiée QueryVision est opérée par <b style="color:#fff">Scaleway</b>, cloud français engagé dans la qualification <b style="color:#fff">SecNumCloud</b> de l'ANSSI — le plus haut niveau d'exigence français en matière de cloud de confiance. Datacenters en France, hors de portée des législations extraterritoriales.</p>
+        <p style="margin-top:0.75rem">Selon vos besoins — installation <b style="color:#fff">on-premise</b> ou déploiement sur <b style="color:#fff">votre propre cluster</b> — une instance peut être déployée chez d'autres hébergeurs.</p>
+      </div>
+      <div class="sn-badges">
+        <div class="sn-badge" title="Hébergement en France">
+          <div class="snb-ico"><svg viewBox="0 0 30 30"><rect x="3" y="7" width="8" height="16" fill="#0055A4"/><rect x="11" y="7" width="8" height="16" fill="#fff"/><rect x="19" y="7" width="8" height="16" fill="#EF4135"/><rect x="3" y="7" width="24" height="16" rx="2" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/></svg></div>
+          <span class="snb-cap">France</span>
+        </div>
+        <div class="sn-badge" title="SecNumCloud — qualification ANSSI">
+          <div class="snb-ico"><svg viewBox="0 0 30 30" fill="none"><path d="M15 3 L25 7 V14 C25 20.5 20.8 25 15 27.5 C9.2 25 5 20.5 5 14 V7 Z" stroke="#03CF65" stroke-width="1.8"/><path d="M11.5 12 a3.5 3.5 0 0 1 7 0 v2" stroke="#03CF65" stroke-width="1.8"/><rect x="10" y="14" width="10" height="7" rx="1.5" fill="#03CF65"/></svg></div>
+          <span class="snb-cap">SecNum<br>Cloud</span>
+        </div>
+        <div class="sn-badge" title="ANSSI — Visa de sécurité">
+          <div class="snb-ico"><svg viewBox="0 0 30 30"><rect x="4" y="8" width="22" height="14" rx="2" fill="none" stroke="#e8edf3" stroke-width="1.6"/><text x="15" y="17.5" text-anchor="middle" font-family="'Hanken Grotesk',sans-serif" font-size="6.4" font-weight="800" fill="#e8edf3">ANSSI</text><rect x="8" y="21" width="4.5" height="1.6" fill="#0055A4"/><rect x="12.5" y="21" width="4.5" height="1.6" fill="#fff"/><rect x="17" y="21" width="4.5" height="1.6" fill="#EF4135"/></svg></div>
+          <span class="snb-cap">Visa de<br>sécurité</span>
+        </div>
       </div>
     </div>
-    <p class="plogo-cat rv">Nos partenaires intégrés — hyperscalers et modèles, sur demande</p>
-    <div class="plogo-row rv">
+
+    <p class="plogo-cat rv">Sur demande — on-premise, cluster client — une instance peut être déployée chez d'autres hébergeurs</p>
+    <div class="plogo-row cols4 rv">
       <div class="plogo" title="Amazon Web Services">
         <svg viewBox="0 0 48 30"><text x="24" y="16" text-anchor="middle" font-family="'Hanken Grotesk',sans-serif" font-size="14" font-weight="800" fill="#e8edf3">aws</text><path d="M8 21 Q24 30 40 21" fill="none" stroke="#FF9900" stroke-width="2.2" stroke-linecap="round"/><path d="M37 19 L41 21 L37 24" fill="none" stroke="#FF9900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="pl-name">AWS</span>
@@ -526,21 +544,39 @@
         <svg viewBox="0 0 48 30"><rect x="8" y="7" width="32" height="16" rx="8" fill="none" stroke="#F80000" stroke-width="3"/></svg>
         <span class="pl-name">OCI</span>
       </div>
-      <div class="plogo" title="Mistral AI">
+    </div>
+
+    <p class="plogo-cat rv">Modèles par défaut — Mistral, Qwen et Gemma, auto-hébergés chez Scaleway — OpenAI, Anthropic ou tout modèle compatible API OpenAI, à la demande</p>
+    <div class="plogo-row cols6 rv">
+      <div class="plogo default-tile" title="Mistral AI — auto-hébergé chez Scaleway">
         <svg viewBox="0 0 48 30"><rect x="12" y="5" width="5" height="5" fill="#FFCE00"/><rect x="31" y="5" width="5" height="5" fill="#FFCE00"/><rect x="12" y="10.5" width="10" height="5" fill="#FFA300"/><rect x="26" y="10.5" width="10" height="5" fill="#FFA300"/><rect x="12" y="16" width="24" height="5" fill="#FF6F00"/><rect x="12" y="21.5" width="5" height="5" fill="#FF0107"/><rect x="21.5" y="21.5" width="5" height="5" fill="#FF0107"/><rect x="31" y="21.5" width="5" height="5" fill="#FF0107"/></svg>
         <span class="pl-name">Mistral</span>
+        <span class="pl-chip">Défaut — auto-hébergé</span>
       </div>
-      <div class="plogo" title="Qwen — Alibaba">
+      <div class="plogo default-tile" title="Qwen — auto-hébergé chez Scaleway">
         <svg viewBox="0 0 48 30"><path d="M24 3 L33 8 V19 L24 24 L15 19 V8 Z" fill="none" stroke="#7C4DFF" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 10 L28 15 L24 20 L20 15 Z" fill="#7C4DFF"/><line x1="27" y1="18" x2="32" y2="24" stroke="#7C4DFF" stroke-width="2.6" stroke-linecap="round"/></svg>
         <span class="pl-name">Qwen</span>
+        <span class="pl-chip">Défaut — auto-hébergé</span>
       </div>
-      <div class="plogo" title="OpenAI">
+      <div class="plogo default-tile" title="Gemma — auto-hébergé chez Scaleway">
+        <svg viewBox="0 0 48 30"><defs><linearGradient id="gmg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1BA1E3"/><stop offset="1" stop-color="#4285F4"/></linearGradient></defs><path d="M24 3 C25.5 10 29 13.5 36 15 C29 16.5 25.5 20 24 27 C22.5 20 19 16.5 12 15 C19 13.5 22.5 10 24 3 Z" fill="url(#gmg)"/></svg>
+        <span class="pl-name">Gemma</span>
+        <span class="pl-chip">Défaut — auto-hébergé</span>
+      </div>
+      <div class="plogo" title="OpenAI — à la demande">
         <svg viewBox="0 0 48 30"><g stroke="#e8edf3" stroke-width="2.1" fill="none" stroke-linecap="round"><path d="M24 5 a5.2 5.2 0 0 1 5.2 5.2 v3"/><path d="M32.5 9.5 a5.2 5.2 0 0 1 -0.2 7.4 l-2.6 1.5"/><path d="M32.3 19.6 a5.2 5.2 0 0 1 -5.4 4.7 l-2.9 -0.4"/><path d="M23.6 24.8 a5.2 5.2 0 0 1 -5 -5.4 v-3"/><path d="M15.4 20.3 a5.2 5.2 0 0 1 0.3 -7.4 l2.6 -1.5"/><path d="M15.8 10.2 a5.2 5.2 0 0 1 5.4 -4.7 l2.8 0.4"/></g></svg>
         <span class="pl-name">OpenAI</span>
+        <span class="pl-chip" style="color:var(--body-on-ink)">À la demande</span>
       </div>
-      <div class="plogo" title="Anthropic">
+      <div class="plogo" title="Anthropic — à la demande">
         <svg viewBox="0 0 48 30"><path d="M20 25 L28 5 L36 25 L31.5 25 L28 15.5 L24.5 25 Z" fill="#D97757"/><path d="M12 25 L17 12 L20.5 21 L19 25 Z" fill="#D97757"/></svg>
         <span class="pl-name">Anthropic</span>
+        <span class="pl-chip" style="color:var(--body-on-ink)">À la demande</span>
+      </div>
+      <div class="plogo" title="Tout modèle exposant une API compatible OpenAI">
+        <svg viewBox="0 0 48 30"><text x="24" y="19" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" font-weight="700" fill="#03CF65">{ + }</text></svg>
+        <span class="pl-name">API compatible</span>
+        <span class="pl-chip" style="color:var(--body-on-ink)">À la demande</span>
       </div>
     </div>
   </div>
@@ -652,7 +688,7 @@
 </section>
 
 <!-- ═══ CTA FINAL ═══ -->
-<section class="cta-final on-ink" id="contact">
+<section class="cta-final" id="contact">
   <div class="wrap">
     <p class="kicker rv" style="justify-content:center">06 — Prochaine étape</p>
     <h2 class="rv d1">Voyez vos propres données répondre.</h2>
