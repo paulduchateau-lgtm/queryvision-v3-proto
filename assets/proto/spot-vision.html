@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spot Vision — Workspace Risques · QueryVision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="qv.css">
+  <style>
+    .conv-list { flex: 1; overflow-y: auto; padding: 0 0.75rem 0.75rem; display: flex; flex-direction: column; gap: 0.25rem; }
+    .conv-list .qv-sidebar-group-label { margin-top: 0.875rem; }
+    .conv-list .qv-sidebar-group-label:first-child { margin-top: 0; }
+    .conv-item { display: block; padding: 0.5rem 0.625rem; border-radius: var(--radius-md); color: var(--sidebar-fg); text-decoration: none; font-size: 0.8125rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .conv-item:hover { background: var(--secondary); color: var(--text-strong); }
+    .conv-item.active { background: rgba(3, 207, 101, 0.1); color: var(--qv-green-500); font-weight: 500; }
+    .light .conv-item.active { color: var(--qv-green-700); }
+    .chat-header { flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); background: var(--header-veil); }
+    .chat-header h1 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+    .chat-messages { flex: 1; overflow-y: auto; padding: 2rem 1.5rem 1rem; }
+    .chat-thread { max-width: 46rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1.75rem; }
+    .msg-user { align-self: flex-end; max-width: 82%; background: var(--secondary); padding: 0.75rem 1rem; border-radius: var(--radius-lg); font-size: 0.9375rem; }
+    .msg-assistant { display: flex; gap: 0.75rem; }
+    .msg-avatar { width: 1.75rem; height: 1.75rem; border-radius: var(--radius-sm); flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(3, 207, 101, 0.12); color: var(--accent-fg); }
+    .msg-avatar svg { width: 14px; height: 14px; }
+    .msg-body { flex: 1; min-width: 0; font-size: 0.9375rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .msg-body p { margin: 0; }
+    .msg-body ul { margin: 0; padding-left: 1.125rem; display: flex; flex-direction: column; gap: 0.375rem; }
+    .source-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.125rem; }
+    .source-chip { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.25rem 0.625rem; background: var(--secondary); border: 1px solid var(--border-strong); border-radius: 999px; font-size: 0.75rem; color: var(--muted-foreground); text-decoration: none; }
+    .source-chip:hover { color: var(--text-strong); border-color: var(--muted-foreground); }
+    .source-chip svg { width: 12px; height: 12px; flex-shrink: 0; }
+    .mini-table { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
+    .composer-zone { flex-shrink: 0; padding: 0.75rem 1.5rem 1.25rem; }
+    .composer { max-width: 46rem; margin: 0 auto; background: var(--card); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); padding: 0.625rem 0.625rem 0.625rem 1rem; display: flex; flex-direction: column; gap: 0.375rem; }
+    .composer textarea { border: none; background: transparent; padding: 0.25rem 0; resize: none; box-shadow: none; font-family: var(--font-sans); }
+    .composer textarea:focus { outline: none; }
+    .composer-bottom { display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; }
+    .select-inline { height: 1.875rem; background: transparent; border: 1px solid transparent; border-radius: var(--radius-sm); color: var(--muted-foreground); font-family: var(--font-sans); font-size: 0.8125rem; padding: 0 0.5rem; cursor: pointer; }
+    .select-inline:hover { border-color: var(--border-strong); color: var(--text-strong); background: var(--secondary); }
+    .btn-icon { width: 2.25rem; padding: 0; }
+  </style>
+<script>if(localStorage.getItem("qv-theme")==="light")document.documentElement.classList.add("light");</script>
+  <style>
+    /* Site v3 — Spot Vision : accent violet (ex-couleur ADMIN) */
+    .qv-rail-item.active { background: rgba(140, 132, 216, 0.14); color: var(--qv-chart-purple); }
+    .light .qv-rail-item.active { color: #5f58bb; }
+    .conv-item.active { background: rgba(140, 132, 216, 0.14); color: #a8a2e2; }
+    .light .conv-item.active { color: #5f58bb; }
+    .msg-avatar { background: rgba(140, 132, 216, 0.16); color: var(--purple-fg); }
+    .btn-primary { background: var(--qv-chart-purple); color: #1d1a3e; }
+    .btn-primary:hover { background: #a8a2e2; }
+    .btn-primary:active { background: #7b72cf; }
+  </style>
+</head>
+<body>
+<div class="qv-app">
+
+  <nav class="qv-rail">
+    <a href="home.html" class="qv-rail-logo" title="QueryVision">
+      <svg viewBox="0 0 84 84" width="26" height="26"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="currentColor"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+    </a>
+    <div class="qv-rail-sep"></div>
+    <a href="home.html" class="qv-rail-item" title="Accueil du workspace"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+    <a href="query-vision.html" class="qv-rail-item" title="Query Vision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></a>
+    <a href="spot-vision.html" class="qv-rail-item active" title="Spot Vision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></a>
+    <div class="qv-rail-spacer"></div>
+    <a href="admin-org.html" class="qv-rail-item admin" title="ADMIN"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></a>
+    <button class="theme-toggle" onclick="qvTheme()" aria-label="Basculer le thème clair/sombre" title="Thème clair/sombre">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="profile.html" title="Mon compte"><div class="avatar green" style="width: 2rem; height: 2rem;">CF</div></a>
+  </nav>
+
+  <aside class="qv-sidebar">
+    <a href="#" class="ws-switcher" title="Changer de workspace">
+      <div class="ws-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="ws-name">Risques<span class="ws-sub">Dataset carto risques SAB · 2 produits</span></span>
+      <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" style="color: var(--muted-foreground); flex-shrink: 0;"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+
+    <div style="padding: 0 0.75rem 0.625rem;">
+      <a href="#" class="btn btn-primary" style="width: 100%;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Nouvelle conversation
+      </a>
+    </div>
+    <div style="padding: 0 0.75rem 0.625rem;">
+      <input type="text" class="input" placeholder="Rechercher une conversation…">
+    </div>
+
+    <nav class="conv-list">
+      <p class="qv-sidebar-group-label">Aujourd'hui</p>
+      <a href="#" class="conv-item active">Obligations DORA prestataires critiques</a>
+      <a href="#" class="conv-item">Seuils d'alerte incidents</a>
+
+      <p class="qv-sidebar-group-label">Cette semaine</p>
+      <a href="#" class="conv-item">Cartographie des risques SAB — questions</a>
+      <a href="#" class="conv-item">Plan de continuité d'activité T3</a>
+      <a href="#" class="conv-item">Référentiel de contrôle interne ORSA</a>
+
+      <p class="qv-sidebar-group-label">Plus ancien</p>
+      <a href="#" class="conv-item">Synthèse audit prestataires 2025</a>
+      <a href="#" class="conv-item">Sinistralité climatique — analyse</a>
+    </nav>
+  </aside>
+
+  <main class="qv-main">
+    <div class="chat-header">
+      <h1>Obligations DORA prestataires critiques</h1>
+      <span class="badge badge-neutral">Gemma 4 31B · machine dédiée</span>
+    </div>
+
+    <div class="chat-messages">
+      <div class="chat-thread">
+
+        <div class="msg-user">Quelles sont nos obligations DORA vis-à-vis de nos prestataires critiques ?</div>
+
+        <div class="msg-assistant">
+          <div class="msg-avatar"><svg viewBox="0 0 84 84" width="14" height="14"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="currentColor"/></svg></div>
+          <div class="msg-body">
+            <p>Le règlement DORA (Digital Operational Resilience Act), applicable depuis janvier 2025, impose à Mutuelle Horizon un cadre renforcé de gestion des risques liés aux prestataires de services TIC jugés critiques. Concrètement, cela couvre l'identification, l'évaluation continue et la surveillance des risques de concentration et de dépendance vis-à-vis de ces prestataires.</p>
+            <p>D'après votre politique risques fournisseurs (v3) et la cartographie SAB 2025, trois prestataires sont aujourd'hui classés « critiques » au sens DORA : l'hébergeur cloud principal, l'éditeur du cœur métier assurance et le prestataire de sécurité managée. Chacun fait l'objet d'un plan de sortie documenté et d'une clause d'audit renforcée.</p>
+            <ul>
+              <li><strong>Registre d'information</strong> — maintenir à jour le registre des contrats TIC critiques, transmis annuellement au régulateur.</li>
+              <li><strong>Tests de résilience</strong> — intégrer les prestataires critiques au programme annuel de tests de résilience opérationnelle numérique.</li>
+              <li><strong>Clauses contractuelles</strong> — garantir droit d'audit, plan de sortie et notification d'incident sous 24 h dans chaque contrat.</li>
+            </ul>
+            <div class="source-row">
+              <a href="#" class="source-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Politique risques fournisseurs v3.pdf</a>
+              <a href="#" class="source-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Cartographie SAB 2025 — ligne 142</a>
+              <a href="#" class="source-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Global Knowledge · DORA (EBA/ESMA)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="msg-user">Lesquels de nos prestataires sont concernés ?</div>
+
+        <div class="msg-assistant">
+          <div class="msg-avatar"><svg viewBox="0 0 84 84" width="14" height="14"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="currentColor"/></svg></div>
+          <div class="msg-body">
+            <p>D'après la cartographie SAB 2025, trois prestataires sont actuellement classés critiques au sens DORA :</p>
+            <div class="mini-table">
+              <table class="table">
+                <thead>
+                  <tr><th>Prestataire</th><th>Service</th><th>Criticité</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>CloudNord Services</td><td>Hébergement infrastructure</td><td><span class="badge badge-destructive">Critique</span></td></tr>
+                  <tr><td>AssurCore Solutions</td><td>Cœur métier assurance</td><td><span class="badge badge-destructive">Critique</span></td></tr>
+                  <tr><td>VigilSec</td><td>Sécurité managée (SOC)</td><td><span class="badge badge-destructive">Critique</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="composer-zone">
+      <div class="composer">
+        <textarea class="input" rows="1" placeholder="Posez votre question sur vos données et documents…"></textarea>
+        <div class="composer-bottom">
+          <span class="mono text-muted" style="font-size: 0.75rem;">Gemma 4 31B — machine dédiée</span>
+          <button class="btn btn-primary btn-icon" aria-label="Envoyer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="hint" style="text-align: center;">Spot Vision s'appuie exclusivement sur les données validées de votre organisation — vérifiez les sources citées.</p>
+    </div>
+  </main>
+
+</div>
+<script>function qvTheme(){var l=document.documentElement.classList.toggle("light");localStorage.setItem("qv-theme",l?"light":"dark");}</script>
+</body>
+</html>

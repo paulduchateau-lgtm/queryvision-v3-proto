@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console — Mutuelle Horizon · QueryVision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="qv.css">
+  <style>
+    .org-selector {
+      margin: 0.75rem; padding: 0.625rem 0.75rem;
+      background: var(--secondary); border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md); display: flex; align-items: center; gap: 0.625rem; cursor: pointer;
+    }
+    .org-selector .org-avatar {
+      width: 1.75rem; height: 1.75rem; border-radius: var(--radius-sm);
+      background: rgba(140, 132, 216, 0.2); color: var(--qv-chart-purple);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6875rem; font-weight: 700; flex-shrink: 0;
+    }
+    .org-selector .org-name { font-size: 0.8125rem; font-weight: 600; flex: 1; }
+    .sidebar-user { display: flex; align-items: center; gap: 0.625rem; padding: 0.375rem 0; }
+    .sidebar-user .user-info { flex: 1; min-width: 0; }
+    .sidebar-user .user-name { font-size: 0.8125rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sidebar-user .user-role { font-size: 0.75rem; color: var(--muted-foreground); }
+    .icon-box { width: 2.25rem; height: 2.25rem; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .icon-box svg { width: 18px; height: 18px; }
+    .console-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.875rem 0; flex-wrap: wrap; }
+    .console-row + .divider { margin: 0; }
+    .quiet-link { font-size: 0.8125rem; color: var(--accent-fg); text-decoration: none; font-weight: 500; }
+    .quiet-link:hover { text-decoration: underline; }
+    .policy-option { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.875rem 0; cursor: pointer; }
+    .policy-option + .policy-option { border-top: 1px solid var(--border); }
+    .policy-option input[type=radio] { margin-top: 0.25rem; accent-color: var(--qv-green-500); flex-shrink: 0; }
+    .scope-wrap { position: relative; margin: 0 0.75rem 0.75rem; }
+    .scope-btn {
+      width: 100%; padding: 0.5rem 0.625rem; background: transparent; border: 1px solid var(--border);
+      border-radius: var(--radius-md); display: flex; align-items: center; gap: 0.5rem; cursor: pointer;
+      font: inherit; color: inherit; text-align: left;
+    }
+    .scope-btn svg:first-child { color: var(--muted-foreground); flex-shrink: 0; }
+    .scope-btn .scope-text { flex: 1; min-width: 0; }
+    .scope-btn .scope-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); display: block; }
+    .scope-btn .scope-value { font-size: 0.8125rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .scope-menu {
+      position: absolute; top: calc(100% + 0.375rem); left: 0; right: 0; background: var(--card);
+      border: 1px solid var(--border-strong); border-radius: var(--radius-md); box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+      z-index: 40; padding: 0.375rem; display: none;
+    }
+    .scope-menu.open { display: block; }
+    .scope-menu a { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.625rem; border-radius: var(--radius-sm); color: var(--text-strong); text-decoration: none; font-size: 0.8125rem; }
+    .scope-menu a:hover { background: var(--secondary); }
+    .scope-menu a .check { width: 14px; height: 14px; color: var(--qv-green-500); margin-left: auto; flex-shrink: 0; visibility: hidden; }
+    .scope-menu a.active .check { visibility: visible; }
+  </style>
+<script>if(localStorage.getItem("qv-theme")==="light")document.documentElement.classList.add("light");</script>
+</head>
+<body>
+<div class="qv-app ctx-org">
+
+  <!-- SIDEBAR -->
+  <aside class="qv-sidebar">
+    <div class="qv-sidebar-header">
+      <svg viewBox="0 0 84 84" width="22" height="22" aria-hidden="true">
+        <path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="currentColor"/>
+        <rect x="65" y="65" width="19" height="19" fill="#03CF65"/>
+      </svg>
+      <span>Console</span>
+    </div>
+
+    <div class="org-selector">
+      <div class="org-avatar">MH</div>
+      <span class="org-name">Mutuelle Horizon</span>
+      <svg style="color: var(--muted-foreground);" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+
+    <div class="scope-wrap">
+      <button type="button" id="scope-btn" class="scope-btn" aria-haspopup="true" aria-expanded="false" title="Changer de périmètre">
+        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        <span class="scope-text"><span class="scope-label">Périmètre</span><span class="scope-value" id="scope-value">Toute l'organisation</span></span>
+        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" style="color: var(--muted-foreground); flex-shrink: 0;"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="scope-menu" id="scope-menu" role="menu">
+        <a href="#vue-ensemble" data-scope="vue-ensemble" role="menuitem">Toute l'organisation<svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></a>
+        <a href="#ws-risques" data-scope="ws-risques" role="menuitem">Risques<svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></a>
+        <a href="#ws-nps" data-scope="ws-nps" role="menuitem">Nouveau Plan Stratégique<svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></a>
+        <a href="#ws-audit-interne" data-scope="ws-audit-interne" role="menuitem">Audit interne<svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></a>
+      </div>
+    </div>
+
+    <div class="ctx-pill"><span class="dot"></span>Console Web</div>
+
+    <nav class="qv-sidebar-menu">
+      <a href="#vue-ensemble" data-target="vue-ensemble" class="qv-sidebar-item">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Vue d'ensemble
+      </a>
+      <a href="#abonnement" data-target="abonnement" class="qv-sidebar-item">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+          <line x1="1" y1="10" x2="23" y2="10"/>
+        </svg>
+        Abonnement &amp; dépenses
+      </a>
+      <a href="#cles-api" data-target="cles-api" class="qv-sidebar-item">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <circle cx="7.5" cy="15.5" r="5.5"/><path d="M21 2l-9.6 9.6"/><path d="M15.5 7.5l3 3L22 7l-3-3"/>
+        </svg>
+        Clés API
+      </a>
+      <a href="#mcp" data-target="mcp" class="qv-sidebar-item">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+          <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+        </svg>
+        Configuration MCP
+      </a>
+      <a href="#modeles" data-target="modeles" class="qv-sidebar-item">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/>
+          <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
+          <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
+          <line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/>
+          <line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+        </svg>
+        Modèles LLM
+      </a>
+      <a href="#audit" data-target="audit" class="qv-sidebar-item">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Audit
+      </a>
+    </nav>
+
+    <div class="qv-sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="row" style="min-width: 0; flex: 1; gap: 0.625rem; text-decoration: none; color: inherit;" title="Mon compte">
+          <div class="avatar purple">SB</div>
+          <div class="user-info">
+            <div class="user-name">Sophie Bensaïd</div>
+            <div class="user-role">Administratrice</div>
+          </div>
+        </a>
+        <a href="home.html" class="btn btn-ghost btn-sm" style="padding: 0 0.375rem; color: var(--qv-green-500);" title="Ouvrir QueryVision" aria-label="Ouvrir l'application QueryVision">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </a>
+          <button class="theme-toggle" onclick="qvTheme()" aria-label="Basculer le thème clair/sombre" title="Thème clair/sombre">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="qv-main">
+    <div class="scope-bar">
+      <svg viewBox="0 0 84 84" fill="none"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="currentColor"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      <span>Console</span>
+      <span class="sep">›</span>
+      <a href="#vue-ensemble" class="crumb-org crumb-current" id="crumb-org">Organisation · Mutuelle Horizon</a>
+      <span class="sep" id="crumb-ws-sep" hidden>›</span>
+      <span class="crumb-current crumb-ws" id="crumb-ws" hidden>Workspace · Risques</span>
+    </div>
+
+    <!-- ═══════ 1. VUE D'ENSEMBLE ═══════ -->
+    <section class="panel" data-panel="vue-ensemble">
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Organisation · Mutuelle Horizon</p>
+          <h1>Vue d'ensemble</h1>
+          <p>L'état de votre infrastructure QueryVision et de votre contrat.</p>
+        </div>
+      </div>
+
+      <div class="qv-content">
+
+        <!-- CARTE 1 : INFRASTRUCTURE -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Infrastructure</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="stat-grid">
+              <div>
+                <div class="stat-label">Statut</div>
+                <div style="margin-top: 0.375rem;">
+                  <span class="badge badge-green"><span class="dot"></span>Opérationnelle</span>
+                </div>
+              </div>
+              <div>
+                <div class="stat-label">Région</div>
+                <div class="mono text-strong" style="font-size: 1rem; margin-top: 0.375rem;">Scaleway · PAR-2</div>
+              </div>
+              <div>
+                <div class="stat-label">Version plateforme</div>
+                <div class="mono text-strong" style="font-size: 1rem; margin-top: 0.375rem;">v2.4.1</div>
+              </div>
+              <div>
+                <div class="stat-label">Disponibilité 30 j</div>
+                <div class="mono text-strong" style="font-size: 1rem; margin-top: 0.375rem;">99,96 %</div>
+              </div>
+            </div>
+            <p class="text-sm text-muted" style="margin-top: 1.25rem; margin-bottom: 0;">3 workspaces · 18 utilisateurs · dernière mise à jour de l'infra le 26/07/2026 (fenêtre de maintenance : dimanche 02:00–04:00).</p>
+          </div>
+        </div>
+
+        <!-- CARTE 2 : PRODUITS ACTIVÉS -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Produits activés</h2>
+              <p class="card-desc">Les produits inclus dans votre contrat, activés au niveau de l'infrastructure.</p>
+            </div>
+          </div>
+          <div class="card-body">
+
+            <div class="console-row">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(3, 207, 101, 0.12); color: var(--accent-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Query Vision</div>
+                  <div class="text-sm text-muted">BI conversationnelle</div>
+                </div>
+              </div>
+              <span class="badge badge-green"><span class="dot"></span>Inclus · activé</span>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+
+            <div class="console-row">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(140, 132, 216, 0.14); color: var(--purple-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Spot Vision</div>
+                  <div class="text-sm text-muted">Assistant RAG pour vos équipes</div>
+                </div>
+              </div>
+              <span class="badge badge-green"><span class="dot"></span>Activé le 15/07/2026</span>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+
+            <div class="console-row" style="opacity: 0.55;">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: var(--secondary); color: var(--muted-foreground);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">OpsVision</div>
+                  <div class="text-sm text-muted">Pilotage des opérations et incidents</div>
+                </div>
+              </div>
+              <div class="row" style="gap: 0.75rem;">
+                <span class="badge badge-neutral">Non inclus</span>
+                <button class="btn btn-outline btn-sm">Contacter les ventes</button>
+              </div>
+            </div>
+
+            <p class="hint">L'activation d'un produit sur un workspace se fait ensuite dans ADMIN, par vos administrateurs.</p>
+          </div>
+        </div>
+
+        <!-- CARTE 3 : CE MOIS-CI -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Ce mois-ci</h2>
+              <p class="card-desc">Juillet 2026</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="stat-grid">
+              <div>
+                <div class="stat-label">Dépense engagée</div>
+                <div class="stat-value">3 360 € <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">HT</span></div>
+                <div class="text-sm text-muted" style="margin-top: 0.25rem;">sièges Query Vision + forfait Spot Vision</div>
+              </div>
+              <div>
+                <div class="stat-label">Crédits Query Vision</div>
+                <div class="stat-value">20 250 <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">/ 24 000</span></div>
+                <div class="gauge warning" style="margin-top: 0.5rem;"><span style="width: 84.4%;"></span></div>
+              </div>
+              <div>
+                <div class="stat-label">Tokens Spot Vision</div>
+                <div class="stat-value">2,9 M <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">ce mois</span></div>
+                <div class="text-sm text-muted" style="margin-top: 0.25rem;">sans limite · machine dédiée</div>
+              </div>
+              <div>
+                <div class="stat-label">Prochaine facture</div>
+                <div class="stat-value" style="font-size: 1.25rem;">1er août 2026</div>
+              </div>
+            </div>
+            <a href="#abonnement" class="quiet-link" style="display: inline-block; margin-top: 1.25rem;">Voir le détail →</a>
+          </div>
+        </div>
+
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 2. ABONNEMENT & DÉPENSES ═══════ -->
+    <section class="panel" data-panel="abonnement" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Organisation · Mutuelle Horizon</p>
+          <h1>Abonnement &amp; dépenses</h1>
+          <p>Votre offre, votre enveloppe de crédits IA et vos factures.</p>
+        </div>
+      </div>
+
+      <div class="qv-content">
+
+        <!-- CARTE 1 : ABONNEMENT -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Abonnement</h2>
+              <span class="badge badge-purple" style="margin-top: 0.5rem;">Tier Direction</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="mono text-strong" style="font-size: 2rem; font-weight: 600; letter-spacing: -0.02em;">3 360 € <span style="font-size: 1rem; font-weight: 400; color: var(--muted-foreground);">HT / mois</span></div>
+            <p class="card-desc" style="margin-top: 0.25rem;">Chaque produit a son modèle de facturation.</p>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+              <div class="row-between">
+                <span class="text-sm"><strong style="font-weight: 500;">Query Vision</strong> · <span class="text-muted">au siège</span></span>
+                <span class="mono text-sm">18 × 120 € = 2 160 €</span>
+              </div>
+              <div class="row-between" style="margin-top: 0.375rem;">
+                <span class="text-sm text-muted">Sièges utilisés</span>
+                <span class="mono text-sm text-muted">18 / 25</span>
+              </div>
+              <div class="gauge" style="margin-top: 0.375rem;"><span style="width: 72%;"></span></div>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+              <div class="row-between">
+                <span class="text-sm"><strong style="font-weight: 500;">Spot Vision</strong> · <span class="text-muted">au forfait</span></span>
+                <span class="mono text-sm">1 200 € / mois</span>
+              </div>
+              <p class="text-sm text-muted" style="margin: 0.375rem 0 0;">Machine dédiée Gemma 4 31B — sièges et consommation illimités.</p>
+            </div>
+            <p class="text-sm text-muted" style="margin: 1rem 0 0;">Prochaine échéance : 1er août 2026.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-outline btn-sm">Changer d'offre</button>
+            <button class="btn btn-primary btn-sm">Ajouter des sièges</button>
+          </div>
+        </div>
+
+        <!-- CARTE 2 : ENVELOPPE IA DU MOIS -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Enveloppe de crédits — Query Vision</h2>
+              <p class="card-desc">24 000 crédits inclus · juillet 2026 · Spot Vision n'y figure pas (machine dédiée, sans limite)</p>
+            </div>
+            <span class="badge badge-warning">84,4 %</span>
+          </div>
+          <div class="card-body">
+            <div class="row-between">
+              <span class="mono text-strong" style="font-size: 1.0625rem;">20 250 / 24 000 crédits</span>
+              <span class="text-sm text-muted">3 750 restants</span>
+            </div>
+            <div class="gauge warning" style="margin-top: 0.5rem; height: 0.75rem;"><span style="width: 84.4%;"></span></div>
+
+            <div class="callout callout-warning" style="margin-top: 1.25rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <div class="body"><strong>Seuil de 80 % atteint</strong>Au-delà de 100 %, dégradation gracieuse vers la classe de modèle inférieure (politique de l'organisation).</div>
+            </div>
+
+            <p class="eyebrow" style="margin-top: 1.25rem;">Répartition par workspace</p>
+            <div style="display: flex; flex-direction: column; gap: 0.625rem; margin-top: 0.75rem;">
+              <div class="bar-row" style="grid-template-columns: 13rem 1fr 4.5rem;"><a href="#ws-risques" class="quiet-link" style="color: inherit;">Risques</a><div class="bar"><span style="width: 100%;"></span></div><span class="mono">11 900</span></div>
+              <div class="bar-row" style="grid-template-columns: 13rem 1fr 4.5rem;"><a href="#ws-audit-interne" class="quiet-link" style="color: inherit;">Audit interne</a><div class="bar"><span style="width: 44%;"></span></div><span class="mono">5 250</span></div>
+              <div class="bar-row" style="grid-template-columns: 13rem 1fr 4.5rem;"><span>API &amp; MCP (hors workspace)</span><div class="bar"><span style="width: 26%;"></span></div><span class="mono">3 100</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTE : FORFAIT SPOT VISION -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Spot Vision — machine dédiée</h2>
+              <p class="card-desc">Forfait 1 200 € / mois · Gemma 4 31B · sièges et consommation illimités</p>
+            </div>
+            <span class="badge badge-green"><span class="dot"></span>Charge normale</span>
+          </div>
+          <div class="card-body">
+            <div class="row-between">
+              <span class="mono text-strong" style="font-size: 1.0625rem;">2,9 M tokens ce mois</span>
+              <span class="text-sm text-muted">+18 % vs juin · aucune limite de consommation</span>
+            </div>
+
+            <p class="eyebrow" style="margin-top: 1.25rem;">RAM utilisée vs capacité machine — juillet 2026</p>
+            <div style="margin-top: 0.75rem; overflow-x: auto;">
+              <svg viewBox="0 0 640 180" role="img" aria-label="Mémoire utilisée par la machine dédiée face à sa capacité" style="width: 100%; min-width: 480px; display: block;">
+                <!-- grille -->
+                <line x1="40" y1="140" x2="620" y2="140" style="stroke: var(--border); stroke-width: 1;"/>
+                <line x1="40" y1="85" x2="620" y2="85" style="stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 4;"/>
+                <!-- capacité machine -->
+                <line x1="40" y1="30" x2="620" y2="30" style="stroke: var(--warning-fg); stroke-width: 1.5; stroke-dasharray: 6 5;"/>
+                <text x="620" y="22" text-anchor="end" class="mono" style="font-size: 10px; fill: var(--warning-fg); font-family: var(--font-mono);">capacité machine — 64 Go</text>
+                <!-- aire RAM (pic quotidien) -->
+                <path d="M40,69.5 L78.7,67 L117.3,66.1 L156,68.7 L194.7,64.4 L233.3,61.8 L272,65.2 L310.7,63.5 L349.3,60.9 L388,64.4 L426.7,58.4 L465.3,54.1 L484.7,49.8 L504,56.6 L542.7,60.9 L581.3,63.5 L620,62.6 L620,140 L40,140 Z"
+                      style="fill: rgba(91, 142, 154, 0.18); stroke: none;"/>
+                <path d="M40,69.5 L78.7,67 L117.3,66.1 L156,68.7 L194.7,64.4 L233.3,61.8 L272,65.2 L310.7,63.5 L349.3,60.9 L388,64.4 L426.7,58.4 L465.3,54.1 L484.7,49.8 L504,56.6 L542.7,60.9 L581.3,63.5 L620,62.6"
+                      style="fill: none; stroke: var(--qv-chart-blue); stroke-width: 2; stroke-linejoin: round;"/>
+                <!-- plancher : modèle résident -->
+                <line x1="40" y1="71.2" x2="620" y2="71.2" style="stroke: var(--qv-slate-500); stroke-width: 1; stroke-dasharray: 2 3; opacity: 0.6;"/>
+                <text x="46" y="82" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">modèle résident ≈ 40 Go</text>
+                <!-- pic -->
+                <circle cx="484.7" cy="49.8" r="3.5" style="fill: var(--qv-chart-blue);"/>
+                <text x="484.7" y="42" text-anchor="middle" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">pic 24/07 · 52,5 Go · 82 %</text>
+                <!-- axe Y -->
+                <text x="34" y="143" text-anchor="end" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">0</text>
+                <text x="34" y="88" text-anchor="end" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">32 Go</text>
+                <text x="34" y="33" text-anchor="end" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">64 Go</text>
+                <!-- axe X -->
+                <text x="40" y="158" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">1 juil.</text>
+                <text x="310" y="158" text-anchor="middle" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">15 juil.</text>
+                <text x="620" y="158" text-anchor="end" class="mono" style="font-size: 10px; fill: var(--muted-foreground); font-family: var(--font-mono);">31 juil.</text>
+              </svg>
+            </div>
+            <p class="text-sm text-muted" style="margin: 0.5rem 0 0;">Pic quotidien de mémoire utilisée. Le plancher (~40 Go) est le modèle Gemma 4 31B résident en mémoire ; la charge varie avec les contextes et les requêtes simultanées. Le pic du mois a atteint 82 % de la capacité — c'est ce signal qui déclenchera les futures alertes de charge.</p>
+            <p class="eyebrow" style="margin-top: 1.25rem;">Répartition par workspace</p>
+            <div style="display: flex; flex-direction: column; gap: 0.625rem; margin-top: 0.75rem;">
+              <div class="bar-row" style="grid-template-columns: 13rem 1fr 4.5rem;"><a href="#ws-risques" class="quiet-link" style="color: inherit;">Risques</a><div class="bar"><span style="width: 100%; background: var(--qv-chart-blue);"></span></div><span class="mono">1,8 M</span></div>
+              <div class="bar-row" style="grid-template-columns: 13rem 1fr 4.5rem;"><a href="#ws-nps" class="quiet-link" style="color: inherit;">Nouveau Plan Stratégique</a><div class="bar"><span style="width: 61%; background: var(--qv-chart-blue);"></span></div><span class="mono">1,1 M</span></div>
+            </div>
+            <p class="hint" style="margin-top: 1rem;">Aucune limite de consommation — la machine est dédiée à votre organisation. Des alertes de charge (RAM, GPU) seront ajoutées ultérieurement.</p>
+          </div>
+        </div>
+
+        <!-- CARTE 4 : FACTURES -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Factures</h2>
+            </div>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="table">
+              <thead>
+                <tr><th>N°</th><th>Période</th><th>Montant</th><th>Statut</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono">F-2026-07</td>
+                  <td class="text-muted">Juillet 2026</td>
+                  <td class="mono">3 360,00 € HT</td>
+                  <td><span class="badge badge-neutral">À venir</span></td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm" title="Télécharger" aria-label="Télécharger la facture F-2026-07"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></td>
+                </tr>
+                <tr>
+                  <td class="mono">F-2026-06</td>
+                  <td class="text-muted">Juin 2026</td>
+                  <td class="mono">2 160,00 € HT</td>
+                  <td><span class="badge badge-green"><span class="dot"></span>Payée</span></td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm" title="Télécharger" aria-label="Télécharger la facture F-2026-06"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></td>
+                </tr>
+                <tr>
+                  <td class="mono">F-2026-05</td>
+                  <td class="text-muted">Mai 2026</td>
+                  <td class="mono">2 160,00 € HT</td>
+                  <td><span class="badge badge-green"><span class="dot"></span>Payée</span></td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm" title="Télécharger" aria-label="Télécharger la facture F-2026-05"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 3. CLÉS API ═══════ -->
+    <section class="panel" data-panel="cles-api" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Organisation · Mutuelle Horizon</p>
+          <h1>Clés API des modèles</h1>
+          <p>Renseignez les clés des fournisseurs LLM que QueryVision utilise sur votre infrastructure.</p>
+        </div>
+        <div class="qv-page-actions">
+          <button class="btn btn-primary">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Ajouter un fournisseur
+          </button>
+        </div>
+      </div>
+
+      <div class="qv-content">
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Fournisseurs LLM</h2>
+              <p class="card-desc">Une clé par fournisseur — les modèles hébergés sur vos machines dédiées n'en ont pas besoin.</p>
+            </div>
+          </div>
+          <div class="card-body">
+
+            <div style="padding: 0.875rem 0;">
+              <div class="row-between" style="margin-bottom: 0.625rem;">
+                <div class="stack">
+                  <span class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Mistral — API souveraine</span>
+                  <span class="text-sm text-muted">Utilisée par Query Vision (Mistral Small 3.2, Mistral Large 2)</span>
+                </div>
+                <span class="badge badge-green"><span class="dot"></span>Connectée · vérifiée il y a 2 h</span>
+              </div>
+              <div class="row" style="gap: 0.5rem;">
+                <input class="input mono" type="password" value="mst-4f2a9c1e77b8d3a05e6f" readonly style="max-width: 24rem; font-size: 0.8125rem;">
+                <button class="btn btn-outline btn-sm">Tester</button>
+                <button class="btn btn-ghost btn-sm">Remplacer</button>
+              </div>
+            </div>
+            <hr class="divider" style="margin: 0;">
+
+            <div style="padding: 0.875rem 0;">
+              <div class="row-between">
+                <div class="stack">
+                  <span class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Magistral — GPU dédié</span>
+                  <span class="text-sm text-muted">Query Vision, tâches avancées · hébergé sur votre infrastructure</span>
+                </div>
+                <span class="badge badge-neutral">Aucune clé requise</span>
+              </div>
+            </div>
+            <hr class="divider" style="margin: 0;">
+
+            <div style="padding: 0.875rem 0;">
+              <div class="row-between">
+                <div class="stack">
+                  <span class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Gemma 4 31B — machine dédiée</span>
+                  <span class="text-sm text-muted">Spot Vision · hébergé sur votre infrastructure</span>
+                </div>
+                <span class="badge badge-neutral">Aucune clé requise</span>
+              </div>
+            </div>
+            <hr class="divider" style="margin: 0;">
+
+            <div style="padding: 0.875rem 0 0;">
+              <div class="row-between" style="margin-bottom: 0.625rem;">
+                <div class="stack">
+                  <span class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Fournisseur compatible OpenAI <span class="text-muted" style="font-weight: 400;">(optionnel)</span></span>
+                  <span class="text-sm text-muted">Pour brancher un autre fournisseur autorisé par votre politique de souveraineté</span>
+                </div>
+                <span class="badge badge-neutral">Non configuré</span>
+              </div>
+              <div class="row" style="gap: 0.5rem; flex-wrap: wrap;">
+                <input class="input mono" type="text" placeholder="URL de base — https://…" style="max-width: 16rem; font-size: 0.8125rem;">
+                <input class="input mono" type="password" placeholder="Clé API — sk-…" style="max-width: 16rem; font-size: 0.8125rem;">
+                <button class="btn btn-outline btn-sm">Enregistrer</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div class="body">Les clés sont chiffrées et stockées dans votre infrastructure — elles ne transitent jamais par QueryVision. Un modèle dont la clé devient invalide est automatiquement retiré des sélecteurs dans ADMIN.</div>
+        </div>
+
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 4. CONFIGURATION MCP ═══════ -->
+    <section class="panel" data-panel="mcp" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Organisation · Mutuelle Horizon</p>
+          <h1>Configuration MCP</h1>
+          <p>Exposez vos données validées à vos agents IA internes dans le respect des droits d'accès.</p>
+        </div>
+      </div>
+
+      <div class="qv-content">
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Serveur MCP</h2>
+              <p class="card-desc">Exposez vos données validées à vos agents IA internes dans le respect des droits d'accès.</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="console-row" style="padding-top: 0;">
+              <span class="mono text-sm">https://mcp.mutuelle-horizon.query.vision</span>
+              <div class="row" style="gap: 0.625rem;">
+                <span class="badge badge-green"><span class="dot"></span>Actif</span>
+                <button class="btn btn-outline btn-sm">Copier</button>
+                <label class="switch"><input type="checkbox" checked><span class="track"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Clients connectés</h2>
+              <p class="card-desc">2 clients actifs.</p>
+            </div>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="table">
+              <thead>
+                <tr><th>Client</th><th>Dernier accès</th><th>Portée</th><th>Workspaces autorisés</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-strong">Claude — DSI Mutuelle Horizon</td>
+                  <td class="text-muted">Il y a 18 min</td>
+                  <td><span class="badge badge-neutral">Lecture</span></td>
+                  <td><div class="row" style="gap: 0.375rem; flex-wrap: wrap;"><a href="#ws-risques" class="badge badge-neutral" style="text-decoration: none;">Risques</a><a href="#ws-audit-interne" class="badge badge-neutral" style="text-decoration: none;">Audit interne</a></div></td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Déconnecter</button></td>
+                </tr>
+                <tr>
+                  <td class="text-strong">Agent interne — veille réglementaire</td>
+                  <td class="text-muted">Hier</td>
+                  <td><span class="badge badge-neutral">Lecture</span></td>
+                  <td><div class="row" style="gap: 0.375rem; flex-wrap: wrap;"><a href="#ws-nps" class="badge badge-neutral" style="text-decoration: none;">Nouveau Plan Stratégique</a></div></td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Déconnecter</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-body">
+            <p class="hint" style="margin-top: 0;">Chaque client MCP est rattaché à un utilisateur et hérite de ses droits.</p>
+          </div>
+        </div>
+
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 5. MODÈLES LLM ═══════ -->
+    <section class="panel" data-panel="modeles" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Organisation · Mutuelle Horizon</p>
+          <h1>Modèles LLM</h1>
+          <p>Les modèles disponibles sur votre infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="qv-content">
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Disponibilité sur l'infrastructure</h2>
+              <p class="card-desc">Les modèles techniquement déployés et accessibles depuis vos workspaces.</p>
+            </div>
+          </div>
+          <div class="card-body">
+
+            <div class="console-row">
+              <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Mistral — API souveraine (SaaS)</div>
+              <label class="switch"><input type="checkbox" checked><span class="track"></span></label>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+
+            <div class="console-row">
+              <div>
+                <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">GPU dédié — Magistral</div>
+                <div class="mono text-sm text-muted" style="margin-top: 0.125rem;">2 500 €/mois · inclus tier Direction · Query Vision</div>
+              </div>
+              <label class="switch"><input type="checkbox" checked><span class="track"></span></label>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+
+            <div class="console-row">
+              <div>
+                <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Machine dédiée — Gemma 4 31B</div>
+                <div class="mono text-sm text-muted" style="margin-top: 0.125rem;">réservée à Spot Vision · forfait 1 200 €/mois · consommation illimitée</div>
+              </div>
+              <label class="switch"><input type="checkbox" checked disabled><span class="track"></span></label>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+
+            <div class="console-row">
+              <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Ollama — local</div>
+              <div class="row" style="gap: 0.75rem;">
+                <label class="switch"><input type="checkbox"><span class="track"></span></label>
+                <button class="btn btn-outline btn-sm">Demander l'activation</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span class="body">Disponibilité : ici · Autorisation org et affectation par produit : dans ADMIN (app QueryVision).</span>
+        </div>
+
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 6. AUDIT ═══════ -->
+    <section class="panel" data-panel="audit" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Organisation · Mutuelle Horizon</p>
+          <h1>Audit</h1>
+          <p>Historique des actes contractuels et infrastructure de la Console — distinct de l'audit de l'organisation dans ADMIN.</p>
+        </div>
+        <div class="qv-page-actions">
+          <button class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Actualiser
+          </button>
+          <button class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exporter CSV
+          </button>
+        </div>
+      </div>
+
+      <div class="qv-content">
+        <div class="card">
+          <div style="overflow-x: auto;">
+            <table class="table">
+              <thead>
+                <tr><th>Date</th><th>Auteur</th><th>Action</th><th>Détail</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono text-muted">29/07 14:22</td>
+                  <td>Sophie Bensaïd</td>
+                  <td><span class="badge badge-green">CREATE</span></td>
+                  <td class="text-sm">A créé la clé API « Agent DSI — sandbox »</td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Détails</button></td>
+                </tr>
+                <tr>
+                  <td class="mono text-muted">24/07 10:05</td>
+                  <td>Sophie Bensaïd</td>
+                  <td><span class="badge badge-green">CONNEXION</span></td>
+                  <td class="text-sm">A connecté le client MCP « Agent interne — veille réglementaire »</td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Détails</button></td>
+                </tr>
+                <tr>
+                  <td class="mono text-muted">22/07 09:40</td>
+                  <td>Sophie Bensaïd</td>
+                  <td><span class="badge badge-purple">POLITIQUE</span></td>
+                  <td class="text-sm">A changé la politique de dépassement : Dégradation gracieuse</td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Détails</button></td>
+                </tr>
+                <tr>
+                  <td class="mono text-muted">20/07 16:12</td>
+                  <td>Sophie Bensaïd</td>
+                  <td><span class="badge badge-destructive">RÉVOCATION</span></td>
+                  <td class="text-sm">A révoqué la clé API « Ancienne intégration BI »</td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Détails</button></td>
+                </tr>
+                <tr>
+                  <td class="mono text-muted">15/07 08:00</td>
+                  <td>Sophie Bensaïd</td>
+                  <td><span class="badge badge-purple">CONTRAT</span></td>
+                  <td class="text-sm">A activé Spot Vision sur l'offre</td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Détails</button></td>
+                </tr>
+                <tr>
+                  <td class="mono text-muted">05/07 03:00</td>
+                  <td>Plateforme QueryVision</td>
+                  <td><span class="badge badge-neutral">MAINTENANCE</span></td>
+                  <td class="text-sm">A mis à jour l'infrastructure vers la version v2.4.1</td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Détails</button></td>
+                </tr>
+                <tr>
+                  <td class="mono text-muted">01/07 06:00</td>
+                  <td>Système de facturation</td>
+                  <td><span class="badge badge-neutral">FACTURATION</span></td>
+                  <td class="text-sm">A émis la facture F-2026-06</td>
+                  <td style="text-align: right;"><button class="btn btn-ghost btn-sm">Détails</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer" style="justify-content: space-between;">
+            <span class="text-muted text-sm">Page 1 sur 2</span>
+            <div class="row" style="gap: 0.5rem;">
+              <button class="btn btn-ghost btn-sm" disabled>Précédent</button>
+              <button class="btn btn-ghost btn-sm">Suivant</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 7. DRILLDOWN — WORKSPACE RISQUES ═══════ -->
+    <section class="panel" data-panel="ws-risques" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Workspace · Mutuelle Horizon</p>
+          <h1>Risques</h1>
+          <p>Dataset carto risques SAB · Query Vision + Spot Vision · 14 membres</p>
+        </div>
+        <div class="qv-page-actions">
+          <a href="admin-workspace.html" class="btn btn-outline">Administrer dans ADMIN</a>
+        </div>
+      </div>
+
+      <div class="qv-content">
+        <a href="#vue-ensemble" class="quiet-link">← Toute l'organisation</a>
+
+        <div class="stat-grid">
+          <div>
+            <div class="stat-label">Crédits Query Vision</div>
+            <div class="stat-value">11 900 <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">/ 14 000</span></div>
+            <div class="gauge warning" style="margin-top: 0.5rem;"><span style="width: 85%;"></span></div>
+          </div>
+          <div>
+            <div class="stat-label">Tokens Spot Vision</div>
+            <div class="stat-value">1,8 M <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">ce mois</span></div>
+            <div class="text-sm text-muted" style="margin-top: 0.25rem;">sans limite · machine dédiée</div>
+          </div>
+          <div>
+            <div class="stat-label">Requêtes ce mois</div>
+            <div class="stat-value">1 240</div>
+          </div>
+          <div>
+            <div class="stat-label">Membres actifs</div>
+            <div class="stat-value">12 <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">/ 14</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div><h2 class="card-title">Produits actifs</h2></div></div>
+          <div class="card-body">
+            <div class="console-row">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(3, 207, 101, 0.12); color: var(--accent-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Query Vision</div>
+                  <div class="text-sm text-muted">14 membres</div>
+                </div>
+              </div>
+              <span class="badge badge-green"><span class="dot"></span>Actif</span>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+            <div class="console-row">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(140, 132, 216, 0.14); color: var(--purple-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Spot Vision</div>
+                  <div class="text-sm text-muted">Gemma 4 31B · machine dédiée · 11 membres</div>
+                </div>
+              </div>
+              <span class="badge badge-green"><span class="dot"></span>Actif</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div><h2 class="card-title">Dataset</h2></div></div>
+          <div class="card-body">
+            <div class="mono text-strong" style="font-size: 1rem;">carto_risques_SAB_2024-2025</div>
+            <p class="text-sm text-muted" style="margin: 0.5rem 0 0;">Posé par INTAKE le 12/06/2026 · mise à jour hebdomadaire (dernière le 28/07/2026) · 4 tables · 12 400 lignes</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div><h2 class="card-title">Activité récente (console)</h2></div></div>
+          <div style="overflow-x: auto;">
+            <table class="table">
+              <tbody>
+                <tr><td class="text-sm">Clé API « Intégration Power BI » utilisée sur ce workspace</td><td class="text-muted text-sm" style="text-align: right;">Il y a 2 h</td></tr>
+                <tr><td class="text-sm">Client MCP « Claude — DSI Mutuelle Horizon » connecté (lecture)</td><td class="text-muted text-sm" style="text-align: right;">Il y a 18 min</td></tr>
+                <tr><td class="text-sm">Pic de consommation : 1 850 crédits</td><td class="text-muted text-sm" style="text-align: right;">24/07</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span class="body">Membres, produits, modèles et compétences se gèrent dans ADMIN, au sein de l'application.</span>
+        </div>
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 8. DRILLDOWN — WORKSPACE NOUVEAU PLAN STRATÉGIQUE ═══════ -->
+    <section class="panel" data-panel="ws-nps" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Workspace · Mutuelle Horizon</p>
+          <h1>Nouveau Plan Stratégique</h1>
+          <p>Dataset plan stratégique 2027 · Spot Vision · 6 membres</p>
+        </div>
+        <div class="qv-page-actions">
+          <a href="#" class="btn btn-outline">Administrer dans ADMIN</a>
+        </div>
+      </div>
+
+      <div class="qv-content">
+        <a href="#vue-ensemble" class="quiet-link">← Toute l'organisation</a>
+
+        <div class="stat-grid">
+          <div style="opacity: 0.55;">
+            <div class="stat-label">Crédits Query Vision</div>
+            <div class="stat-value">—</div>
+            <p class="text-sm text-muted" style="margin: 0.375rem 0 0;">Query Vision n'est pas actif sur ce workspace</p>
+          </div>
+          <div>
+            <div class="stat-label">Tokens Spot Vision</div>
+            <div class="stat-value">1,1 M <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">ce mois</span></div>
+            <div class="text-sm text-muted" style="margin-top: 0.25rem;">sans limite · machine dédiée</div>
+          </div>
+          <div>
+            <div class="stat-label">Conversations ce mois</div>
+            <div class="stat-value">214</div>
+          </div>
+          <div>
+            <div class="stat-label">Membres actifs</div>
+            <div class="stat-value">6 <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">/ 6</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div><h2 class="card-title">Produits actifs</h2></div></div>
+          <div class="card-body">
+            <div class="console-row">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(140, 132, 216, 0.14); color: var(--purple-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Spot Vision</div>
+                  <div class="text-sm text-muted">Gemma 4 31B · 6 membres</div>
+                </div>
+              </div>
+              <span class="badge badge-green"><span class="dot"></span>Actif</span>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+            <div class="console-row" style="opacity: 0.55;">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(3, 207, 101, 0.12); color: var(--accent-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Query Vision</div>
+                </div>
+              </div>
+              <span class="badge badge-neutral">Non activé sur ce workspace</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div><h2 class="card-title">Dataset</h2></div></div>
+          <div class="card-body">
+            <div class="mono text-strong" style="font-size: 1rem;">plan_strategique_2027</div>
+            <p class="text-sm text-muted" style="margin: 0.5rem 0 0;">Posé par INTAKE le 10/07/2026 · mise à jour à la demande · 320 documents · 3 sources de connaissances</p>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span class="body">Membres, produits, modèles et compétences se gèrent dans ADMIN, au sein de l'application.</span>
+        </div>
+      </div><!-- /.qv-content -->
+    </section>
+
+    <!-- ═══════ 9. DRILLDOWN — WORKSPACE AUDIT INTERNE ═══════ -->
+    <section class="panel" data-panel="ws-audit-interne" hidden>
+      <div class="qv-page-header">
+        <div>
+          <p class="eyebrow">Workspace · Mutuelle Horizon</p>
+          <h1>Audit interne</h1>
+          <p>Dataset plan d'audit 2026 · Query Vision · 5 membres</p>
+        </div>
+        <div class="qv-page-actions">
+          <a href="#" class="btn btn-outline">Administrer dans ADMIN</a>
+        </div>
+      </div>
+
+      <div class="qv-content">
+        <a href="#vue-ensemble" class="quiet-link">← Toute l'organisation</a>
+
+        <div class="stat-grid">
+          <div>
+            <div class="stat-label">Crédits Query Vision</div>
+            <div class="stat-value">5 250 <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">/ 7 000</span></div>
+            <div class="gauge warning" style="margin-top: 0.5rem;"><span style="width: 75%;"></span></div>
+          </div>
+          <div>
+            <div class="stat-label">Requêtes ce mois</div>
+            <div class="stat-value">480</div>
+          </div>
+          <div>
+            <div class="stat-label">Membres actifs</div>
+            <div class="stat-value">5 <span style="font-size: 0.875rem; font-weight: 400; color: var(--muted-foreground);">/ 5</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div><h2 class="card-title">Produits actifs</h2></div></div>
+          <div class="card-body">
+            <div class="console-row">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(3, 207, 101, 0.12); color: var(--accent-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Query Vision</div>
+                  <div class="text-sm text-muted">5 membres</div>
+                </div>
+              </div>
+              <span class="badge badge-green"><span class="dot"></span>Actif</span>
+            </div>
+            <div class="divider" style="margin: 0;"></div>
+            <div class="console-row" style="opacity: 0.55;">
+              <div class="row" style="gap: 0.875rem;">
+                <div class="icon-box" style="background: rgba(140, 132, 216, 0.14); color: var(--purple-fg);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+                </div>
+                <div>
+                  <div class="text-strong" style="font-weight: 600; font-size: 0.9375rem;">Spot Vision</div>
+                </div>
+              </div>
+              <span class="badge badge-neutral">Non activé</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div><h2 class="card-title">Dataset</h2></div></div>
+          <div class="card-body">
+            <div class="mono text-strong" style="font-size: 1rem;">plan_audit_2026</div>
+            <p class="text-sm text-muted" style="margin: 0.5rem 0 0;">Posé le 20/06/2026 · mise à jour mensuelle</p>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span class="body">Membres, produits, modèles et compétences se gèrent dans ADMIN, au sein de l'application.</span>
+        </div>
+      </div><!-- /.qv-content -->
+    </section>
+
+  </main>
+</div>
+<script>
+var scopeLabels = {"ws-risques":"Risques","ws-nps":"Nouveau Plan Stratégique","ws-audit-interne":"Audit interne"};
+function showPanel(){
+  var id = location.hash.replace('#', '') || 'vue-ensemble';
+  document.querySelectorAll('.panel').forEach(function(p){ p.hidden = p.dataset.panel !== id; });
+  var isWs = !!scopeLabels[id];
+  document.querySelectorAll('.qv-sidebar-item[data-target]').forEach(function(a){ a.classList.toggle('active', !isWs && a.dataset.target === id); });
+  document.getElementById('scope-value').textContent = scopeLabels[id] || "Toute l'organisation";
+  document.querySelectorAll('.scope-menu a').forEach(function(a){ a.classList.toggle('active', a.dataset.scope === (isWs ? id : 'vue-ensemble')); });
+  var sep = document.getElementById('crumb-ws-sep'), ws = document.getElementById('crumb-ws');
+  sep.hidden = ws.hidden = !isWs;
+  if (isWs) ws.textContent = 'Workspace · ' + scopeLabels[id];
+  document.getElementById('crumb-org').classList.toggle('crumb-current', !isWs);
+}
+window.addEventListener('hashchange', showPanel);
+showPanel();
+function qvTheme(){var l=document.documentElement.classList.toggle("light");localStorage.setItem("qv-theme",l?"light":"dark");}
+(function(){
+  var btn = document.getElementById("scope-btn"), menu = document.getElementById("scope-menu");
+  btn.addEventListener("click", function(e){
+    e.stopPropagation();
+    var open = menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.addEventListener("click", function(e){
+    if(!menu.contains(e.target) && e.target !== btn){ menu.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }
+  });
+  menu.addEventListener("click", function(){ menu.classList.remove("open"); });
+})();
+</script>
+</body>
+</html>

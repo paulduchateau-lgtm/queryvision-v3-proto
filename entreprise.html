@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entreprise — Partenaires, Trust Center &amp; implantations · QueryVision</title>
+<meta name="description" content="QueryVision côté entreprise : le programme partenaires, le Trust Center et nos implantations en Europe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+  .pcat-grid { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  @media (max-width: 760px) { .pcat-grid { grid-template-columns: 1fr; } }
+  .pcat {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.875rem 1.75rem; transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .pcat:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -18px rgba(15,21,28,0.18); }
+  .pcat .pc-cat { font-family: var(--mono); font-size: 0.6563rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green-dark); }
+  .pcat h3 { margin-top: 0.75rem; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.015em; }
+  .pcat p { margin-top: 0.625rem; font-size: 0.9063rem; color: var(--body); }
+  .tiers-h { margin: 4.5rem 0 0; text-align: center; font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--body); }
+  .tier-grid { margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: stretch; }
+  @media (max-width: 860px) { .tier-grid { grid-template-columns: 1fr; } }
+  .tier {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 2rem 1.75rem; position: relative; display: flex; flex-direction: column; gap: 0.625rem;
+  }
+  .tier.reco { border: 1.5px solid var(--green-dark); box-shadow: 0 22px 50px -22px rgba(10, 124, 66, 0.35); }
+  .tier .tier-badge {
+    position: absolute; top: -0.8125rem; left: 50%; transform: translateX(-50%);
+    font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.14em; text-transform: uppercase;
+    background: var(--green); color: var(--green-deep); border-radius: 999px; padding: 0.25rem 0.875rem; font-weight: 700;
+  }
+  .tier .tier-n { font-family: var(--mono); font-size: 0.6563rem; letter-spacing: 0.14em; color: var(--body); }
+  .tier h3 { font-size: 1.375rem; font-weight: 800; font-style: italic; letter-spacing: -0.02em; }
+  .tier p { font-size: 0.875rem; color: var(--body); }
+  .office-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 860px) { .office-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .office-grid { grid-template-columns: 1fr; } }
+  .office {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.625rem 1.5rem; display: flex; flex-direction: column; gap: 0.375rem;
+  }
+  .office .of-city { font-size: 1.1875rem; font-weight: 800; letter-spacing: -0.015em; display: flex; align-items: center; gap: 0.5rem; }
+  .office .of-region { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--body); }
+  .office .of-status { margin-top: 0.625rem; }
+  .impl-stats { margin-top: 2.5rem; display: flex; gap: 2.5rem; flex-wrap: wrap; font-family: var(--mono); font-size: 0.75rem; color: var(--body); letter-spacing: 0.04em; }
+  .impl-stats b { color: var(--ink); }
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'%3E%3Crect width='84' height='84' fill='%230F151C'/%3E%3Cpath d='M 14 14 L 70 14 L 70 44 L 60 44 L 60 24 L 24 24 L 24 60 L 47 60 L 47 70 L 14 70 Z' fill='white'/%3E%3Crect x='54' y='54' width='16' height='16' fill='%2303CF65'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      QueryVision
+    </a>
+    <nav class="nav-links">
+      <div class="nav-drop">
+        <button type="button">Agents</button>
+        <div class="nav-drop-menu">
+          <a href="agents/query-vision.html">Query Vision <small>L'analyste — de la question au chiffre</small></a>
+          <a href="agents/spot-vision.html">Spot Vision <small>Le relais — l'information de référence</small></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button type="button">Métiers</button>
+        <div class="nav-drop-menu">
+          <a href="metiers/risques.html">Risques <small>Cartographier l'exposition en continu</small></a>
+          <a href="metiers/conformite.html">Conformité <small>La conformité, lisible à la demande</small></a>
+          <a href="metiers/audit.html">Audit &amp; Conseil interne <small>Constats, recommandations, processus</small></a>
+          <a href="metiers/finance.html">Finance <small>Clôturez. Analysez. Anticipez.</small></a>
+        </div>
+      </div>
+      <a href="index.html#souverainete">Souveraineté</a>
+      <a href="index.html#plateforme">Plateforme</a>
+      <a href="entreprise.html">Entreprise</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="#">Se connecter</a>
+      <a class="btn btn-primary" href="#contact">Demander une démo</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="kicker center rv">Entreprise</p>
+    <h1 class="rv d1">Une entreprise française, un <span class="hl-g">écosystème</span> de confiance.</h1>
+    <p class="hero-sub rv d2">QueryVision se construit avec un réseau de partenaires conseil, technologie et revente — et des engagements de transparence documentés dans notre Trust Center.</p>
+    <div class="hero-ctas rv d3" style="justify-content:center">
+      <a class="btn btn-primary" href="#partenaires">Programme partenaires <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="https://www.queryvision.ai/trust-center" target="_blank" rel="noopener">Trust Center</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME PARTENAIRES -->
+<section id="partenaires" style="padding-top: 2rem">
+  <div class="wrap">
+    <p class="kicker rv">01 — Programme partenaires</p>
+    <h2 class="sec-title rv d1">Construisons ensemble la décision data de demain.</h2>
+    <p class="sec-lead rv d2">QueryVision Partners ouvre la plateforme à un écosystème de partenaires conseil, technologie et revente. Apportez votre expertise locale, votre base clients et votre savoir-faire — nous apportons la plateforme, la marque et un programme de croissance taillé pour vous.</p>
+
+    <div class="pcat-grid">
+      <div class="pcat rv">
+        <p class="pc-cat">Cabinets de conseil &amp; intégrateurs</p>
+        <h3>Déployez la plateforme chez vos clients.</h3>
+        <p>Intégrez QueryVision dans vos missions de transformation data. Formation, certification et co-vente sur vos comptes stratégiques.</p>
+      </div>
+      <div class="pcat rv d1">
+        <p class="pc-cat">Partenaires technologiques</p>
+        <h3>Connectez votre produit à QueryVision.</h3>
+        <p>Éditeurs SaaS, plateformes data, ERP, CRM — intégrez nos APIs et apparaissez dans le marketplace QueryVision.</p>
+      </div>
+      <div class="pcat rv d1">
+        <p class="pc-cat">Revendeurs régionaux</p>
+        <h3>Ouvrez un nouveau marché.</h3>
+        <p>Représentez QueryVision dans votre territoire. Exclusivité géographique, MDF, support pré-vente dédié.</p>
+      </div>
+      <div class="pcat rv d2">
+        <p class="pc-cat">Experts data &amp; formateurs</p>
+        <h3>Formez les équipes de demain.</h3>
+        <p>Devenez QueryVision Certified Expert. Animez des formations, accompagnez les déploiements et facturez votre expertise.</p>
+      </div>
+    </div>
+
+    <p class="tiers-h rv">— Trois niveaux d'engagement —</p>
+    <div class="tier-grid">
+      <div class="tier rv">
+        <span class="tier-n">Niveau 1</span>
+        <h3>Authorized</h3>
+        <p>Formation produit + support technique. Le point d'entrée du programme.</p>
+      </div>
+      <div class="tier reco rv d1">
+        <span class="tier-badge">Recommandé</span>
+        <span class="tier-n">Niveau 2</span>
+        <h3>Certified</h3>
+        <p>Co-marketing, MDF, deal registration, formation avancée, accès roadmap.</p>
+      </div>
+      <div class="tier rv d2">
+        <span class="tier-n">Niveau 3</span>
+        <h3>Premier</h3>
+        <p>Priorité commerciale, exclusivité régionale, roadmap partagée, account team dédié.</p>
+      </div>
+    </div>
+
+    <div class="hero-ctas rv" style="margin-top: 3rem; justify-content: center">
+      <a class="btn btn-primary" href="mailto:contact@queryvision.ai?subject=Programme%20partenaires">Devenir partenaire <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST CENTER -->
+<section class="tight">
+  <div class="wrap">
+    <p class="kicker rv">02 — Transparence</p>
+    <div class="sec-band on-ink rv d1">
+      <div>
+        <h3>Le Trust Center, noir sur blanc.</h3>
+        <p>Notre Trust Center détaille l'intégralité de nos engagements : hébergement souverain, sécurité, conformité RGPD, registre des sous-traitants et audits externes.</p>
+        <div class="sb-chips">
+          <span>Hébergement souverain</span>
+          <span>RGPD</span>
+          <span>Registre des sous-traitants</span>
+          <span>Audits externes</span>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="https://www.queryvision.ai/trust-center" target="_blank" rel="noopener">Voir le Trust Center <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- IMPLANTATIONS -->
+<section id="implantations" style="background: var(--paper-deep); border-top: 1px solid var(--line)">
+  <div class="wrap">
+    <p class="kicker rv">03 — Implantations</p>
+    <h2 class="sec-title rv d1">Proches de vos équipes, partout en Europe.</h2>
+
+    <div class="office-grid">
+      <div class="office rv" style="border-top: 3px solid var(--green)">
+        <div class="of-city">Bordeaux <span style="font-size:0.75rem">★</span></div>
+        <div class="of-region">France — Nouvelle-Aquitaine</div>
+        <div class="of-status"><span class="chip green">Siège social — actif</span></div>
+      </div>
+      <div class="office rv d1">
+        <div class="of-city">Paris</div>
+        <div class="of-region">France — Île-de-France</div>
+        <div class="of-status"><span class="chip yellow">Ouverture — 2026</span></div>
+      </div>
+      <div class="office rv d1">
+        <div class="of-city">Bruxelles</div>
+        <div class="of-region">Belgique — Union Européenne</div>
+        <div class="of-status"><span class="chip yellow">Ouverture — 2026</span></div>
+      </div>
+      <div class="office rv d2">
+        <div class="of-city">Genève</div>
+        <div class="of-region">Suisse — Lac Léman</div>
+        <div class="of-status"><span class="chip gray">Ouverture — 2027</span></div>
+      </div>
+      <div class="office rv d2">
+        <div class="of-city">Luxembourg</div>
+        <div class="of-region">Luxembourg — Grand-Duché</div>
+        <div class="of-status"><span class="chip gray">Ouverture — 2027</span></div>
+      </div>
+      <div class="office rv d3">
+        <div class="of-city">Casablanca</div>
+        <div class="of-region">Maroc — Casablanca Finance City</div>
+        <div class="of-status"><span class="chip gray">Ouverture — 2027</span></div>
+      </div>
+    </div>
+    <div class="impl-stats rv">
+      <span><b>1</b> bureau actif</span>
+      <span><b>2</b> ouvertures 2026</span>
+      <span><b>3</b> ouvertures 2027</span>
+      <span>Accessible <b>partout dans le monde</b> via nos partenaires intégrateurs</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final on-ink" id="contact">
+  <div class="wrap">
+    <p class="kicker rv" style="justify-content:center">Prochaine étape</p>
+    <h2 class="rv d1">Prêt à rejoindre l'écosystème ?</h2>
+    <p class="rv d2">Décrivez votre activité, votre territoire et vos clients cibles. Nous revenons vers vous sous 48 h avec un point d'entrée concret.</p>
+    <div class="hero-ctas rv d3" style="margin-top:2.25rem">
+      <a class="btn btn-primary" href="mailto:contact@queryvision.ai?subject=Programme%20partenaires">Devenir partenaire <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="index.html">Retour à l'accueil</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          QueryVision
+        </div>
+        <p class="foot-base">FROM QUERY TO VISION<br>QueryVision S.A.S. — Bordeaux, France</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <b>Agents</b>
+          <a href="agents/query-vision.html">Query Vision</a>
+          <a href="agents/spot-vision.html">Spot Vision</a>
+        </div>
+        <div>
+          <b>Métiers</b>
+          <a href="metiers/risques.html">Risques</a>
+          <a href="metiers/conformite.html">Conformité</a>
+          <a href="metiers/audit.html">Audit &amp; Conseil</a>
+          <a href="metiers/finance.html">Finance</a>
+        </div>
+        <div>
+          <b>Société</b>
+          <a href="index.html#souverainete">Souveraineté</a>
+          <a href="entreprise.html">Entreprise</a>
+          <a href="entreprise.html#partenaires">Partenaires</a>
+          <a href="entreprise.html#implantations">Implantations</a>
+          <a href="https://www.queryvision.ai/trust-center" target="_blank" rel="noopener">Trust Center</a>
+          <a href="mailto:contact@queryvision.ai">Contact</a>
+        </div>
+        <div>
+          <b>Légal</b>
+          <a href="#">Mentions légales</a>
+          <a href="#">CGU</a>
+          <a href="#">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 QueryVision S.A.S. — Tous droits réservés.</span>
+      <span>Hébergé en France — Scaleway</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

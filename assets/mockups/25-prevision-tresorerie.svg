@@ -1,0 +1,95 @@
+<svg width="680" height="440" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+  <title>Prévision de trésorerie 12 mois</title>
+  <desc>Cash-flow prévisionnel glissant avec panneau latéral d'interprétation IA</desc>
+  <rect x="40" y="24" width="600" height="392" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="70" y="58" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Cash-flow prévisionnel — 12 mois</text>
+  <text x="610" y="58" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#C89432" text-anchor="end">1 TENSION DÉTECTÉE</text>
+  <line x1="70" y1="74" x2="610" y2="74" stroke="#2B3543" stroke-width="1"/>
+
+  <!-- Chart area: x=70→472, y=90→320 -->
+
+  <!-- Y-axis labels -->
+  <text x="66" y="324" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A5668" text-anchor="end">0</text>
+  <text x="66" y="278" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A5668" text-anchor="end">10M</text>
+  <text x="66" y="232" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A5668" text-anchor="end">20M</text>
+  <text x="66" y="186" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A5668" text-anchor="end">30M</text>
+  <text x="66" y="140" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A5668" text-anchor="end">40M</text>
+
+  <!-- Horizontal grid -->
+  <line x1="70" y1="323" x2="472" y2="323" stroke="#2B3543" stroke-width="1"/>
+  <line x1="70" y1="231" x2="472" y2="231" stroke="#2B3543" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="70" y1="185" x2="472" y2="185" stroke="#2B3543" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  <!-- Alert threshold at 10M = y=277 -->
+  <line x1="70" y1="277" x2="472" y2="277" stroke="#B24B4B" stroke-width="1.5" stroke-dasharray="6,4" stroke-opacity="0.7"/>
+  <text x="474" y="281" font-family="'JetBrains Mono',monospace" font-size="9" fill="#D07070">SEUIL</text>
+
+  <!-- Month labels: step≈36.5px, x: 70,107,143,180,216,253,289,326,362,399,435,472 -->
+  <text x="70"  y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Jul</text>
+  <text x="107" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Aoû</text>
+  <text x="143" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Sep</text>
+  <text x="180" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#D07070" text-anchor="middle">Oct</text>
+  <text x="216" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#D07070" text-anchor="middle">Nov</text>
+  <text x="253" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Déc</text>
+  <text x="289" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Jan</text>
+  <text x="326" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Fév</text>
+  <text x="362" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Mar</text>
+  <text x="399" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Avr</text>
+  <text x="435" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#4A5668" text-anchor="middle">Mai</text>
+  <text x="472" y="338" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#03CF65" text-anchor="middle">Jun</text>
+
+  <!-- Cash values: Jul:22 Aoû:20 Sep:17 Oct:13 Nov:11 Déc:15 Jan:19 Fév:22 Mar:24 Avr:26 Mai:28 Jun:30 -->
+  <!-- y = 323 - val*4.6 → 221,231,245,263,272,254,236,221,213,203,194,185 -->
+  <polygon points="70,221 107,231 143,245 180,263 216,272 253,254 289,236 326,221 362,213 399,203 435,194 472,185 472,323 70,323" fill="#03CF65" fill-opacity="0.06"/>
+  <polyline points="70,221 107,231 143,245 180,263 216,272 253,254 289,236 326,221 362,213 399,203 435,194 472,185" fill="none" stroke="#03CF65" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Data points -->
+  <circle cx="70"  cy="221" r="3" fill="#03CF65"/>
+  <circle cx="107" cy="231" r="3" fill="#03CF65"/>
+  <circle cx="143" cy="245" r="3" fill="#03CF65"/>
+  <circle cx="180" cy="263" r="4" fill="#C89432" stroke="#1C2431" stroke-width="1"/>
+  <circle cx="216" cy="272" r="4" fill="#D07070" stroke="#1C2431" stroke-width="1"/>
+  <circle cx="253" cy="254" r="3" fill="#03CF65"/>
+  <circle cx="289" cy="236" r="3" fill="#03CF65"/>
+  <circle cx="326" cy="221" r="3" fill="#03CF65"/>
+  <circle cx="362" cy="213" r="3" fill="#03CF65"/>
+  <circle cx="399" cy="203" r="3" fill="#03CF65"/>
+  <circle cx="435" cy="194" r="3" fill="#03CF65"/>
+  <circle cx="472" cy="185" r="3" fill="#03CF65"/>
+
+  <!-- Side panel: x=490→610, y=88→320 -->
+  <rect x="490" y="88" width="120" height="232" rx="6" fill="#18242F" stroke="#263040" stroke-width="1"/>
+
+  <text x="506" y="108" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1" fill="#67737F">TENSION</text>
+  <line x1="506" y1="116" x2="600" y2="116" stroke="#263040" stroke-width="1"/>
+
+  <!-- Nov data -->
+  <text x="506" y="134" font-family="-apple-system,'Inter',sans-serif" font-size="10" fill="#8C99A8">Novembre 2025</text>
+  <text x="506" y="163" font-family="Georgia,'Times New Roman',serif" font-size="28" fill="#D07070">11 M€</text>
+  <text x="506" y="180" font-family="'JetBrains Mono',monospace" font-size="9" fill="#B24B4B">Seuil : 10 M€</text>
+
+  <line x1="506" y1="192" x2="600" y2="192" stroke="#263040" stroke-width="0.5"/>
+
+  <!-- Oct data -->
+  <text x="506" y="208" font-family="-apple-system,'Inter',sans-serif" font-size="10" fill="#8C99A8">Octobre 2025</text>
+  <text x="506" y="228" font-family="Georgia,'Times New Roman',serif" font-size="20" fill="#C89432">13 M€</text>
+  <text x="506" y="244" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">Vigilance</text>
+
+  <line x1="506" y1="256" x2="600" y2="256" stroke="#263040" stroke-width="0.5"/>
+
+  <text x="506" y="273" font-family="'JetBrains Mono',monospace" font-size="9" fill="#03CF65">Analyser →</text>
+  <text x="506" y="289" font-family="-apple-system,'Inter',sans-serif" font-size="9" fill="#4A5668">SAP TRM · live</text>
+  <text x="506" y="304" font-family="-apple-system,'Inter',sans-serif" font-size="9" fill="#4A5668">Scénario central</text>
+
+  <!-- AI annotation block -->
+  <rect x="70" y="354" width="540" height="34" rx="8" fill="#1A2B3A" stroke="#293A4A" stroke-width="1"/>
+  <text x="86" y="368" font-family="'JetBrains Mono',monospace" font-size="10" fill="#03CF65" letter-spacing="1">IA ·</text>
+  <text x="110" y="368" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#9BA4AE">Tension oct.–nov. : décaissements fournisseurs &gt; encaissements clients.</text>
+  <text x="86" y="381" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#6B7A8A">Demandez : « Quels clients retardent leurs paiements ? »</text>
+
+  <!-- Footer -->
+  <line x1="70" y1="400" x2="610" y2="400" stroke="#2B3543" stroke-width="1"/>
+  <text x="70" y="415" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">Connecté à SAP TRM · Actualisé le 01/07/2025 · Scénario central</text>
+</svg>

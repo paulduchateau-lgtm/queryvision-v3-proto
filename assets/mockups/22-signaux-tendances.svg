@@ -1,0 +1,87 @@
+<svg width="680" height="440" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+  <title>Signaux et tendances marché</title>
+  <desc>Courbe de tendance mensuelle avec panneau latéral d'analyse IA des signaux détectés</desc>
+  <rect x="40" y="24" width="600" height="392" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="70" y="58" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Signaux &amp; tendances marché</text>
+  <text x="610" y="58" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#03CF65" text-anchor="end">IA ACTIVE</text>
+  <line x1="70" y1="74" x2="610" y2="74" stroke="#2B3543" stroke-width="1"/>
+
+  <!-- Chart area: x=90→420, y=90→300 (narrower to leave room for side panel) -->
+
+  <!-- Grid lines -->
+  <line x1="90" y1="300" x2="420" y2="300" stroke="#28323F" stroke-width="1"/>
+  <line x1="90" y1="258" x2="420" y2="258" stroke="#28323F" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="90" y1="216" x2="420" y2="216" stroke="#28323F" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="90" y1="174" x2="420" y2="174" stroke="#28323F" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="90" y1="132" x2="420" y2="132" stroke="#28323F" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="90" y1="90" x2="420" y2="90" stroke="#28323F" stroke-width="0.5"/>
+
+  <!-- Y-axis labels -->
+  <text x="84" y="303" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="end">0</text>
+  <text x="84" y="261" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="end">20</text>
+  <text x="84" y="219" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="end">40</text>
+  <text x="84" y="177" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="end">60</text>
+  <text x="84" y="135" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="end">80</text>
+  <text x="84" y="93" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="end">100</text>
+
+  <!-- X-axis months: 12 points, x=90→420, step=30px -->
+  <text x="90"  y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Jan</text>
+  <text x="120" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Fév</text>
+  <text x="150" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Mar</text>
+  <text x="180" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Avr</text>
+  <text x="210" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Mai</text>
+  <text x="240" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Jun</text>
+  <text x="270" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Jul</text>
+  <text x="300" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Aoû</text>
+  <text x="330" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Sep</text>
+  <text x="360" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Oct</text>
+  <text x="390" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F" text-anchor="middle">Nov</text>
+  <text x="420" y="316" font-family="'JetBrains Mono',monospace" font-size="9" fill="#03CF65" text-anchor="middle">Déc</text>
+
+  <!-- Values: 50,52,49,51,36,33,56,58,64,74,84,92 → y=300-val*2.1 -->
+  <!-- y: 195,191,197,193,224,231,182,178,166,145,124,107 -->
+  <!-- Area fill -->
+  <polygon points="90,195 120,191 150,197 180,193 210,224 240,231 270,182 300,178 330,166 360,145 390,124 420,107 420,300 90,300" fill="#8C84D8" fill-opacity="0.1"/>
+  <!-- Main line (purple) -->
+  <polyline points="90,195 120,191 150,197 180,193 210,224 240,231 270,182 300,178 330,166 360,145 390,124 420,107" fill="none" stroke="#8C84D8" stroke-width="2.5"/>
+  <!-- YoY comparison line (green dashed) -->
+  <!-- Values N-1: 42,45,42,44,30,28,48,50,55,63,72,80 → y: 212,205,212,208,237,241,199,195,185,168,149,132 -->
+  <polyline points="90,212 120,205 150,212 180,208 210,237 240,241 270,199 300,195 330,185 360,168 390,149 420,132" fill="none" stroke="#03CF65" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- Side panel: x=436→610, y=88→320 -->
+  <rect x="436" y="88" width="166" height="228" rx="6" fill="#18242F" stroke="#263040" stroke-width="1"/>
+
+  <!-- Panel header -->
+  <text x="452" y="108" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#67737F">SIGNAUX IA</text>
+  <line x1="452" y1="116" x2="588" y2="116" stroke="#263040" stroke-width="1"/>
+
+  <!-- Signal 1: PME -->
+  <rect x="448" y="124" width="6" height="6" rx="1" fill="#03CF65"/>
+  <text x="460" y="132" font-family="'JetBrains Mono',monospace" font-size="9" fill="#8C99A8">Segment PME</text>
+  <text x="452" y="155" font-family="Georgia,'Times New Roman',serif" font-size="24" fill="#03CF65">+34 %</text>
+  <text x="452" y="172" font-family="-apple-system,'Inter',sans-serif" font-size="10" fill="#67737F">vs trimestre précédent</text>
+
+  <line x1="452" y1="182" x2="588" y2="182" stroke="#263040" stroke-width="0.5"/>
+
+  <!-- Signal 2: Finance sous-indexé -->
+  <rect x="448" y="190" width="6" height="6" rx="1" fill="#C89432"/>
+  <text x="460" y="198" font-family="'JetBrains Mono',monospace" font-size="9" fill="#8C99A8">Finance &amp; Assurance</text>
+  <text x="452" y="220" font-family="Georgia,'Times New Roman',serif" font-size="24" fill="#C89432">−28 %</text>
+  <text x="452" y="237" font-family="-apple-system,'Inter',sans-serif" font-size="10" fill="#67737F">opportunité identifiée</text>
+
+  <line x1="452" y1="248" x2="588" y2="248" stroke="#263040" stroke-width="0.5"/>
+
+  <!-- CTA -->
+  <text x="452" y="266" font-family="'JetBrains Mono',monospace" font-size="10" fill="#03CF65">Voir l'analyse →</text>
+  <text x="452" y="280" font-family="-apple-system,'Inter',sans-serif" font-size="10" fill="#4A5668">12 sources · 3 signaux ext.</text>
+
+  <!-- Bottom separator + legend -->
+  <line x1="70" y1="330" x2="610" y2="330" stroke="#2B3543" stroke-width="1"/>
+  <line x1="70" y1="348" x2="90" y2="348" stroke="#8C84D8" stroke-width="2.5"/>
+  <text x="96" y="352" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#8C99A8">Cette année</text>
+  <line x1="184" y1="348" x2="204" y2="348" stroke="#03CF65" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="210" y="352" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#8C99A8">N-1</text>
+  <text x="610" y="352" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F" text-anchor="end">Croisement 12 sources internes</text>
+</svg>
