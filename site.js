@@ -1,5 +1,103 @@
 // QueryVision v3 — comportements partagés
 (function () {
+  // Clé Web3Forms (publique par conception, comme sur le site en prod :
+  // même clé que le secret VITE_WEB3FORMS_KEY des GitHub Actions du site actuel).
+  // Vide = repli gracieux : le formulaire compose un email via mailto.
+  const WEB3FORMS_KEY = '';
+  const CONTACT_EMAIL = 'contact@query.vision';
+  const LANGS = { fr: 'Français', en: 'English', es: 'Español', de: 'Deutsch' };
+  const FORM_MSG = {
+    fr: { invalid: 'Vérifiez votre nom et votre adresse e-mail.', sending: 'Envoi en cours…', sent: 'Message envoyé — nous revenons vers vous sous 48 h.', failed: "L'envoi a échoué. Écrivez-nous à " },
+    en: { invalid: 'Please check your name and email address.', sending: 'Sending…', sent: 'Message sent — we will get back to you within 48 hours.', failed: 'Sending failed. Please email us at ' },
+    es: { invalid: 'Compruebe su nombre y su dirección de correo.', sending: 'Enviando…', sent: 'Mensaje enviado — le responderemos en un plazo de 48 h.', failed: 'El envío ha fallado. Escríbanos a ' },
+    de: { invalid: 'Bitte prüfen Sie Ihren Namen und Ihre E-Mail-Adresse.', sending: 'Wird gesendet…', sent: 'Nachricht gesendet — wir melden uns innerhalb von 48 Stunden.', failed: 'Senden fehlgeschlagen. Schreiben Sie uns an ' }
+  };
+
+  // Préfixe vers la racine du site (déduit du lien site.css) + langue courante
+  const cssLink = document.querySelector('link[href$="site.css"]');
+  const rootPrefix = cssLink ? cssLink.getAttribute('href').replace('site.css', '') : '';
+  const curLang = (document.documentElement.lang || 'fr').slice(0, 2);
+
+  // ── Sélecteur de langue ──
+  function treePath() {
+    if (location.pathname.endsWith('/')) return 'index.html';
+    const depth = (rootPrefix.match(/\.\.\//g) || []).length;
+    const segs = location.pathname.split('/').filter(Boolean);
+    let path = segs.slice(-(depth + 1));
+    if (path.length && LANGS[path[0]]) path = path.slice(1);
+    return path.join('/') || 'index.html';
+  }
+  // rootPrefix pointe toujours vers la racine réelle du site (site.css n'existe qu'à la racine)
+  function langHref(code) {
+    return rootPrefix + (code === 'fr' ? '' : code + '/') + treePath();
+  }
+  const navInner = document.querySelector('.nav-inner');
+  if (navInner) {
+    const ld = document.createElement('div');
+    ld.className = 'lang-drop';
+    ld.innerHTML = '<button type="button" aria-label="Choisir la langue">' + curLang.toUpperCase() + '</button>' +
+      '<div class="lang-drop-menu">' +
+      Object.keys(LANGS).map(c => '<a href="' + langHref(c) + '"' + (c === curLang ? ' class="active"' : '') + ' hreflang="' + c + '">' + LANGS[c] + '</a>').join('') +
+      '</div>';
+    const cta = navInner.querySelector('.nav-cta');
+    if (cta) navInner.insertBefore(ld, cta); else navInner.appendChild(ld);
+  }
+
+  // ── Formulaire de contact (Web3Forms, comme la prod) ──
+  const form = document.getElementById('contact-form');
+  const msg = FORM_MSG[curLang] || FORM_MSG.fr;
+  if (form) {
+    // pré-remplissage du motif via ?motif=
+    const motif = new URLSearchParams(location.search).get('motif');
+    if (motif === 'partenariat') {
+      const r = form.querySelector('input[name="intent"][value="partner"]');
+      if (r) r.checked = true;
+    }
+    const status = document.getElementById('form-status');
+    const btn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (form.querySelector('[name="botcheck"]').value) return; // honeypot
+      const data = Object.fromEntries(new FormData(form).entries());
+      delete data.botcheck;
+      if (!data.name || !data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(data.email))) {
+        status.textContent = msg.invalid;
+        status.className = 'form-status err';
+        return;
+      }
+      if (!WEB3FORMS_KEY) {
+        // Repli sans clé : composition d'un email
+        const body = encodeURIComponent(
+          'Nom : ' + data.name + '\nSociété : ' + (data.company || '—') + '\nFonction : ' + (data.role || '—') +
+          '\nMotif : ' + (data.intent || 'demo') + '\n\n' + (data.message || ''));
+        location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Contact site — ' + data.name) + '&body=' + body;
+        return;
+      }
+      btn.disabled = true;
+      status.textContent = msg.sending;
+      status.className = 'form-status';
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject: 'Contact site QueryVision — ' + data.name, from_name: 'Site QueryVision', botcheck: '', ...data })
+        });
+        const out = await res.json().catch(() => null);
+        if (res.ok && out && out.success) {
+          form.reset();
+          status.textContent = msg.sent;
+          status.className = 'form-status ok';
+        } else {
+          status.textContent = msg.failed + CONTACT_EMAIL + '.';
+          status.className = 'form-status err';
+        }
+      } catch (err) {
+        status.textContent = msg.failed + CONTACT_EMAIL + '.';
+        status.className = 'form-status err';
+      }
+      btn.disabled = false;
+    });
+  }
   // Nav : densification au scroll
   const nav = document.getElementById('nav');
   if (nav) addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 24), { passive: true });

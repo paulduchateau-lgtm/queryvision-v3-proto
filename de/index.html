@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QueryVision — Souveräne KI-Agenten für Risikomanagement, Compliance, Audit &amp; Finanzen</title>
+<meta name="description" content="QueryVision stellt KI-Agenten bereit, die Ihre Funktionen Risikomanagement, Compliance, Audit, Interne Beratung und Finanzen beherrschen — auf einer dedizierten Infrastruktur in Frankreich.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'%3E%3Crect width='84' height='84' fill='%230F151C'/%3E%3Cpath d='M 14 14 L 70 14 L 70 44 L 60 44 L 60 24 L 24 24 L 24 60 L 47 60 L 47 70 L 14 70 Z' fill='white'/%3E%3Crect x='54' y='54' width='16' height='16' fill='%2303CF65'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      QueryVision
+    </a>
+    <nav class="nav-links">
+      <div class="nav-drop">
+        <button type="button">Agenten</button>
+        <div class="nav-drop-menu">
+          <a href="agents/query-vision.html">Query Vision <small>Der Analyst — von der Frage zur Zahl</small></a>
+          <a href="agents/spot-vision.html">Spot Vision <small>Der Vermittler — die verlässliche Referenzinformation</small></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button type="button">Fachbereiche</button>
+        <div class="nav-drop-menu">
+          <a href="metiers/risques.html">Risikomanagement <small>Exposition laufend kartieren</small></a>
+          <a href="metiers/conformite.html">Compliance <small>Compliance, lesbar auf Abruf</small></a>
+          <a href="metiers/audit.html">Revision &amp; Interne Beratung <small>Feststellungen, Empfehlungen, Prozesse</small></a>
+          <a href="metiers/finance.html">Finanzen <small>Abschließen. Analysieren. Vorausschauen.</small></a>
+        </div>
+      </div>
+      <a href="#souverainete">Souveränität</a>
+      <a href="#plateforme">Plattform</a>
+      <a href="entreprise.html">Unternehmen</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.demo.query.vision/login">Anmelden</a>
+      <a class="btn btn-primary" href="contact.html">Demo anfragen</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ HERO CENTRÉ + SCÈNE ═══ -->
+<section class="hero centered">
+  <div class="wrap">
+    <div class="hero-head">
+      <span class="hero-eyebrow rv">KI-Agenten — Experten für Ihre Fachbereiche</span>
+      <h1 class="rv d1">Ihre Daten werden<br><span class="hl">endlich</span> mit Ihnen sprechen.</h1>
+      <p class="hero-sub rv d2"><strong>Beobachten, verstehen und handeln</strong> — mit unserer KI-Plattform, die Ihre Daten <strong>zugänglich und aussagekräftig</strong> macht: auf einer dedizierten Infrastruktur in Frankreich.</p>
+      <div class="hero-ctas rv d3">
+        <a class="btn btn-primary" href="contact.html">Demo anfragen <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#agents">Die Agenten entdecken</a>
+      </div>
+      <div class="hero-meta rv d3">
+        <span><span class="tick">✓</span> Hosting in Frankreich — Scaleway</span>
+        <span><span class="tick">✓</span> 1 Kunde = 1 dedizierte Infrastruktur</span>
+        <span><span class="tick">✓</span> Keine Daten für das Training verwendet</span>
+      </div>
+    </div>
+
+    <div class="stage rv" id="stage-demo">
+      <div class="fc dim" style="left: -3%; top: 2rem; width: 24rem;"><img src="../assets/mockups/05-matrice-criticite.svg" alt="Kritikalitätsmatrix"></div>
+      <div class="fc" style="left: 2%; top: 17rem; width: 21rem;"><img src="../assets/mockups/04-anneau-repartition.svg" alt="Verteilung nach Bereich"></div>
+      <div class="fc dim" style="right: -3%; top: 1rem; width: 24rem;"><img src="../assets/mockups/12-couverture-reglementaire.svg" alt="Regulatorische Abdeckung"></div>
+      <div class="fc" style="right: 1%; top: 16rem; width: 23rem;"><img src="../assets/mockups/25-prevision-tresorerie.svg" alt="Liquiditätsprognose"></div>
+
+      <div class="chat-card">
+        <div class="cc-head">
+          <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          Query Vision
+          <span class="cc-role">Analyse-Agent</span>
+        </div>
+        <div class="cm cm-1 cm-user">Kannst du die Entwicklung unserer Lieferantenrisiken in diesem Quartal analysieren?</div>
+        <div class="cm cm-2 cm-process">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Abfrage generiert, geprüft, ausgeführt — 0,6 s
+        </div>
+        <div class="cm cm-3 cm-answer">Ich habe eine detaillierte Analyse Ihrer Lieferantenexposition vorbereitet:</div>
+        <a class="cm cm-4 cm-doc" href="agents/query-vision.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Lieferantenexposition — Q2 2026
+          <span class="cd-arr">›</span>
+        </a>
+        <div class="cc-input"><span class="plus">+</span> Stellen Sie eine Frage oder erstellen Sie einen Bericht …</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 01 AGENTS ═══ -->
+<section id="agents" style="padding-top: 4.5rem">
+  <div class="wrap">
+    <p class="kicker rv">01 — Die Agenten</p>
+    <h2 class="sec-title rv d1">Zwei Agenten. Zwei Wege, Ihre Daten für sich arbeiten zu lassen.</h2>
+    <p class="sec-lead rv d2">Kein generischer Chatbot: spezialisierte Agenten, gesteuert pro Workspace, mit Rechten pro Produkt und pro Nutzer.</p>
+
+    <div class="agents-grid">
+      <article class="agent-card qv rv">
+        <div class="agent-copy">
+          <span class="agent-tag">Agent 01</span>
+          <h3>Query Vision</h3>
+          <p class="role">Der Analyst — von der Frage zur Zahl</p>
+          <p class="desc">Stellen Sie eine Fachfrage in natürlicher Sprache. Query Vision fragt Ihre Daten ab, generiert und prüft die Abfrage und liefert einen Bericht mit Zahlen, Visualisierungen und Begründung.</p>
+          <ul class="agent-feats">
+            <li>Abfrage generiert, validiert und offengelegt — keine Blackbox</li>
+            <li>Belegte Antworten: Filter, Datenumfang und Daten sichtbar</li>
+            <li>Berichte und Kartierungen im Handumdrehen zusammengestellt</li>
+            <li>Jede Ausführung im Audit-Log protokolliert</li>
+          </ul>
+          <div class="agent-cta"><a href="agents/query-vision.html">Agent entdecken →</a></div>
+        </div>
+        <div class="agent-visual">
+          <div class="shot light">
+            <div class="shot-viewport" data-w="1440" data-h="880" data-theme="light">
+              <iframe src="../assets/proto/query-vision.html" loading="eager" tabindex="-1" title="Query Vision — Bericht Risikokartierung"></iframe>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="agent-card sv rv">
+        <div class="agent-copy">
+          <span class="agent-tag">Agent 02</span>
+          <h3>Spot Vision</h3>
+          <p class="role">Der Vermittler — Referenzinformation in Echtzeit</p>
+          <p class="desc">Ihre Teams navigieren in natürlicher Sprache durch die Dokumentation, die Sie der Plattform anvertrauen — interne Verfahren, Vertragshistorien, Finanzarchive, Strategieplan — und erhalten inhaltstreue Antworten, in ihrem Berechtigungsbereich.</p>
+          <ul class="agent-feats">
+            <li>Antworten strikt auf Basis der anvertrauten Inhalte, nichts anderes</li>
+            <li>Abgeschotteter Umfang pro Workspace und Zugriffsrecht</li>
+            <li>Einheitliche Verbreitung der Information in der Organisation</li>
+            <li>Bewährte Technologiebausteine auf dem Stand der Technik</li>
+          </ul>
+          <div class="agent-cta"><a href="agents/spot-vision.html">Agent entdecken →</a></div>
+        </div>
+        <div class="agent-visual">
+          <div class="shot light">
+            <div class="shot-viewport" data-w="1440" data-h="880" data-theme="light">
+              <iframe src="../assets/proto/spot-vision.html" loading="eager" tabindex="-1" title="Spot Vision — Konversation"></iframe>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 MÉTIERS (onglets) ═══ -->
+<section id="metiers" style="padding-top: 2rem">
+  <div class="wrap">
+    <p class="kicker rv">02 — Anwendungsfälle nach Fachbereich</p>
+    <h2 class="sec-title rv d1">Entwickelt für Funktionen, die sich kein Ungefähr leisten können.</h2>
+    <p class="sec-lead rv d2">Die Stärke von QueryVision ist nicht nur technologischer Natur: Jeder Bereich bringt ein fachliches Referenzkorpus mit, aufgebaut mit Praktikern.</p>
+
+    <div class="tabs-bar rv" role="tablist">
+      <button class="tab-btn active" data-tab="risques" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Risikomanagement</button>
+      <button class="tab-btn" data-tab="conformite" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Compliance</button>
+      <button class="tab-btn" data-tab="audit" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Interne Revision</button>
+      <button class="tab-btn" data-tab="conseil" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Interne Beratung</button>
+      <button class="tab-btn" data-tab="finance" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Finanzen</button>
+    </div>
+
+    <!-- RISQUES -->
+    <div class="tab-pane active" id="pane-risques" style="--acc: var(--terra)">
+      <div class="tab-copy">
+        <h3>Risikomanagement</h3>
+        <p class="t-desc">Bei jeder Frage aktuelle Risikokartierungen, Expositionskonzentration je Einheit, Verfolgung der Maßnahmenpläne — die konsolidierte Sicht, die der Vorstand erwartet, ohne drei Wochen Tabellenkalkulation.</p>
+        <div class="tab-q">Wie hoch ist die Netto-Kritikalität der Hauptrisiken je Einheit, und wie ist der Stand der Gegenmaßnahmen?</div>
+        <div class="tab-corpus">
+          <div class="tc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <p><b>Integriertes Fachkorpus</b> — Referenzrahmen und Marktpraktiken der <b>AMRAE</b> (Risikomanagement), hinterlegt in Query Vision und Spot Vision.</p>
+        </div>
+        <p class="tab-more"><a href="metiers/risques.html">Fachbereich Risikomanagement entdecken →</a></p>
+      </div>
+      <div class="app-card">
+        <div class="app-head">
+          <svg class="ah-glyph" viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          <div><div class="ah-title">Netto-Kritikalität je Einheit</div><div class="ah-sub">BERICHT — ERSTELLT AM 28.07.2026</div></div>
+          <span class="ah-badge">Validiert</span>
+        </div>
+        <div class="app-body">
+          <div>
+            <div class="app-sec-title">Heatmap — Netto-Kritikalität (Wahrscheinlichkeit × Auswirkung)</div>
+            <div class="hm">
+              <span></span>
+              <span class="hm-h">Cyber</span><span class="hm-h">Dienstleister</span><span class="hm-h">Kontinuität</span><span class="hm-h">Compliance</span><span class="hm-h">Betrug</span>
+              <span class="hm-r">Maison Santé</span><span class="hm-c c4">14,2</span><span class="hm-c c5">16,8</span><span class="hm-c c2">8,4</span><span class="hm-c c3">11,9</span><span class="hm-c c1">5,2</span>
+              <span class="hm-r">Maison Prévoyance</span><span class="hm-c c3">12,1</span><span class="hm-c c2">9,6</span><span class="hm-c c4">13,8</span><span class="hm-c c2">8,9</span><span class="hm-c c1">4,1</span>
+              <span class="hm-r">Maison Retraite</span><span class="hm-c c2">9,2</span><span class="hm-c c3">10,4</span><span class="hm-c c1">6,1</span><span class="hm-c c3">11,2</span><span class="hm-c c2">7,8</span>
+              <span class="hm-r">Konzern-IT</span><span class="hm-c c5">15,2</span><span class="hm-c c4">13,1</span><span class="hm-c c3">12,4</span><span class="hm-c c2">7,4</span><span class="hm-c c1">3,9</span>
+            </div>
+          </div>
+          <div>
+            <div class="app-sec-title">Gegenmaßnahmen — kritische Risiken</div>
+            <table class="app-table">
+              <tr><th>Risiko</th><th>Laufende Maßnahme</th><th>Status</th></tr>
+              <tr><td>Ausfall eines kritischen Dienstleisters</td><td>Exit-Plan + verstärkte Auditklausel</td><td><span class="chip yellow">Läuft — 60 %</span></td></tr>
+              <tr><td>Cyber — Ransomware</td><td>Unveränderliche Backups + Krisenübung Q3</td><td><span class="chip green">Umgesetzt</span></td></tr>
+              <tr><td>Geschäftskontinuität</td><td>BCM-Plan Maison Prévoyance — Test zu planen</td><td><span class="chip red">Überfällig</span></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONFORMITÉ -->
+    <div class="tab-pane" id="pane-conformite" style="--acc: var(--green-dark)">
+      <div class="tab-copy">
+        <h3>Compliance</h3>
+        <p class="t-desc">Der Status jeder Anforderung, laufend aktuell: konform, zu beobachten, nicht konform — mit vorgeschlagener Korrekturmaßnahme und Frist. Die Auditvorbereitung ist keine Rekonstruktion in letzter Minute mehr.</p>
+        <div class="tab-q">Wo stehen wir bei ISO 27001, und welche Korrekturmaßnahmen sind noch offen?</div>
+        <div class="tab-corpus">
+          <div class="tc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <p><b>Integriertes Fachkorpus</b> — normative Referenzwerke der <b>AFNOR</b> (ISO 27001, ISO 22301), hinterlegt in Query Vision und Spot Vision.</p>
+        </div>
+        <p class="tab-more"><a href="metiers/conformite.html">Fachbereich Compliance entdecken →</a></p>
+      </div>
+      <div class="app-card">
+        <div class="app-head">
+          <svg class="ah-glyph" viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          <div><div class="ah-title">ISO-27001-Monitoring — Anhang A</div><div class="ah-sub">KONTROLLEN — HEUTE AKTUALISIERT</div></div>
+          <span class="ah-badge">87 % konform</span>
+        </div>
+        <div class="app-body">
+          <table class="app-table">
+            <tr><th style="width:38%">Anforderung</th><th style="width:14%">Status</th><th>Vorgeschlagene Korrekturmaßnahme</th></tr>
+            <tr><td><b>A.5</b> — Informationssicherheitsrichtlinien</td><td><span class="chip green">● Konform</span></td><td style="color:#8a9199">—</td></tr>
+            <tr><td><b>A.8</b> — Asset-Management</td><td><span class="chip yellow">● Zu beobachten</span></td><td>SaaS-Asset-Inventar bis zum 15.09. vervollständigen — verantwortlich: IT-Leitung</td></tr>
+            <tr><td><b>A.9</b> — Zugriffskontrolle</td><td><span class="chip green">● Konform</span></td><td style="color:#8a9199">—</td></tr>
+            <tr><td><b>A.12</b> — Betriebssicherheit</td><td><span class="chip red">● Nicht konform</span></td><td>Zentrales Logging auf den 3 verbleibenden Anwendungen aktivieren — Plan in 4 Schritten vorgeschlagen</td></tr>
+            <tr><td><b>A.16</b> — Incident-Management</td><td><span class="chip yellow">● Zu beobachten</span></td><td>Lessons Learned der 2 Vorfälle aus Q2 formalisieren — vorausgefüllte Vorlage verfügbar</td></tr>
+            <tr><td><b>A.17</b> — Geschäftskontinuität</td><td><span class="chip green">● Konform</span></td><td style="color:#8a9199">—</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIT -->
+    <div class="tab-pane" id="pane-audit" style="--acc: var(--blue)">
+      <div class="tab-copy">
+        <h3>Interne Revision</h3>
+        <p class="t-desc">Der Revisor fragt den Stand der Empfehlungen so ab, wie er die Frage dem Team stellen würde: in natürlicher Sprache, mit belegten Antworten aus dem Follow-up-Register — Status, Nachweise, Verzögerungen.</p>
+        <div class="tab-q">Wurden die Empfehlungen des Einkaufsaudits 2025 umgesetzt?</div>
+        <div class="tab-corpus">
+          <div class="tc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <p><b>Integriertes Fachkorpus</b> — Rahmenwerk und Standards des <b>IFACI</b> (Interne Revision und Kontrolle), hinterlegt in Query Vision und Spot Vision.</p>
+        </div>
+        <p class="tab-more"><a href="metiers/audit.html">Fachbereich Revision entdecken →</a></p>
+      </div>
+      <div class="app-card">
+        <div class="app-head">
+          <svg class="ah-glyph" viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          <div><div class="ah-title">Follow-up der Empfehlungen</div><div class="ah-sub">SPOT VISION — WORKSPACE REVISION</div></div>
+        </div>
+        <div class="app-body">
+          <div class="chat">
+            <div class="msg-q">Wurden die Empfehlungen des Einkaufsaudits 2025 umgesetzt?</div>
+            <div class="msg-a">
+              <div class="qv-dot"><svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0a7c42"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg></div>
+              <div class="a-body">
+                Von den <b>9 Empfehlungen</b> aus dem Audit des Einkaufsprozesses (Bericht vom November 2025) sind <b>7 abgeschlossen</b>, 1 läuft, 1 ist überfällig:
+                <ul>
+                  <li><b>Abgeschlossen (7)</b> — darunter die Funktionstrennung Bestellung/Wareneingang und die Schwelle zur Doppelfreigabe ab 25.000 €, im Q2 mit Nachweisen geprüft.</li>
+                  <li><b>Laufend (1)</b> — die jährliche Überprüfung der gelisteten Lieferanten, geplant für September 2026.</li>
+                  <li><b>Überfällig (1)</b> — die Digitalisierung der Leistungsaufträge, Frist um 2 Monate überschritten — verantwortlich: Einkaufsleitung.</li>
+                </ul>
+                <div class="src-chips"><span>Follow-up-Plan — Einkaufsaudit 2025</span><span>Nachweise Q2 2026 — Ordner 4</span><span>IFACI-Rahmenwerk — Standard 2500</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSEIL -->
+    <div class="tab-pane" id="pane-conseil" style="--acc: var(--purple)">
+      <div class="tab-copy">
+        <h3>Interne Beratung</h3>
+        <p class="t-desc">Interne Berater kartieren Prozesse und identifizieren kritische Pfade direkt aus den Aktivitätsdaten — reale Durchlaufzeiten, Engpässe, Vereinfachungspotenziale.</p>
+        <div class="tab-q">Was ist der kritische Pfad bei der Bearbeitung einer Beschwerde, und wo geht Zeit verloren?</div>
+        <div class="tab-corpus">
+          <div class="tc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <p><b>Integriertes Fachkorpus</b> — Methoden und Referenzwerke von <b>Syntec Conseil</b> (Beratung und Transformation), hinterlegt in Query Vision und Spot Vision.</p>
+        </div>
+        <p class="tab-more"><a href="metiers/audit.html">Revision &amp; Interne Beratung entdecken →</a></p>
+      </div>
+      <div class="app-card">
+        <div class="app-head">
+          <svg class="ah-glyph" viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          <div><div class="ah-title">Bearbeitung einer Beschwerde — kritischer Pfad</div><div class="ah-sub">PROZESSANALYSE — 4.512 VORGÄNGE, 12 MONATE</div></div>
+          <span class="ah-badge">Generiert</span>
+        </div>
+        <div class="app-body">
+          <svg viewBox="0 0 640 300" style="width:100%;height:auto" font-family="'Hanken Grotesk',sans-serif">
+            <defs>
+              <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#9ba4ae"/></marker>
+              <marker id="arrc" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#D96A44"/></marker>
+            </defs>
+            <g font-size="12.5" font-weight="600">
+              <rect x="10" y="120" width="100" height="52" rx="8" fill="#fff" stroke="#D96A44" stroke-width="2"/>
+              <text x="60" y="142" text-anchor="middle" fill="#0F151C">Eingang</text>
+              <text x="60" y="159" text-anchor="middle" font-size="10.5" font-weight="500" fill="#D96A44" font-family="'JetBrains Mono',monospace">0,5 Tage</text>
+              <rect x="150" y="120" width="110" height="52" rx="8" fill="#fff" stroke="#D96A44" stroke-width="2"/>
+              <text x="205" y="142" text-anchor="middle" fill="#0F151C">Qualifizierung</text>
+              <text x="205" y="159" text-anchor="middle" font-size="10.5" font-weight="500" fill="#D96A44" font-family="'JetBrains Mono',monospace">1,2 Tage</text>
+              <rect x="300" y="40" width="120" height="52" rx="8" fill="#fff" stroke="#dfe5e1" stroke-width="1.5"/>
+              <text x="360" y="62" text-anchor="middle" fill="#0F151C">Einfache Analyse</text>
+              <text x="360" y="79" text-anchor="middle" font-size="10.5" font-weight="500" fill="#6b7480" font-family="'JetBrains Mono',monospace">2,1 Tage — 71 %</text>
+              <rect x="300" y="196" width="120" height="52" rx="8" fill="#fdf4f0" stroke="#D96A44" stroke-width="2"/>
+              <text x="360" y="218" text-anchor="middle" fill="#0F151C">Expertise</text>
+              <text x="360" y="235" text-anchor="middle" font-size="10.5" font-weight="500" fill="#D96A44" font-family="'JetBrains Mono',monospace">6,8 Tage — 29 %</text>
+              <rect x="460" y="120" width="100" height="52" rx="8" fill="#fff" stroke="#D96A44" stroke-width="2"/>
+              <text x="510" y="142" text-anchor="middle" fill="#0F151C">Freigabe</text>
+              <text x="510" y="159" text-anchor="middle" font-size="10.5" font-weight="500" fill="#D96A44" font-family="'JetBrains Mono',monospace">2,3 Tage</text>
+              <rect x="585" y="120" width="48" height="52" rx="26" fill="#e3f6eb" stroke="#0a7c42" stroke-width="1.5"/>
+              <text x="609" y="151" text-anchor="middle" font-size="11" fill="#0a7c42" font-weight="700">OK</text>
+            </g>
+            <line x1="110" y1="146" x2="146" y2="146" stroke="#D96A44" stroke-width="2" marker-end="url(#arrc)"/>
+            <path d="M260 132 C280 110 285 78 296 70" fill="none" stroke="#9ba4ae" stroke-width="1.5" marker-end="url(#arr)"/>
+            <path d="M260 160 C280 182 285 214 296 222" fill="none" stroke="#D96A44" stroke-width="2" marker-end="url(#arrc)"/>
+            <path d="M420 66 C444 76 448 112 458 126" fill="none" stroke="#9ba4ae" stroke-width="1.5" marker-end="url(#arr)"/>
+            <path d="M420 222 C444 212 448 180 458 166" fill="none" stroke="#D96A44" stroke-width="2" marker-end="url(#arrc)"/>
+            <line x1="560" y1="146" x2="581" y2="146" stroke="#D96A44" stroke-width="2" marker-end="url(#arrc)"/>
+            <rect x="150" y="272" width="340" height="1" fill="#f0ede7"/>
+            <text x="320" y="292" text-anchor="middle" font-size="11.5" fill="#444c56"><tspan font-weight="700" fill="#D96A44">Kritischer Pfad: 11,3 Tage</tspan> — der Schritt Expertise bündelt 60 % der Durchlaufzeit</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCE -->
+    <div class="tab-pane" id="pane-finance" style="--acc: var(--sun)">
+      <div class="tab-copy">
+        <h3>Finanzen</h3>
+        <p class="t-desc">Jahresend-Forecast, Abweichungen, Ergebnisbeitrag je Aktivität — der Steuerungsdialog stützt sich auf live abfragbare Zahlen, aufbereitet in der Sprache der Geschäftsleitung.</p>
+        <div class="tab-q">Wie sieht der Forecast 2026 je Aktivität aus, und welche Abweichungen erklären die Differenz zum Budget?</div>
+        <div class="tab-corpus">
+          <div class="tc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <p><b>Integriertes Fachkorpus</b> — Referenzwerke und Praktiken der <b>DFCG</b> (Finanzabteilungen und Controlling), hinterlegt in Query Vision und Spot Vision.</p>
+        </div>
+        <p class="tab-more"><a href="metiers/finance.html">Fachbereich Finanzen entdecken →</a></p>
+      </div>
+      <div class="app-card">
+        <div class="app-head">
+          <svg class="ah-glyph" viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          <div><div class="ah-title">Forecast 2026 — Management-Übersicht</div><div class="ah-sub">BERICHT — SZENARIO REFORECAST Q2</div></div>
+          <span class="ah-badge">Validiert</span>
+        </div>
+        <div class="app-body">
+          <div class="kpi-row">
+            <div class="kpi"><div class="k-l">Umsatz YTD</div><div class="k-v">128,4 Mio. €</div><div class="k-d up">+3,2 % vs. Budget</div></div>
+            <div class="kpi"><div class="k-l">Nettomarge</div><div class="k-v">12,8 %</div><div class="k-d up">+0,4 Pkt.</div></div>
+            <div class="kpi"><div class="k-l">OPEX YTD</div><div class="k-v">31,2 Mio. €</div><div class="k-d down">+1,8 % vs. Budget</div></div>
+            <div class="kpi"><div class="k-l">Forecast</div><div class="k-v">196 Mio. €</div><div class="k-d up">+2,1 % vs. Budget</div></div>
+          </div>
+          <div>
+            <div class="app-sec-title">Ist vs. Budget — Monatsumsatz (Mio. €)</div>
+            <svg viewBox="0 0 600 130" style="width:100%;height:auto">
+              <g>
+                <rect x="30"  y="52" width="26" height="70" rx="3" fill="#EEECE7"/><rect x="60"  y="44" width="26" height="78" rx="3" fill="#E8A33D"/>
+                <rect x="125" y="46" width="26" height="76" rx="3" fill="#EEECE7"/><rect x="155" y="52" width="26" height="70" rx="3" fill="#E8A33D"/>
+                <rect x="220" y="40" width="26" height="82" rx="3" fill="#EEECE7"/><rect x="250" y="30" width="26" height="92" rx="3" fill="#E8A33D"/>
+                <rect x="315" y="44" width="26" height="78" rx="3" fill="#EEECE7"/><rect x="345" y="38" width="26" height="84" rx="3" fill="#E8A33D"/>
+                <rect x="410" y="36" width="26" height="86" rx="3" fill="#EEECE7"/><rect x="440" y="28" width="26" height="94" rx="3" fill="#E8A33D"/>
+                <rect x="505" y="42" width="26" height="80" rx="3" fill="#EEECE7"/><rect x="535" y="24" width="26" height="98" rx="3" fill="#E8A33D"/>
+              </g>
+              <line x1="20" y1="122" x2="580" y2="122" stroke="#e6ebe8" stroke-width="1.5"/>
+              <g font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#6b7480">
+                <text x="58"  y="135" text-anchor="middle">JAN</text><text x="153" y="135" text-anchor="middle">FEB</text>
+                <text x="248" y="135" text-anchor="middle">MÄR</text><text x="343" y="135" text-anchor="middle">APR</text>
+                <text x="438" y="135" text-anchor="middle">MAI</text><text x="533" y="135" text-anchor="middle">JUN</text>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <table class="app-table">
+              <tr><th>Abweichung</th><th>Auswirkung</th><th>Bewertung</th></tr>
+              <tr><td>Volumen — Geschäftsfeld Gesundheit</td><td style="font-family:var(--mono)">+2,4 Mio. €</td><td><span class="chip green">Positiv</span></td></tr>
+              <tr><td>Preis — Neuverhandlung Dienstleister</td><td style="font-family:var(--mono)">−0,8 Mio. €</td><td><span class="chip yellow">Zu beobachten</span></td></tr>
+              <tr><td>Kosten — Personalaufwand</td><td style="font-family:var(--mono)">−0,3 Mio. €</td><td><span class="chip gray">Planmäßig</span></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CITATION ═══ -->
+<div class="quote-band">
+  <div class="quote-inner rv">
+    <blockquote><span class="qm">„</span>Zum ersten Mal spricht ein Werkzeug die Sprache meiner Abteilung. Die Kartierungen, für deren Konsolidierung wir drei Wochen brauchten, sind bei jeder Frage aktuell — und ich kann jede Zahl vor dem Vorstand belegen.<span class="qm">“</span></blockquote>
+    <div class="quote-author">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Porträt — Hélène Vasseur">
+      <div>
+        <div class="qa-name">Hélène Vasseur</div>
+        <div class="qa-role">Leiterin Risikomanagement — Versicherungsgruppe auf Gegenseitigkeit</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 03 SOUVERAINETÉ ═══ -->
+<section class="sov on-ink" id="souverainete">
+  <div class="wrap">
+    <p class="kicker rv">03 — Souveränität &amp; Sicherheit</p>
+    <h2 class="sec-title rv d1" style="color:#fff">Ihre Daten bleiben bei Ihnen. Wirklich.</h2>
+    <p class="sec-lead rv d2">Das ist keine Konfigurationsoption, sondern die Architektur selbst. So wird Ihre Plattform bereitgestellt — ganz einfach erklärt.</p>
+
+    <!-- 1 · schéma -->
+    <div class="flow rv">
+      <div class="flow-node src">
+        <span class="fn-step">Schritt 1</span>
+        <div class="fn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h4>Ihre Daten</h4>
+        <p>Ihre gewohnten Dateien — Excel, BI-Exporte — abgelegt in Ihrem gesicherten Bereich. Kein IT-Projekt auf Ihrer Seite.</p>
+      </div>
+      <div class="flow-link">
+        <svg preserveAspectRatio="none" viewBox="0 0 100 14"><line class="dash" x1="0" y1="7" x2="100" y2="7"/></svg>
+        <span class="fl-tag">verschlüsselt</span>
+      </div>
+      <div class="flow-node intake">
+        <span class="fn-step">Schritt 2</span>
+        <div class="fn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h4>Data Quality &amp; Integration</h4>
+        <p>Unser Data-Quality-&amp;-Integration-Team steuert Aufbereitung, Qualitätskontrolle und Integration Ihrer Daten über unser proprietäres <b>Secure Intake Gateway</b>. Nichts geht ohne Validierung in Produktion.</p>
+        <span class="fn-tagline">SECURE INTAKE GATEWAY™</span>
+      </div>
+      <div class="flow-link">
+        <svg preserveAspectRatio="none" viewBox="0 0 100 14"><line class="dash" x1="0" y1="7" x2="100" y2="7"/></svg>
+        <span class="fl-tag">validierte Daten</span>
+      </div>
+      <div class="flow-node infra">
+        <span class="fn-step">Schritt 3</span>
+        <div class="infra-head">
+          <span class="flag"><i style="background:#0055A4"></i><i style="background:#fff"></i><i style="background:#EF4135"></i></span>
+          <h4>Ihre dedizierte Infrastruktur</h4>
+          <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        </div>
+        <p>Eine isolierte Umgebung, nur für Sie aufgebaut, aus standardisierten und bewährten Bausteinen — dieselbe industrielle Basis für jeden Kunden, niemals zwischen Kunden geteilt.</p>
+        <div class="infra-tiles">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 3v18h18"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Query Vision</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>Spot Vision</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>Ihre Daten</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>KI-Modelle</span>
+        </div>
+        <div class="infra-foot">Gehostet in <b>Frankreich</b> bei Scaleway — die Modelle laufen <b>innerhalb</b> der Infrastruktur, <b>kein ausgehender Datenfluss</b> zu Dritten</div>
+      </div>
+    </div>
+    <div class="flow-caption rv">
+      <span><span class="ok">→</span> Ihre Teams greifen per SSO zu, Ende-zu-Ende verschlüsselt</span>
+      <span><span class="no">✕</span> Keine Daten verlassen die Umgebung — weder zu uns noch zu Dritten noch zu einem öffentlichen Modell</span>
+    </div>
+
+    <!-- 2 · garanties -->
+    <p class="sov-block-title rv">Die Garantien</p>
+    <div class="sov-grid">
+      <div class="sov-card rv"><div class="s-num">SOV-01</div><h3>1 Kunde = 1 dedizierte Infrastruktur</h3><p>Jeder Kunde verfügt über seine eigene isolierte Infrastruktur. Keine gemeinsame Datenhaltung, keine Nachbarschaft.</p></div>
+      <div class="sov-card rv d1"><div class="s-num">SOV-02</div><h3>Hosting in Frankreich</h3><p>Infrastrukturen betrieben bei Scaleway, in Frankreich — außerhalb der Reichweite extraterritorialer Gesetzgebungen.</p></div>
+      <div class="sov-card rv d2"><div class="s-num">SOV-03</div><h3>Kein Training mit Ihren Daten</h3><p>Vertragliche Garantie: Ihre Daten dienen niemals dem Training eines Modells — weder unserer noch der von Dritten.</p></div>
+      <div class="sov-card rv"><div class="s-num">SEC-01</div><h3>Jede Abfrage ist auditierbar</h3><p>Natives Audit-Log: Wer hat was angefragt, welche Abfrage wurde ausgeführt, auf welchem Datenumfang, mit welchem Ergebnis.</p></div>
+      <div class="sov-card rv d1"><div class="s-num">SEC-02</div><h3>Rechte pro Workspace und pro Produkt</h3><p>Die Abschottung folgt Ihrer Organisation: Jeder Workspace ist ein Datenperimeter, jeder Agent hat eigene Rechte.</p></div>
+      <div class="sov-card rv d2"><div class="s-num">SEC-03</div><h3>Ende-zu-Ende-Verschlüsselung</h3><p>Neueste Protokolle zur Absicherung der Kommunikation, Verschlüsselung der Datenbank, Abschottung der Informationen.</p></div>
+    </div>
+
+    <!-- 3 · console -->
+    <p class="sov-block-title rv">Und Sie behalten die Kontrolle</p>
+    <div class="sov-shot">
+      <div class="sov-shot-copy rv">
+        <h3>Eine Administrationskonsole, wie bei den großen Cloud-Anbietern.</h3>
+        <p>Ihre Organisation steuert Vertrag und Infrastruktur in voller Transparenz — ohne von uns abhängig zu sein.</p>
+        <ul>
+          <li>Abonnement, Lizenzen und KI-Budget in Echtzeit</li>
+          <li>Ausgaben aufgeschlüsselt nach Workspace</li>
+          <li>Schwellenwert-Alarme und Überschreitungsrichtlinien</li>
+          <li>Rechnungen, API-Schlüssel und Audit-Log</li>
+        </ul>
+      </div>
+      <div class="rv d1">
+        <div class="shot">
+          <div class="shot-chrome"><span class="url">console.queryvision.ai — Abonnement &amp; Ausgaben</span></div>
+          <div class="shot-viewport" data-w="1440" data-h="880" data-theme="dark">
+            <iframe src="../assets/proto/billing.html" loading="eager" tabindex="-1" title="Konsole — Abonnement und Ausgaben"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 · hébergement & modèles -->
+    <p class="sov-block-title rv">Hosting &amp; Modelle</p>
+    <div class="secnum-card rv">
+      <div class="sn-brand">
+        <div class="sn-mark">
+          <svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round"><path d="M14 8 H10 A4 4 0 0 0 6 12 V28 A4 4 0 0 0 10 32 H14"/><path d="M26 8 H30 A4 4 0 0 1 34 12 V16"/><path d="M34 24 V28 A4 4 0 0 1 30 32 H26"/><path d="M15 20 H25"/></svg>
+        </div>
+        <div style="text-align:center">
+          <div class="sn-word">Scaleway</div>
+          <div class="sn-sub">Souveräne Cloud — Frankreich</div>
+        </div>
+      </div>
+      <div class="sn-copy">
+        <h3>Standardmäßig in Frankreich gehostet, bei Scaleway.</h3>
+        <p>Jede dedizierte QueryVision-Infrastruktur wird von <b style="color:#fff">Scaleway</b> betrieben, einem französischen Cloud-Anbieter im <b style="color:#fff">SecNumCloud</b>-Qualifizierungsprozess der ANSSI — dem höchsten französischen Anforderungsniveau für vertrauenswürdige Cloud-Dienste. Rechenzentren in Frankreich, außerhalb der Reichweite extraterritorialer Gesetzgebungen.</p>
+        <p style="margin-top:0.75rem">Je nach Bedarf — <b style="color:#fff">On-Premise</b>-Installation oder Deployment auf <b style="color:#fff">Ihrem eigenen Cluster</b> — kann eine Instanz auch bei anderen Anbietern bereitgestellt werden.</p>
+      </div>
+      <div class="sn-badges">
+        <div class="sn-badge" title="Hosting in Frankreich">
+          <div class="snb-ico"><svg viewBox="0 0 30 30"><rect x="3" y="7" width="8" height="16" fill="#0055A4"/><rect x="11" y="7" width="8" height="16" fill="#fff"/><rect x="19" y="7" width="8" height="16" fill="#EF4135"/><rect x="3" y="7" width="24" height="16" rx="2" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/></svg></div>
+          <span class="snb-cap">Frankreich</span>
+        </div>
+        <div class="sn-badge" title="SecNumCloud — ANSSI-Qualifizierung">
+          <div class="snb-ico"><svg viewBox="0 0 30 30" fill="none"><path d="M15 3 L25 7 V14 C25 20.5 20.8 25 15 27.5 C9.2 25 5 20.5 5 14 V7 Z" stroke="#03CF65" stroke-width="1.8"/><path d="M11.5 12 a3.5 3.5 0 0 1 7 0 v2" stroke="#03CF65" stroke-width="1.8"/><rect x="10" y="14" width="10" height="7" rx="1.5" fill="#03CF65"/></svg></div>
+          <span class="snb-cap">SecNum<br>Cloud</span>
+        </div>
+        <div class="sn-badge" title="ANSSI — Sicherheitsvisum">
+          <div class="snb-ico"><svg viewBox="0 0 30 30"><rect x="4" y="8" width="22" height="14" rx="2" fill="none" stroke="#e8edf3" stroke-width="1.6"/><text x="15" y="17.5" text-anchor="middle" font-family="'Hanken Grotesk',sans-serif" font-size="6.4" font-weight="800" fill="#e8edf3">ANSSI</text><rect x="8" y="21" width="4.5" height="1.6" fill="#0055A4"/><rect x="12.5" y="21" width="4.5" height="1.6" fill="#fff"/><rect x="17" y="21" width="4.5" height="1.6" fill="#EF4135"/></svg></div>
+          <span class="snb-cap">Sicherheits-<br>visum</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="plogo-cat rv">Auf Anfrage — On-Premise, Kunden-Cluster — kann eine Instanz bei anderen Anbietern bereitgestellt werden</p>
+    <div class="plogo-row cols4 rv">
+      <div class="plogo" title="Amazon Web Services">
+        <svg viewBox="0 0 48 30"><text x="24" y="16" text-anchor="middle" font-family="'Hanken Grotesk',sans-serif" font-size="14" font-weight="800" fill="#e8edf3">aws</text><path d="M8 21 Q24 30 40 21" fill="none" stroke="#FF9900" stroke-width="2.2" stroke-linecap="round"/><path d="M37 19 L41 21 L37 24" fill="none" stroke="#FF9900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="pl-name">AWS</span>
+      </div>
+      <div class="plogo" title="Google Cloud Platform">
+        <svg viewBox="0 0 48 30"><path d="M17 20 a8 8 0 0 1 8-11 a8.5 8.5 0 0 1 7.5 4.5" fill="none" stroke="#EA4335" stroke-width="3" stroke-linecap="round"/><path d="M32.5 13.5 A6.5 6.5 0 0 1 35 26 L 28 26" fill="none" stroke="#4285F4" stroke-width="3" stroke-linecap="round"/><path d="M28 26 L17.5 26 A6.8 6.8 0 0 1 13 20.5" fill="none" stroke="#34A853" stroke-width="3" stroke-linecap="round"/><path d="M13 20.5 a7 7 0 0 1 4-9.5" fill="none" stroke="#FBBC05" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="pl-name">Google Cloud</span>
+      </div>
+      <div class="plogo" title="Microsoft Azure">
+        <svg viewBox="0 0 48 30"><path d="M22 4 L30 4 L44 27 L33 27 Z" fill="#38B0E3"/><path d="M20 8 L27 20 L14 26 L4 27 Z" fill="#0078D4"/></svg>
+        <span class="pl-name">Azure</span>
+      </div>
+      <div class="plogo" title="Oracle Cloud Infrastructure">
+        <svg viewBox="0 0 48 30"><rect x="8" y="7" width="32" height="16" rx="8" fill="none" stroke="#F80000" stroke-width="3"/></svg>
+        <span class="pl-name">OCI</span>
+      </div>
+    </div>
+
+    <p class="plogo-cat rv">Standardmodelle — Mistral, Qwen und Gemma, selbst gehostet bei Scaleway — OpenAI, Anthropic oder jedes OpenAI-API-kompatible Modell, auf Anfrage</p>
+    <div class="plogo-row cols6 rv">
+      <div class="plogo default-tile" title="Mistral AI — selbst gehostet bei Scaleway">
+        <svg viewBox="0 0 48 30"><rect x="12" y="5" width="5" height="5" fill="#FFCE00"/><rect x="31" y="5" width="5" height="5" fill="#FFCE00"/><rect x="12" y="10.5" width="10" height="5" fill="#FFA300"/><rect x="26" y="10.5" width="10" height="5" fill="#FFA300"/><rect x="12" y="16" width="24" height="5" fill="#FF6F00"/><rect x="12" y="21.5" width="5" height="5" fill="#FF0107"/><rect x="21.5" y="21.5" width="5" height="5" fill="#FF0107"/><rect x="31" y="21.5" width="5" height="5" fill="#FF0107"/></svg>
+        <span class="pl-name">Mistral</span>
+        <span class="pl-chip">Standard — selbst gehostet</span>
+      </div>
+      <div class="plogo default-tile" title="Qwen — selbst gehostet bei Scaleway">
+        <svg viewBox="0 0 48 30"><path d="M24 3 L33 8 V19 L24 24 L15 19 V8 Z" fill="none" stroke="#7C4DFF" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 10 L28 15 L24 20 L20 15 Z" fill="#7C4DFF"/><line x1="27" y1="18" x2="32" y2="24" stroke="#7C4DFF" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span class="pl-name">Qwen</span>
+        <span class="pl-chip">Standard — selbst gehostet</span>
+      </div>
+      <div class="plogo default-tile" title="Gemma — selbst gehostet bei Scaleway">
+        <svg viewBox="0 0 48 30"><defs><linearGradient id="gmg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1BA1E3"/><stop offset="1" stop-color="#4285F4"/></linearGradient></defs><path d="M24 3 C25.5 10 29 13.5 36 15 C29 16.5 25.5 20 24 27 C22.5 20 19 16.5 12 15 C19 13.5 22.5 10 24 3 Z" fill="url(#gmg)"/></svg>
+        <span class="pl-name">Gemma</span>
+        <span class="pl-chip">Standard — selbst gehostet</span>
+      </div>
+      <div class="plogo" title="OpenAI — auf Anfrage">
+        <svg viewBox="0 0 48 30"><g stroke="#e8edf3" stroke-width="2.1" fill="none" stroke-linecap="round"><path d="M24 5 a5.2 5.2 0 0 1 5.2 5.2 v3"/><path d="M32.5 9.5 a5.2 5.2 0 0 1 -0.2 7.4 l-2.6 1.5"/><path d="M32.3 19.6 a5.2 5.2 0 0 1 -5.4 4.7 l-2.9 -0.4"/><path d="M23.6 24.8 a5.2 5.2 0 0 1 -5 -5.4 v-3"/><path d="M15.4 20.3 a5.2 5.2 0 0 1 0.3 -7.4 l2.6 -1.5"/><path d="M15.8 10.2 a5.2 5.2 0 0 1 5.4 -4.7 l2.8 0.4"/></g></svg>
+        <span class="pl-name">OpenAI</span>
+        <span class="pl-chip" style="color:var(--body-on-ink)">Auf Anfrage</span>
+      </div>
+      <div class="plogo" title="Anthropic — auf Anfrage">
+        <svg viewBox="0 0 48 30"><path d="M20 25 L28 5 L36 25 L31.5 25 L28 15.5 L24.5 25 Z" fill="#D97757"/><path d="M12 25 L17 12 L20.5 21 L19 25 Z" fill="#D97757"/></svg>
+        <span class="pl-name">Anthropic</span>
+        <span class="pl-chip" style="color:var(--body-on-ink)">Auf Anfrage</span>
+      </div>
+      <div class="plogo" title="Jedes Modell mit OpenAI-kompatibler API">
+        <svg viewBox="0 0 48 30"><text x="24" y="19" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" font-weight="700" fill="#03CF65">{ + }</text></svg>
+        <span class="pl-name">Kompatible API</span>
+        <span class="pl-chip" style="color:var(--body-on-ink)">Auf Anfrage</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 PLATEFORME ═══ -->
+<section id="plateforme">
+  <div class="wrap">
+    <p class="kicker rv">04 — Plattform &amp; Integrationen</p>
+    <h2 class="sec-title rv d1">Fügt sich in Ihre Systemlandschaft ein. Ohne Big Bang.</h2>
+
+    <div class="int-layout">
+      <div class="int-side rv">
+        <h3>Ihre Daten kommen strukturiert an, Ihre Teams kommen geschult an.</h3>
+        <p>Von der Quelle bis zur Entscheidung: Eingänge laufen über das Secure Intake Gateway, die Verarbeitung bleibt in Ihrer Infrastruktur, die Ergebnisse gehen dorthin, wo Sie arbeiten — unter nativer Governance.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Gesteuerte Importe, die die manuelle Konsolidierung überflüssig machen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Gesicherter Zugriff und zentrale Kontrolle</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>API und MCP für maßgeschneiderte Integrationen</li>
+        </ul>
+      </div>
+      <div class="int-boxes rv d1">
+        <div class="int-box">
+          <span class="ib-label">Eingänge</span>
+          <div class="ib-tiles">
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#1D6F42"/><path d="M11 10.5 L14.6 16 L11 21.5 H14 L16.2 17.9 L18.4 21.5 H21.4 L17.8 16 L21.4 10.5 H18.4 L16.2 14.1 L14 10.5 Z" fill="#fff"/></svg></div><span class="int-name">Excel</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#F2C811"/><rect x="8" y="16" width="4" height="8" rx="1" fill="#0F151C"/><rect x="14" y="12" width="4" height="12" rx="1" fill="#0F151C"/><rect x="20" y="8" width="4" height="16" rx="1" fill="#0F151C"/></svg></div><span class="int-name">Power BI</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#f2f4f7"/><path d="M10 8h8l4 4v12H10z" fill="#fff" stroke="#5b6571" stroke-width="1.6"/><path d="M18 8v4h4" fill="none" stroke="#5b6571" stroke-width="1.6"/><text x="16" y="21.5" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6.5" font-weight="700" fill="#0F151C">CSV</text></svg></div><span class="int-name">CSV</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#036C70"/><circle cx="14" cy="13" r="6" fill="#1A9BA1"/><circle cx="20" cy="18" r="5" fill="#37C6D0"/><circle cx="13" cy="20" r="4" fill="#B7EBEE"/></svg></div><span class="int-name">SharePoint</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#fff" stroke="#e6ebe8"/><path d="M13 7 L19 7 L26 19 L20 19 Z" fill="#FFCF63"/><path d="M13 7 L6 19 L9 24.5 L16 12.5 Z" fill="#11A861"/><path d="M9 24.5 L12 19 L26 19 L23 24.5 Z" fill="#2684FC"/></svg></div><span class="int-name">Drive</span></div>
+            <div class="int-item soon"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#f2f4f7"/><text x="16" y="20" text-anchor="middle" font-family="'Hanken Grotesk',sans-serif" font-size="8" font-weight="800" fill="#5b6571">SAP</text></svg></div><span class="int-name">SAP — bald</span></div>
+          </div>
+        </div>
+        <div class="int-box">
+          <span class="ib-label">Verarbeitung</span>
+          <div class="ib-tiles">
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#0F151C"/><path d="M16 6l8 3v6c0 5.5-3.4 9.2-8 11-4.6-1.8-8-5.5-8-11V9z" fill="none" stroke="#03CF65" stroke-width="1.9"/><path d="M12.5 15.5l2.5 2.5 4.5-5" fill="none" stroke="#03CF65" stroke-width="1.9" stroke-linecap="round"/></svg></div><span class="int-name">Secure Intake Gateway</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#fff" stroke="#e6ebe8"/><rect x="9" y="7" width="3" height="3" fill="#FFCE00"/><rect x="20" y="7" width="3" height="3" fill="#FFCE00"/><rect x="9" y="11" width="6" height="3" fill="#FFA300"/><rect x="17" y="11" width="6" height="3" fill="#FFA300"/><rect x="9" y="15" width="14" height="3" fill="#FF6F00"/><rect x="9" y="19" width="3" height="3" fill="#FF0107"/><rect x="14.5" y="19" width="3" height="3" fill="#FF0107"/><rect x="20" y="19" width="3" height="3" fill="#FF0107"/></svg></div><span class="int-name">Mistral</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#fff" stroke="#e6ebe8"/><path d="M16 6 L23 10 V18 L16 22 L9 18 V10 Z" fill="none" stroke="#7C4DFF" stroke-width="1.9" stroke-linejoin="round"/><path d="M16 11 L19 14.5 L16 18 L13 14.5 Z" fill="#7C4DFF"/></svg></div><span class="int-name">Qwen</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#0F151C"/><rect x="8" y="8" width="16" height="12" rx="2" fill="none" stroke="#03CF65" stroke-width="1.8"/><rect x="12" y="23" width="8" height="1.8" rx="0.9" fill="#03CF65"/><path d="M11 12 h4 M11 15 h7" stroke="#03CF65" stroke-width="1.6" stroke-linecap="round"/></svg></div><span class="int-name">Dedizierte GPU</span></div>
+          </div>
+        </div>
+        <div class="int-box">
+          <span class="ib-label">Ausgänge</span>
+          <div class="ib-tiles">
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#0F151C"/><rect x="7" y="8" width="18" height="13" rx="2" fill="none" stroke="#03CF65" stroke-width="1.8"/><line x1="7" y1="12" x2="25" y2="12" stroke="#03CF65" stroke-width="1.8"/><line x1="12" y1="24" x2="20" y2="24" stroke="#03CF65" stroke-width="1.8"/></svg></div><span class="int-name">Web-App</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#f2f4f7"/><path d="M16 8v10m0 0 -4-4m4 4 4-4" stroke="#0F151C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 21v2a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 24 23v-2" stroke="#0F151C" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><span class="int-name">PDF-Exporte</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#0F151C"/><text x="16" y="20.5" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" font-weight="700" fill="#03CF65">{ }</text></svg></div><span class="int-name">API</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#fff" stroke="#e6ebe8"/><path d="M16 7v5m0 0a4.5 4.5 0 0 0-4.5 4.5V21a4.5 4.5 0 0 0 9 0v-4.5A4.5 4.5 0 0 0 16 12z" fill="none" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/><line x1="11.5" y1="16" x2="8" y2="16" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/><line x1="24" y1="16" x2="20.5" y2="16" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/></svg></div><span class="int-name">MCP</span></div>
+            <div class="int-item soon"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#4B53BC"/><rect x="7" y="10" width="12" height="12" rx="2.5" fill="#fff" opacity="0.95"/><text x="13" y="19.5" text-anchor="middle" font-family="'Hanken Grotesk',sans-serif" font-size="8.5" font-weight="800" fill="#4B53BC">T</text><circle cx="23" cy="12" r="3.4" fill="#fff" opacity="0.95"/></svg></div><span class="int-name">Teams</span></div>
+            <div class="int-item soon"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#fff" stroke="#e6ebe8"/><rect x="14.2" y="7" width="3.4" height="10" rx="1.7" fill="#36C5F0"/><rect x="14.2" y="7" width="3.4" height="10" rx="1.7" transform="rotate(90 16 16)" fill="#2EB67D"/><rect x="14.2" y="15" width="3.4" height="10" rx="1.7" fill="#ECB22E"/><rect x="14.2" y="15" width="3.4" height="10" rx="1.7" transform="rotate(90 16 16)" fill="#E01E5A"/></svg></div><span class="int-name">Slack</span></div>
+          </div>
+        </div>
+        <div class="int-box">
+          <span class="ib-label">Governance</span>
+          <div class="ib-tiles">
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#f2f4f7"/><circle cx="13" cy="13" r="4.5" fill="none" stroke="#0F151C" stroke-width="1.9"/><path d="M16.2 16.2 L24 24 M21 21 l2.5-2.5 M18.5 18.5 l2.5-2.5" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/></svg></div><span class="int-name">SSO</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#0F151C"/><path d="M16 7l7 2.6v5.2c0 5-3.1 8.3-7 10.2-3.9-1.9-7-5.2-7-10.2V9.6z" fill="none" stroke="#03CF65" stroke-width="1.8"/><path d="M12.8 15.7l2.3 2.3 4.2-4.5" fill="none" stroke="#03CF65" stroke-width="1.8" stroke-linecap="round"/></svg></div><span class="int-name">Granulare Rechte</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#fff" stroke="#e6ebe8"/><line x1="9" y1="11" x2="23" y2="11" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/><line x1="9" y1="16" x2="23" y2="16" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/><line x1="9" y1="21" x2="17" y2="21" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/><circle cx="22.5" cy="21" r="2.8" fill="none" stroke="#0a7c42" stroke-width="1.7"/></svg></div><span class="int-name">Audit-Log</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#f2f4f7"/><rect x="7.5" y="7.5" width="7.5" height="7.5" rx="2" fill="#0F151C"/><rect x="17" y="7.5" width="7.5" height="7.5" rx="2" fill="#9ba4ae"/><rect x="7.5" y="17" width="7.5" height="7.5" rx="2" fill="#9ba4ae"/><rect x="17" y="17" width="7.5" height="7.5" rx="2" fill="#03CF65"/></svg></div><span class="int-name">Workspaces</span></div>
+            <div class="int-item"><div class="int-tile"><svg viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="6" fill="#f2f4f7"/><path d="M16 8c-3 3.2-4.5 6-4.5 8.5a4.5 4.5 0 0 0 9 0C20.5 14 19 11.2 16 8z" fill="none" stroke="#0F151C" stroke-width="1.9" stroke-linejoin="round"/><path d="M10 22h12" stroke="#0F151C" stroke-width="1.9" stroke-linecap="round"/></svg></div><span class="int-name">Gesteuerte KI-Credits</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 RÉSULTATS ═══ -->
+<section class="stories" id="stories">
+  <div class="wrap">
+    <p class="kicker rv">05 — Ergebnisse</p>
+    <h2 class="sec-title rv d1">Zahlen statt Versprechen.</h2>
+
+    <div class="stories-grid">
+      <article class="story-card rv" style="--sc: var(--terra)">
+        <span class="st-sector">Risikomanagement — Versicherungsgruppe auf Gegenseitigkeit</span>
+        <div class="st-num">12&nbsp;Tage&nbsp;<span class="u">→</span>&nbsp;2&nbsp;Tage</div>
+        <p class="st-what">Erstellung der Quartals-Risikokartierung</p>
+        <p class="st-desc">Konsolidierung über mehrere Einheiten, Konsistenzprüfungen und Aufbereitung für den Vorstand: von zwei Wochen Tabellenkalkulation auf zwei Tage — jede Zahl bis zur Quelldatei nachvollziehbar.</p>
+        <div class="story-author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Porträt — Julien Mercier">
+          <div><div class="sa-name">Julien Mercier</div><div class="sa-role">Leiter Risikomanagement</div></div>
+        </div>
+      </article>
+      <article class="story-card rv d1" style="--sc: var(--green)">
+        <span class="st-sector">Compliance — Bancassurance</span>
+        <div class="st-num">−60<span class="u">%</span></div>
+        <p class="st-what">Vorbereitungszeit für Audits</p>
+        <p class="st-desc">Vier Regelwerke laufend überwacht (DSGVO, ISO 27001, Solvency II, Geldwäscheprävention). Nachweise und offene Abweichungen werden auf Abruf erstellt statt in letzter Minute rekonstruiert.</p>
+        <div class="story-author">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Porträt — Nadia Belkacem">
+          <div><div class="sa-name">Nadia Belkacem</div><div class="sa-role">Leiterin Compliance</div></div>
+        </div>
+      </article>
+      <article class="story-card rv d2" style="--sc: var(--purple)">
+        <span class="st-sector">Geschäftsleitung — Sozialversicherung</span>
+        <div class="st-num">3.800</div>
+        <p class="st-what">Mitarbeitende auf den Strategieplan ausgerichtet</p>
+        <p class="st-desc">Der neue Strategieplan ist für alle Führungskräfte abfragbar: Ziele, Umsetzung in Maßnahmen, Zielwerte. Eine einzige Version der Wahrheit, live verfügbar.</p>
+        <div class="story-author">
+          <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Porträt — Claire Delattre">
+          <div><div class="sa-name">Claire Delattre</div><div class="sa-role">Stellvertretende Generaldirektorin</div></div>
+        </div>
+      </article>
+    </div>
+    <p class="stories-note">Rückmeldungen aus Pilotprojekten — Zahlen und Identitäten zu Illustrationszwecken für den Prototyp.</p>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══ -->
+<section class="cta-final" id="contact">
+  <div class="wrap">
+    <p class="kicker rv" style="justify-content:center">06 — Nächster Schritt</p>
+    <h2 class="rv d1">Sehen Sie Ihre eigenen Daten antworten.</h2>
+    <p class="rv d2">Eine Demonstration auf einer Stichprobe Ihrer Daten, mit Ihrem Fachvokabular. Unverbindlich — und ohne dass etwas Ihren Perimeter verlässt.</p>
+    <div class="hero-ctas rv d3" style="margin-top:2.25rem">
+      <a class="btn btn-primary" href="contact.html">Demo anfragen <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="#agents">Agenten noch einmal ansehen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          QueryVision
+        </div>
+        <p class="foot-base">FROM QUERY TO VISION<br>QueryVision S.A.S. — Bordeaux, Frankreich</p>
+        <div class="foot-social"><a href="https://www.linkedin.com/company/queryvision" target="_blank" rel="noopener" aria-label="QueryVision auf LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a></div>
+      </div>
+      <div class="foot-links">
+        <div>
+          <b>Agenten</b>
+          <a href="agents/query-vision.html">Query Vision</a>
+          <a href="agents/spot-vision.html">Spot Vision</a>
+        </div>
+        <div>
+          <b>Fachbereiche</b>
+          <a href="metiers/risques.html">Risikomanagement</a>
+          <a href="metiers/conformite.html">Compliance</a>
+          <a href="metiers/audit.html">Revision &amp; Beratung</a>
+          <a href="metiers/finance.html">Finanzen</a>
+        </div>
+        <div>
+          <b>Unternehmen</b>
+          <a href="index.html#souverainete">Souveränität</a>
+          <a href="index.html#plateforme">Plattform</a>
+          <a href="entreprise.html">Über uns</a>
+          <a href="entreprise.html#partenaires">Partner</a>
+          <a href="entreprise.html#implantations">Standorte</a>
+          <a href="trust-center.html">Trust Center</a>
+          <a href="mailto:contact@query.vision">Kontakt</a>
+        </div>
+        <div>
+          <b>Rechtliches</b>
+          <a href="legal/mentions-legales.html">Impressum</a>
+          <a href="legal/cgu.html">Nutzungsbedingungen</a>
+          <a href="legal/confidentialite.html">Datenschutz</a>
+          <a href="legal/cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 QueryVision S.A.S. — Alle Rechte vorbehalten.</span>
+      <span>Gehostet in Frankreich — Scaleway</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>

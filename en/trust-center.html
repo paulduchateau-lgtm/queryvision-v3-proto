@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trust Center — Security &amp; compliance · QueryVision</title>
+<meta name="description" content="QueryVision Trust Center: sovereign EU hosting, security, GDPR compliance, certifications, sub-processors, business continuity and SLA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../site.css">
+<style>
+  .doc-meta { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--body); margin-top: 1rem; }
+  .doc-wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: 15rem 1fr; gap: 3rem; align-items: start; }
+  .doc-toc { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 0.25rem; }
+  .doc-toc .dt-h { font-family: var(--mono); font-size: 0.6563rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+  .doc-toc a { text-decoration: none; font-size: 0.8438rem; font-weight: 500; color: var(--body); padding: 0.3125rem 0; border-left: 2px solid var(--line); padding-left: 0.75rem; }
+  .doc-toc a:hover { color: var(--ink); border-left-color: var(--green); }
+  @media (max-width: 860px) { .doc-wrap { grid-template-columns: 1fr; } .doc-toc { position: static; } }
+  .doc { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 2.75rem 3rem; }
+  @media (max-width: 640px) { .doc { padding: 1.75rem 1.5rem; } }
+  .doc h2 { font-size: 1.3125rem; font-weight: 800; letter-spacing: -0.015em; margin: 2.25rem 0 0.75rem; scroll-margin-top: 6.5rem; }
+  .doc h2:first-child { margin-top: 0; }
+  .doc h3 { font-size: 1.0313rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .doc p, .doc li { font-size: 0.9375rem; color: var(--body); line-height: 1.7; }
+  .doc p { margin-bottom: 0.875rem; }
+  .doc ul, .doc ol { padding-left: 1.375rem; margin-bottom: 0.875rem; display: flex; flex-direction: column; gap: 0.375rem; }
+  .doc strong { color: var(--ink); }
+  .doc a { color: var(--green-dark); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(10,124,66,0.3); }
+  .doc table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-bottom: 1rem; }
+  .doc th { text-align: left; font-family: var(--mono); font-size: 0.6563rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--body); padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--line); }
+  .doc td { padding: 0.5625rem 0.75rem; border-bottom: 1px solid #f0f2ef; color: var(--body); vertical-align: top; }
+  .placeholder { background: var(--sun-soft); border: 1px dashed var(--sun); border-radius: 4px; padding: 0 0.375rem; font-family: var(--mono); font-size: 0.85em; color: #96690f; white-space: nowrap; }
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'%3E%3Crect width='84' height='84' fill='%230F151C'/%3E%3Cpath d='M 14 14 L 70 14 L 70 44 L 60 44 L 60 24 L 24 24 L 24 60 L 47 60 L 47 70 L 14 70 Z' fill='white'/%3E%3Crect x='54' y='54' width='16' height='16' fill='%2303CF65'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      QueryVision
+    </a>
+    <nav class="nav-links">
+      <div class="nav-drop">
+        <button type="button">Agents</button>
+        <div class="nav-drop-menu">
+          <a href="agents/query-vision.html">Query Vision <small>The analyst — from question to figures</small></a>
+          <a href="agents/spot-vision.html">Spot Vision <small>The relay — reference information, live</small></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button type="button">Teams</button>
+        <div class="nav-drop-menu">
+          <a href="metiers/risques.html">Risk <small>Map your exposure, continuously</small></a>
+          <a href="metiers/conformite.html">Compliance <small>Compliance status, readable on demand</small></a>
+          <a href="metiers/audit.html">Audit &amp; Internal Consulting <small>Findings, recommendations, processes</small></a>
+          <a href="metiers/finance.html">Finance <small>Close. Analyze. Anticipate.</small></a>
+        </div>
+      </div>
+      <a href="index.html#souverainete">Sovereignty</a>
+      <a href="index.html#plateforme">Platform</a>
+      <a href="entreprise.html">Company</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.demo.query.vision/login">Log in</a>
+      <a class="btn btn-primary" href="contact.html">Request a demo</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="kicker center rv">Trust — Trust Center</p>
+    <h1 class="rv d1">Trust is not a promise. <span class="hl-g">It's an architecture.</span></h1>
+    <p class="doc-meta rv d1">Last updated — June 23, 2026 · v0.2</p>
+    <p class="hero-sub rv d2">QueryVision is designed from the ground up for teams with demanding requirements around security, compliance and data sovereignty. This document brings together all of our technical, organizational and contractual commitments.</p>
+    <div class="hero-meta rv d3" style="justify-content:center">
+      <span><span class="tick">✓</span> Sovereign EU hosting</span>
+      <span><span class="tick">✓</span> ISO/IEC 27001 (hosting provider)</span>
+      <span><span class="tick">✓</span> HDS (hosting provider)</span>
+      <span><span class="tick">✓</span> GDPR-native</span>
+      <span><span class="tick">✓</span> ISO 27001 · planned 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- 01 PRÉSENTATION -->
+<section class="tight" id="plateforme" style="padding-top: 3rem">
+  <div class="wrap">
+    <p class="kicker rv">01 — Platform overview</p>
+    <h2 class="sec-title rv d1">One platform, one vendor, one infrastructure.</h2>
+    <p class="sec-lead rv d2">QueryVision is a SaaS platform for data analysis and decision intelligence, embedding LLM, NLP and document-processing modules to automate analyses, summaries and decision-support tasks.</p>
+    <p class="sec-lead rv d2">It is operated as an exclusive SaaS: QueryVision relies on no service providers or integrators to deliver the platform. All source code, algorithms and documentation belong to QueryVision.</p>
+    <article class="doc rv d2" style="margin-top: 2.5rem">
+      <table>
+        <tbody>
+          <tr><th scope="row">Company</th><td>QueryVision, S.A.S.</td></tr>
+          <tr><th scope="row">Headquarters</th><td>9, place Jean Jaurès, 33000 Bordeaux, France</td></tr>
+          <tr><th scope="row">Data residency</th><td>European Union only</td></tr>
+          <tr><th scope="row">Deployment model</th><td>Multi-tenant SaaS, sovereign cloud</td></tr>
+          <tr><th scope="row">Target availability</th><td>99.5% / month</td></tr>
+          <tr><th scope="row">Support</th><td>8:00 am – 6:30 pm, business days</td></tr>
+        </tbody>
+      </table>
+    </article>
+  </div>
+</section>
+
+<!-- 02 HÉBERGEMENT & SOUVERAINETÉ -->
+<section class="tight" id="hebergement" style="background: var(--paper-deep); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
+  <div class="wrap">
+    <p class="kicker rv">02 — Hosting &amp; sovereignty</p>
+    <h2 class="sec-title rv d1">Sovereign by default, not by option.</h2>
+    <p class="sec-lead rv d2">Every component of the platform — frontend, backend, SQL databases and object storage — is hosted at <strong>Scaleway S.A.S.</strong>, a French sovereign cloud provider certified ISO/IEC 27001 and HDS, located in France.</p>
+    <p class="sec-lead rv d2">By default, LLM models are <strong>hosted and executed locally on our Scaleway machines</strong> — inference never leaves our sovereign infrastructure. No client data transits through any third party for AI processing in the standard configuration.</p>
+    <p class="sec-lead rv d2">The <strong>Mistral ZDR (Zero Data Retention)</strong> option is available for clients who wish to access Mistral models via API with a contractual zero-retention guarantee: no data is retained or used for training by Mistral AI.</p>
+    <article class="doc rv d2" style="margin-top: 2.5rem">
+      <table>
+        <thead>
+          <tr><th>Component</th><th>Hosting provider</th><th>Location</th><th>Certifications</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Frontend · Backend · SQL · Object Storage</td><td>Scaleway S.A.S.</td><td>France (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
+          <tr><td>LLM inference — default (self-hosted models)</td><td>Scaleway S.A.S.</td><td>France (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
+          <tr><td>LLM inference via Mistral ZDR — optional</td><td>Mistral AI S.A.S.</td><td>European Union</td><td>ISO/IEC 27001</td></tr>
+        </tbody>
+      </table>
+      <p>No client data is transferred outside the European Economic Area by default. Our sovereignty posture is aligned with the ANSSI SecNumCloud (final qualification targeted for Q3 2026), EBIOS RM and HDS frameworks.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 03·04·06·07 SÉCURITÉ, SOUS-TRAITANTS, IA, INCIDENTS -->
+<section class="sov on-ink tight" id="securite">
+  <div class="wrap">
+    <p class="kicker rv">Commitments — Security, AI &amp; incidents</p>
+    <h2 class="sec-title rv d1" style="color:#fff">Governed, controlled, documented.</h2>
+    <p class="sec-lead rv d2">Our technical and organizational measures are formalized in our Security Assurance Plan (SAP), available to qualified clients and prospects on request.</p>
+    <div class="sov-grid rv d2" style="margin-top: 3rem; grid-template-columns: 1fr 1fr;">
+      <div class="sov-card">
+        <span class="s-num">03 — Security &amp; access control</span>
+        <h3>Security owned directly by the CTO.</h3>
+        <p>It covers authentication and permission management (SSO, MFA, RBAC), encryption of data in transit and at rest, environment isolation, and continuous audit and traceability. The full detail of the measures (authentication, encryption, audit) is available through our Security Assurance Plan.</p>
+      </div>
+      <div class="sov-card" id="sous-traitants">
+        <span class="s-num">04 — Sub-processors &amp; cloud partners</span>
+        <h3>A limited number of sub-processors, all located in the EU.</h3>
+        <p>Hosting and AI inference are entrusted to sub-processors bound by strict contractual confidentiality and security clauses. Any change is notified to the affected clients before it takes effect. The exhaustive register (roles, purposes, certifications) and the DPA are available on request.</p>
+      </div>
+      <div class="sov-card" id="ia">
+        <span class="s-num">06 — Responsible AI</span>
+        <h3>LLMs integrated under strict principles.</h3>
+        <p>Sovereign inference by default (Scaleway EU infrastructure), Zero Data Retention option, exclusive client ownership of data, no automated decision without human oversight. These commitments (inference architecture, ZDR options, data governance) are formalized in our Security Assurance Plan.</p>
+      </div>
+      <div class="sov-card" id="incidents">
+        <span class="s-num">07 — Incidents &amp; vulnerabilities</span>
+        <h3>A formalized process, aligned with GDPR and ANSSI.</h3>
+        <p>Client notification timelines, the classification matrix (impact/urgency) and the complete security incident management process are defined in our Security Assurance Plan. To report a vulnerability: <a href="mailto:security@query.vision" style="color: var(--green)">security@query.vision</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CONFORMITÉ & CERTIFICATIONS -->
+<section class="tight" id="conformite">
+  <div class="wrap">
+    <p class="kicker rv">05 — Compliance &amp; certifications</p>
+    <h2 class="sec-title rv d1">Frameworks, not slogans.</h2>
+    <p class="sec-lead rv d2">QueryVision aligns its security posture with the GDPR, HDS, ISO/IEC 27001 and ANSSI SecNumCloud frameworks. The hosting provider's certifications are already in place; QueryVision's own certifications as a vendor are in progress.</p>
+    <article class="doc rv d2" style="margin-top: 2.5rem">
+      <table>
+        <thead>
+          <tr><th>Framework</th><th>Status</th><th>Detail</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>GDPR</strong></td><td>Native</td><td>Native compliance: appointed DPO, record of processing activities, user rights, data stored within the EU.</td></tr>
+          <tr><td><strong>ISO/IEC 27001 (hosting provider)</strong></td><td>Certified — Scaleway</td><td>Scaleway, the infrastructure hosting provider, is ISO/IEC 27001 certified.</td></tr>
+          <tr><td><strong>HDS (hosting provider)</strong></td><td>Certified — Scaleway</td><td>Scaleway holds the HDS certification (French health data hosting), enabling use in medical contexts.</td></tr>
+          <tr><td><strong>ISO/IEC 27001 (QueryVision)</strong></td><td>In progress · planned 2026</td><td>ISO/IEC 27001 certification of QueryVision as a vendor, planned for late 2026.</td></tr>
+          <tr><td><strong>SecNumCloud ANSSI</strong></td><td>In progress · planned Q3 2026</td><td>SecNumCloud qualification (milestone J1) under way, final qualification targeted for Q3 2026.</td></tr>
+          <tr><td><strong>HDS (QueryVision)</strong></td><td>In progress</td><td>HDS certification of QueryVision as a vendor, currently being planned.</td></tr>
+          <tr><td><strong>SOC 2 Type II</strong></td><td>Planned 2027</td><td>SOC 2 Type II attestation (Trust Service Criteria) planned for 2027.</td></tr>
+          <tr><td><strong>NIS 2</strong></td><td>In progress</td><td>NIS 2 impact analysis under way; compliance planned as part of the 2026 security roadmap.</td></tr>
+        </tbody>
+      </table>
+    </article>
+  </div>
+</section>
+
+<!-- 08 CONTINUITÉ & SLA -->
+<section class="tight" id="continuite" style="background: var(--paper-deep); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
+  <div class="wrap">
+    <p class="kicker rv">08 — Business continuity &amp; SLA</p>
+    <h2 class="sec-title rv d1">Quantified, contractual commitments.</h2>
+    <article class="doc rv d1" style="margin-top: 2.5rem">
+      <table>
+        <thead>
+          <tr><th>Commitment</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Target availability</td><td>99.5% / month (excluding planned maintenance)</td></tr>
+          <tr><td>Support hours</td><td>8:00 am – 6:30 pm, business days</td></tr>
+          <tr><td>Response time — non-blocking issue</td><td>48 business hours</td></tr>
+          <tr><td>Resolution time — non-blocking issue</td><td>2 weeks</td></tr>
+          <tr><td>Response time — blocking issue</td><td>24 business hours</td></tr>
+          <tr><td>Resolution time — blocking issue</td><td>48 business hours</td></tr>
+          <tr><td>Data residency</td><td>European Union only</td></tr>
+          <tr><td>Contract term</td><td>12 months, non-renewing</td></tr>
+        </tbody>
+      </table>
+      <p>Response time: guaranteed time to intervention · Resolution time: guaranteed time to recovery</p>
+      <h3>Backups &amp; disaster recovery</h3>
+      <ul>
+        <li>Automated backups with 1 to 6 months of history depth</li>
+        <li>Regular restoration tests to verify integrity</li>
+        <li>Backups replicated across separate, isolated datacenters</li>
+        <li>Tested Disaster Recovery Plan (DRP), documented redeployment procedure</li>
+        <li>Database snapshots restorable in parallel with traffic redirection</li>
+        <li>Guaranteed deletion of client data upon contract expiry or termination</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- 09 CONTACT SÉCURITÉ & DOCUMENTS -->
+<section class="tight" id="contact">
+  <div class="wrap">
+    <p class="kicker rv">09 — Security contact &amp; documents</p>
+    <h2 class="sec-title rv d1">Our teams reply within 24 business hours.</h2>
+    <p class="sec-lead rv d2">For any question relating to security, compliance or personal data.</p>
+    <article class="doc rv d2" style="margin-top: 2.5rem">
+      <table>
+        <thead>
+          <tr><th>Contact</th><th>Scope</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Security &amp; compliance (CISO, CIO)</strong></td><td>Penetration tests, security questionnaires, access to the full Security Assurance Plan, DPA.</td><td><a href="mailto:security@query.vision">security@query.vision</a></td></tr>
+          <tr><td><strong>Personal data (DPO, legal)</strong></td><td>GDPR rights requests, data breaches, record of processing activities.</td><td><a href="mailto:dpo@query.vision">dpo@query.vision</a></td></tr>
+        </tbody>
+      </table>
+      <h3>Documents available on request</h3>
+      <ul>
+        <li>Security Assurance Plan (SAP) — v0.2, June 2026</li>
+        <li>Data Processing Agreement (DPA / GDPR DPA)</li>
+        <li>External security audit reports (NDA required)</li>
+        <li>Full list of sub-processors with DPA</li>
+        <li>ISO/IEC 27001 and HDS certificates of the hosting provider Scaleway</li>
+      </ul>
+      <p>Every documentation request is handled within 24 business hours by our security team: <a href="mailto:security@query.vision">security@query.vision</a>.</p>
+    </article>
+    <div class="sec-band on-ink rv" style="margin-top: 3rem">
+      <div>
+        <h3>Security questions?</h3>
+        <p>CISO, DPO or legal team: we reply within 24 business hours.</p>
+        <div class="sb-chips">
+          <span>Sovereign EU hosting</span>
+          <span>GDPR-native</span>
+          <span>Zero training</span>
+          <span>Security Assurance Plan on request</span>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="mailto:security@query.vision">security@query.vision <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          QueryVision
+        </div>
+        <p class="foot-base">FROM QUERY TO VISION<br>QueryVision S.A.S. — Bordeaux, France</p>
+        <div class="foot-social"><a href="https://www.linkedin.com/company/queryvision" target="_blank" rel="noopener" aria-label="QueryVision on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a></div>
+      </div>
+      <div class="foot-links">
+        <div>
+          <b>Agents</b>
+          <a href="agents/query-vision.html">Query Vision</a>
+          <a href="agents/spot-vision.html">Spot Vision</a>
+        </div>
+        <div>
+          <b>Teams</b>
+          <a href="metiers/risques.html">Risk</a>
+          <a href="metiers/conformite.html">Compliance</a>
+          <a href="metiers/audit.html">Audit &amp; Consulting</a>
+          <a href="metiers/finance.html">Finance</a>
+        </div>
+        <div>
+          <b>Company</b>
+          <a href="index.html#souverainete">Sovereignty</a>
+          <a href="index.html#plateforme">Platform</a>
+          <a href="entreprise.html">Company</a>
+          <a href="entreprise.html#partenaires">Partners</a>
+          <a href="entreprise.html#implantations">Locations</a>
+          <a href="trust-center.html">Trust Center</a>
+          <a href="mailto:contact@query.vision">Contact</a>
+        </div>
+        <div>
+          <b>Legal</b>
+          <a href="legal/mentions-legales.html">Legal notice</a>
+          <a href="legal/cgu.html">Terms of Use</a>
+          <a href="legal/confidentialite.html">Privacy</a>
+          <a href="legal/cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 QueryVision S.A.S. — All rights reserved.</span>
+      <span>Hosted in France — Scaleway</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>

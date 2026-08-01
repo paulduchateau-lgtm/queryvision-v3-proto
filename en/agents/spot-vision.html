@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spot Vision — The relay agent · QueryVision</title>
+<meta name="description" content="Spot Vision, QueryVision's relay agent: your teams navigate the documentation you entrust to it in plain language — procedures, contracts, archives — and get answers faithful to the content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../site.css">
+<style>
+  .page-hero h1 .hl-g, .step .st-n { color: var(--purple-dark); }
+  .kicker { color: var(--purple-dark); }
+  .kicker::before, .kicker.center::after { background: var(--purple); }
+  .tab-q { --acc: var(--purple); }
+  .tab-q::before { color: var(--purple-dark); }
+  .uc-grid { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  @media (max-width: 760px) { .uc-grid { grid-template-columns: 1fr; } }
+  .uc-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.875rem 1.75rem; }
+  .uc-card h3 { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.015em; }
+  .uc-card p { margin-top: 0.625rem; font-size: 0.9063rem; color: var(--body); }
+  .uc-card .tab-q { margin-top: 1.125rem; }
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'%3E%3Crect width='84' height='84' fill='%230F151C'/%3E%3Cpath d='M 14 14 L 70 14 L 70 44 L 60 44 L 60 24 L 24 24 L 24 60 L 47 60 L 47 70 L 14 70 Z' fill='white'/%3E%3Crect x='54' y='54' width='16' height='16' fill='%2303CF65'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      QueryVision
+    </a>
+    <nav class="nav-links">
+      <div class="nav-drop">
+        <button type="button">Agents</button>
+        <div class="nav-drop-menu">
+          <a href="query-vision.html">Query Vision <small>The analyst — from question to figures</small></a>
+          <a href="spot-vision.html">Spot Vision <small>The relay — reference information, live</small></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button type="button">Teams</button>
+        <div class="nav-drop-menu">
+          <a href="../metiers/risques.html">Risk <small>Map your exposure, continuously</small></a>
+          <a href="../metiers/conformite.html">Compliance <small>Compliance status, readable on demand</small></a>
+          <a href="../metiers/audit.html">Audit &amp; Internal Consulting <small>Findings, recommendations, processes</small></a>
+          <a href="../metiers/finance.html">Finance <small>Close. Analyze. Anticipate.</small></a>
+        </div>
+      </div>
+      <a href="../index.html#souverainete">Sovereignty</a>
+      <a href="../index.html#plateforme">Platform</a>
+      <a href="../entreprise.html">Company</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.demo.query.vision/login">Log in</a>
+      <a class="btn btn-primary" href="../contact.html">Request a demo</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero" style="--ph-glow: rgba(140, 132, 216, 0.16)">
+  <div class="wrap">
+    <p class="kicker center rv">Agent 02 — SpotVision — The relay</p>
+    <h1 class="rv d1">Reference information, <span class="hl-g">live.</span></h1>
+    <p class="hero-sub rv d2">Spot Vision makes your reference documentation talk: your teams navigate the corpora you entrust to it in plain language — internal procedures, contract histories, financial archives, strategic plan — and get answers faithful to the content, within their scope.</p>
+    <div class="hero-ctas rv d3" style="justify-content:center">
+      <a class="btn btn-primary" href="../contact.html">Request a demo <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="#capacites">See the capabilities</a>
+    </div>
+    <div class="hero-meta rv d3" style="justify-content:center">
+      <span><span class="tick">✓</span> Answers grounded in the entrusted content</span>
+      <span><span class="tick">✓</span> A single version of the truth</span>
+      <span><span class="tick">✓</span> Scope governed by workspace</span>
+    </div>
+  </div>
+  <div class="wrap rv" style="margin-top: 4rem; max-width: 72rem;">
+    <div class="shot light">
+      <div class="shot-chrome"><span class="url">app.queryvision.ai — Risk workspace — Spot Vision</span></div>
+      <div class="shot-viewport" data-w="1440" data-h="880" data-theme="light">
+        <iframe src="../../assets/proto/spot-vision.html" loading="eager" tabindex="-1" title="Spot Vision — conversation"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPACITÉS -->
+<section id="capacites" style="padding-top: 3rem">
+  <div class="wrap">
+    <p class="kicker rv">What the agent can do</p>
+    <h2 class="sec-title rv d1">Your reference documents, one question away.</h2>
+    <div class="feat-rows" style="margin-top: 4rem">
+      <div class="feat rv" style="--acc-d: var(--purple-dark)">
+        <div class="feat-copy">
+          <p class="f-eb">Document navigation</p>
+          <h3>The right answer, without opening a single document.</h3>
+          <p>Hundreds of pages of procedures, contracts or archives become a conversation: anyone can ask a question and get the exact answer, faithful to the reference text — no more keyword searches and stray document versions.</p>
+          <ul>
+            <li>Answers grounded in the entrusted content, nothing else</li>
+            <li>Sources cited in every answer</li>
+            <li>A single version of the truth, delivered live</li>
+          </ul>
+        </div>
+        <div class="feat-visual"><img src="../../assets/mockups/03-discussion-donnees.svg" alt="Conversation over reference repositories" loading="lazy"></div>
+      </div>
+      <div class="feat rev rv" style="--acc-d: var(--purple-dark)">
+        <div class="feat-copy">
+          <p class="f-eb">Governed scope</p>
+          <h3>Each team sees its own scope. Nothing more.</h3>
+          <p>Document corpora are attached to workspaces, and access rights mirror your organization. Spot Vision answers on substance, from the entrusted scope — it never promises what it doesn't have.</p>
+          <ul>
+            <li>Partitioning by workspace and by access rights</li>
+            <li>Content validated before being made available</li>
+            <li>Administered by your own teams, in ADMIN</li>
+          </ul>
+        </div>
+        <div class="feat-visual"><img src="../../assets/mockups/09-page-accueil-app.svg" alt="Workspace home" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CE QU'ON LUI CONFIE -->
+<section class="tight" style="padding-top: 0">
+  <div class="wrap">
+    <p class="kicker rv">What your teams entrust to it</p>
+    <h2 class="sec-title rv d1">One agent, as many corpora as you have needs.</h2>
+    <div class="uc-grid">
+      <div class="uc-card rv">
+        <h3>Internal procedures</h3>
+        <p>Operating procedures, policies, approval workflows — the applicable rule, without hunting for the document it lives in.</p>
+        <div class="tab-q">What approval is required beyond €25k of commitment?</div>
+      </div>
+      <div class="uc-card rv d1">
+        <h3>Contract histories</h3>
+        <p>Master agreements, amendments, clauses — the contractual content answers directly, article in hand.</p>
+        <div class="tab-q">What does the maintenance contract provide for in case of early termination?</div>
+      </div>
+      <div class="uc-card rv d1">
+        <h3>Financial archives</h3>
+        <p>Annual reports, closing notes, past accounting rules — the organization's financial memory stays searchable.</p>
+        <div class="tab-q">Which depreciation rules did we apply in fiscal year 2023?</div>
+      </div>
+      <div class="uc-card rv d2">
+        <h3>Strategic plan</h3>
+        <p>Pillars, objectives, action sheets — every manager queries the same reference version. At a social protection group: 3,800 employees aligned.</p>
+        <div class="tab-q">How does pillar 2 break down into actions for my department?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT ÇA MARCHE -->
+<section class="tight" style="background: var(--paper-deep); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
+  <div class="wrap">
+    <p class="kicker rv">How it works</p>
+    <h2 class="sec-title rv d1">Three steps, zero ambiguity.</h2>
+    <div class="steps" style="grid-template-columns: repeat(3, 1fr)">
+      <div class="step rv"><span class="st-n">01</span><h4>Entrust</h4><p>You designate the reference corpora — procedures, contracts, archives, strategic plan. They are prepared and validated through the Secure Intake Gateway.</p></div>
+      <div class="step rv d1"><span class="st-n">02</span><h4>Partition</h4><p>Each repository is attached to a workspace, with access rights per team and per user.</p></div>
+      <div class="step rv d2"><span class="st-n">03</span><h4>Ask</h4><p>Your teams ask their questions in plain language and get answers faithful to the content, with sources cited.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SÉCURITÉ — en dernier -->
+<section class="tight">
+  <div class="wrap">
+    <div class="sec-band on-ink rv">
+      <div>
+        <h3>A secure conversational experience.</h3>
+        <p>Spot Vision is built on proven, state-of-the-art technology building blocks: latest communication security protocols, database encryption, strict information partitioning.</p>
+        <div class="sb-chips">
+          <span>Secured communications</span>
+          <span>Encrypted database</span>
+          <span>Partitioned information</span>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="../index.html#souverainete">See our sovereignty <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" id="contact">
+  <div class="wrap">
+    <p class="kicker rv" style="justify-content:center">Next step</p>
+    <h2 class="rv d1">Make your documentation talk.</h2>
+    <p class="rv d2">A demonstration on one of your document corpora, using your vocabulary. No commitment.</p>
+    <div class="hero-ctas rv d3" style="margin-top:2.25rem">
+      <a class="btn btn-primary" href="../contact.html">Request a demo <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="query-vision.html">Discover Query Vision</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          QueryVision
+        </div>
+        <p class="foot-base">FROM QUERY TO VISION<br>QueryVision S.A.S. — Bordeaux, France</p>
+        <div class="foot-social"><a href="https://www.linkedin.com/company/queryvision" target="_blank" rel="noopener" aria-label="QueryVision on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a></div>
+      </div>
+      <div class="foot-links">
+        <div>
+          <b>Agents</b>
+          <a href="query-vision.html">Query Vision</a>
+          <a href="spot-vision.html">Spot Vision</a>
+        </div>
+        <div>
+          <b>Teams</b>
+          <a href="../metiers/risques.html">Risk</a>
+          <a href="../metiers/conformite.html">Compliance</a>
+          <a href="../metiers/audit.html">Audit &amp; Consulting</a>
+          <a href="../metiers/finance.html">Finance</a>
+        </div>
+        <div>
+          <b>Company</b>
+          <a href="../index.html#souverainete">Sovereignty</a>
+          <a href="../index.html#plateforme">Platform</a>
+          <a href="../entreprise.html">Company</a>
+          <a href="../entreprise.html#partenaires">Partners</a>
+          <a href="../entreprise.html#implantations">Locations</a>
+          <a href="../trust-center.html">Trust Center</a>
+          <a href="mailto:contact@query.vision">Contact</a>
+        </div>
+        <div>
+          <b>Legal</b>
+          <a href="../legal/mentions-legales.html">Legal notice</a>
+          <a href="../legal/cgu.html">Terms of Use</a>
+          <a href="../legal/confidentialite.html">Privacy</a>
+          <a href="../legal/cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 QueryVision S.A.S. — All rights reserved.</span>
+      <span>Hosted in France — Scaleway</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../site.js"></script>
+</body>
+</html>

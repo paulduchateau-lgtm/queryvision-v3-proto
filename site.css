@@ -617,6 +617,64 @@ footer { background: var(--ink); color: var(--body-on-ink); border-top: 1px soli
 .foot-links a { text-decoration: none; font-size: 0.875rem; }
 .foot-links a:hover { color: #fff; }
 .foot-legal { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--ink-line); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.75rem; }
+.foot-social { margin-top: 1.25rem; }
+.foot-social a { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; font-size: 0.8125rem; font-weight: 600; color: var(--body-on-ink); border: 1px solid var(--ink-line); border-radius: 999px; padding: 0.375rem 0.875rem; transition: color 0.15s ease, border-color 0.15s ease; }
+.foot-social a:hover { color: #fff; border-color: var(--green); }
+.foot-social svg { width: 15px; height: 15px; }
+
+/* ── Formulaire de contact ── */
+.form-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 2.5rem 2.5rem 2.25rem; box-shadow: 0 30px 70px -30px rgba(15, 21, 28, 0.25); }
+@media (max-width: 640px) { .form-card { padding: 1.75rem 1.5rem; } }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+.form-field { display: flex; flex-direction: column; gap: 0.4375rem; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label { font-size: 0.8438rem; font-weight: 700; }
+.form-field label .req { color: var(--terra); }
+.form-field input, .form-field select, .form-field textarea {
+  font-family: var(--sans); font-size: 0.9375rem; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--line-strong); border-radius: 10px;
+  padding: 0.6875rem 0.875rem; outline: none; transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--green-dark); box-shadow: 0 0 0 3px rgba(3, 207, 101, 0.15); background: #fff; }
+.form-field textarea { min-height: 8.5rem; resize: vertical; }
+.intent-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.intent-chips input { position: absolute; opacity: 0; pointer-events: none; }
+.intent-chips label {
+  font-size: 0.8438rem; font-weight: 600; color: var(--body); cursor: pointer;
+  border: 1.5px solid var(--line-strong); border-radius: 999px; padding: 0.4375rem 1rem;
+  transition: all 0.15s ease;
+}
+.intent-chips input:checked + label { background: var(--ink); border-color: var(--ink); color: #fff; }
+.intent-chips input:focus-visible + label { box-shadow: 0 0 0 3px rgba(3, 207, 101, 0.3); }
+.form-foot { margin-top: 1.5rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.form-rgpd { font-size: 0.75rem; color: var(--body); max-width: 26rem; }
+.form-rgpd a { color: var(--green-dark); font-weight: 600; }
+.form-status { font-size: 0.875rem; font-weight: 600; }
+.form-status.ok { color: var(--green-dark); }
+.form-status.err { color: #b53d2e; }
+.hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden; }
+
+/* ── Sélecteur de langue ── */
+.lang-drop { position: relative; }
+.lang-drop > button {
+  display: inline-flex; align-items: center; gap: 0.375rem;
+  font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--body); background: none; border: 1px solid var(--line-strong); border-radius: 999px;
+  padding: 0.4375rem 0.8125rem; cursor: pointer;
+}
+.lang-drop > button::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-1px); }
+.lang-drop-menu {
+  position: absolute; top: calc(100% + 6px); right: 0;
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: 0 20px 50px -18px rgba(15, 21, 28, 0.28);
+  padding: 0.375rem; min-width: 8.5rem; display: none; z-index: 60;
+}
+.lang-drop:hover .lang-drop-menu, .lang-drop:focus-within .lang-drop-menu { display: block; }
+.lang-drop-menu a { display: block; text-decoration: none; font-size: 0.8438rem; font-weight: 600; color: var(--ink); padding: 0.4375rem 0.625rem; border-radius: 6px; }
+.lang-drop-menu a:hover { background: var(--paper); }
+.lang-drop-menu a.active { color: var(--green-dark); }
+@media (max-width: 960px) { .nav-inner > .lang-drop { display: none; } .mobile-menu .mm-langs { display: flex; gap: 0.5rem; margin-top: 1rem; } .mobile-menu .mm-langs a { border: 1px solid var(--line); border-radius: 8px; padding: 0.375rem 0.75rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; border-bottom: 1px solid var(--line); } }
 
 /* ── Pages métiers / agents ── */
 .page-hero { padding: 9.5rem 0 4rem; position: relative; overflow: hidden; text-align: center; }
