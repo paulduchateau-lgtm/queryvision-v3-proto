@@ -1,0 +1,40 @@
+<svg width="680" height="348" viewBox="0 0 680 348" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Mockup fuentes de datos Qvision</title>
+<desc>Tarjeta azul grisáceo oscuro que lista cuatro fuentes de datos conectadas con sus estados.</desc>
+<rect x="40" y="24" width="600" height="300" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+<text x="70" y="64" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Fuentes de datos</text>
+<text x="610" y="63" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.2" fill="#03CF65">4 CONECTADAS</text>
+<line x1="70" y1="82" x2="610" y2="82" stroke="#2B3543" stroke-width="1"/>
+<g>
+<rect x="70" y="98" width="40" height="40" rx="10" fill="#232E3E" stroke="#303B4D" stroke-width="1"/>
+<ellipse cx="90" cy="111" rx="11" ry="4" fill="none" stroke="#03CF65" stroke-width="1.4"/>
+<path d="M79 111 V125 M101 111 V125" stroke="#03CF65" stroke-width="1.4"/>
+<path d="M79 125 A11 4 0 0 0 101 125" fill="none" stroke="#03CF65" stroke-width="1.4"/>
+<text x="126" y="116" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Almacén de datos</text>
+<text x="126" y="134" font-family="'JetBrains Mono',monospace" font-size="11" fill="#7E8A96">tabla agregada · 12 columnas</text>
+<rect x="520" y="106" width="90" height="24" rx="12" fill="#0C3B23"/><text x="565" y="122" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#38D982">Conectado</text>
+</g>
+<g>
+<rect x="70" y="152" width="40" height="40" rx="10" fill="#232E3E" stroke="#303B4D" stroke-width="1"/>
+<rect x="82" y="162" width="16" height="20" rx="2" fill="none" stroke="#03CF65" stroke-width="1.4"/>
+<path d="M86 168 h8 M86 173 h8 M86 178 h5" stroke="#03CF65" stroke-width="1.2"/>
+<text x="126" y="170" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Importación de archivo (CSV)</text>
+<text x="126" y="188" font-family="'JetBrains Mono',monospace" font-size="11" fill="#7E8A96">cargado · con marca temporal</text>
+<rect x="520" y="160" width="90" height="24" rx="12" fill="#0C3B23"/><text x="565" y="176" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#38D982">Conectado</text>
+</g>
+<g>
+<rect x="70" y="206" width="40" height="40" rx="10" fill="#232E3E" stroke="#303B4D" stroke-width="1"/>
+<path d="M83 216 h14 M83 222 h14 M83 228 h14 M83 234 h9" stroke="#03CF65" stroke-width="1.4"/>
+<text x="126" y="224" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Referencial interno</text>
+<text x="126" y="242" font-family="'JetBrains Mono',monospace" font-size="11" fill="#7E8A96">léxico &amp; nomenclatura</text>
+<rect x="520" y="214" width="90" height="24" rx="12" fill="#0C3B23"/><text x="565" y="230" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#38D982">Conectado</text>
+</g>
+<g>
+<rect x="70" y="260" width="40" height="40" rx="10" fill="#232E3E" stroke="#303B4D" stroke-width="1"/>
+<circle cx="90" cy="280" r="10" fill="none" stroke="#E6B45A" stroke-width="1.4"/>
+<path d="M90 274 V280 L94 284" fill="none" stroke="#E6B45A" stroke-width="1.4" stroke-linecap="round"/>
+<text x="126" y="278" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Conector API de negocio</text>
+<text x="126" y="296" font-family="'JetBrains Mono',monospace" font-size="11" fill="#7E8A96">flujo en tiempo real</text>
+<rect x="520" y="268" width="90" height="24" rx="12" fill="#3A2E14"/><text x="565" y="284" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#E6B45A">Sinc…</text>
+</g>
+</svg>

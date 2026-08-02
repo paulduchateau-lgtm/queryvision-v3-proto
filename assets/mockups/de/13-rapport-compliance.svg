@@ -1,0 +1,62 @@
+<svg width="680" height="440" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+  <title>Compliance-Bericht Q2 2025</title>
+  <desc>Layout des periodischen Compliance-Berichts, bereit zur Einreichung</desc>
+  <!-- Card background -->
+  <rect x="40" y="24" width="600" height="392" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+  <!-- Header title -->
+  <text x="70" y="58" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Compliance-Bericht Q2 2025</text>
+  <!-- Tag top-right -->
+  <text x="610" y="58" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#03CF65" text-anchor="end">BEREIT ZUR ABGABE</text>
+  <!-- Separator -->
+  <line x1="70" y1="78" x2="610" y2="78" stroke="#2B3543" stroke-width="1"/>
+
+  <!-- Metric box 1: TAUX GLOBAL -->
+  <rect x="70" y="92" width="172" height="100" rx="8" fill="#18242F" stroke="#263040" stroke-width="1"/>
+  <text x="84" y="113" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#03CF65">GESAMTQUOTE</text>
+  <text x="84" y="148" font-family="Georgia,'Times New Roman',serif" font-size="28" fill="#EDF1F4">72%</text>
+  <text x="84" y="173" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#03CF65">vs. 68% Q1  ↑</text>
+
+  <!-- Metric box 2: NON-CONFORMITÉS -->
+  <rect x="254" y="92" width="172" height="100" rx="8" fill="#18242F" stroke="#263040" stroke-width="1"/>
+  <text x="268" y="113" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#8C99A8">ABWEICHUNGEN</text>
+  <text x="268" y="148" font-family="Georgia,'Times New Roman',serif" font-size="28" fill="#EDF1F4">7</text>
+  <text x="268" y="173" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#D07070">+2 vs. Q1  ↑</text>
+
+  <!-- Metric box 3: PROCHAINE ÉCHÉANCE -->
+  <rect x="438" y="92" width="172" height="100" rx="8" fill="#18242F" stroke="#263040" stroke-width="1"/>
+  <text x="452" y="113" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#8C99A8">NÄCHSTE FRIST</text>
+  <text x="452" y="146" font-family="Georgia,'Times New Roman',serif" font-size="24" fill="#EDF1F4">15. Juli</text>
+  <text x="452" y="173" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#8C99A8">SOL II — ORSA</text>
+
+  <!-- Section: Points d'attention -->
+  <text x="70" y="220" font-family="Georgia,'Times New Roman',serif" font-size="16" fill="#EDF1F4">Kritische Punkte</text>
+  <!-- Red bullet item 1 -->
+  <rect x="70" y="232" width="7" height="7" rx="1" fill="#D07070"/>
+  <text x="84" y="241" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6">AML-Schulung 2024 nicht durchgeführt — 23 Mitarbeitende betroffen</text>
+  <!-- Amber bullet item 2 -->
+  <rect x="70" y="254" width="7" height="7" rx="1" fill="#C89432"/>
+  <text x="84" y="263" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6">DORA: TPPI-Kartierung unvollständig (61%)</text>
+
+  <!-- Section separator -->
+  <line x1="70" y1="280" x2="610" y2="280" stroke="#2B3543" stroke-width="1"/>
+
+  <!-- Section: Prêt à exporter -->
+  <text x="70" y="302" font-family="Georgia,'Times New Roman',serif" font-size="16" fill="#EDF1F4">Bereit zum Export</text>
+  <!-- Checkmark item 1 -->
+  <text x="70" y="322" font-family="'JetBrains Mono',monospace" font-size="12" fill="#03CF65">✓</text>
+  <text x="88" y="322" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6">SFCR-Bericht</text>
+  <!-- Checkmark item 2 -->
+  <text x="220" y="322" font-family="'JetBrains Mono',monospace" font-size="12" fill="#03CF65">✓</text>
+  <text x="238" y="322" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6">DSB-Jahresbericht</text>
+  <!-- Checkmark item 3 -->
+  <text x="396" y="322" font-family="'JetBrains Mono',monospace" font-size="12" fill="#03CF65">✓</text>
+  <text x="414" y="322" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6">AML-Konformitätserklärung</text>
+
+  <!-- Bottom separator -->
+  <line x1="70" y1="376" x2="610" y2="376" stroke="#2B3543" stroke-width="1"/>
+  <!-- Footer -->
+  <text x="70" y="398" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">Bericht automatisch generiert · Freigabe erforderlich</text>
+  <!-- Download button -->
+  <rect x="488" y="385" width="122" height="24" rx="5" fill="#122A1C"/>
+  <text x="549" y="401" font-family="'JetBrains Mono',monospace" font-size="10" fill="#03CF65" text-anchor="middle">PDF herunterladen</text>
+</svg>

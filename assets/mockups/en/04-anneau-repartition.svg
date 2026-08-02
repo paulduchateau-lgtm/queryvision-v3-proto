@@ -1,0 +1,22 @@
+<svg width="680" height="430" viewBox="0 0 680 430" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Qvision risk distribution donut mockup</title>
+<desc>Dark blue-gray card, donut chart of risk distribution across five cities with legend.</desc>
+<rect x="40" y="24" width="600" height="380" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+<text x="70" y="66" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Risk distribution by site</text>
+<text x="610" y="65" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#03CF65">RN3</text>
+<line x1="70" y1="84" x2="610" y2="84" stroke="#2B3543" stroke-width="1"/>
+<g transform="rotate(-90 190 250)">
+<circle cx="190" cy="250" r="90" fill="none" stroke="#8C84D8" stroke-width="34" stroke-dasharray="169.6 395.9"/>
+<circle cx="190" cy="250" r="90" fill="none" stroke="#1D9E75" stroke-width="34" stroke-dasharray="147 418.5" stroke-dashoffset="-169.6"/>
+<circle cx="190" cy="250" r="90" fill="none" stroke="#EF9F27" stroke-width="34" stroke-dasharray="113.1 452.4" stroke-dashoffset="-316.6"/>
+<circle cx="190" cy="250" r="90" fill="none" stroke="#378ADD" stroke-width="34" stroke-dasharray="79.2 486.3" stroke-dashoffset="-429.7"/>
+<circle cx="190" cy="250" r="90" fill="none" stroke="#D4537E" stroke-width="34" stroke-dasharray="56.6 508.9" stroke-dashoffset="-508.9"/>
+</g>
+<text x="190" y="246" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="26" fill="#EDF1F4">1,248</text>
+<text x="190" y="268" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#8C99A8">risks</text>
+<circle cx="372" cy="170" r="5" fill="#8C84D8"/><text x="386" y="174" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#C3CCD6">Paris</text><text x="610" y="174" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="#93A0B0">30%</text>
+<circle cx="372" cy="206" r="5" fill="#1D9E75"/><text x="386" y="210" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#C3CCD6">Lyon</text><text x="610" y="210" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="#93A0B0">26%</text>
+<circle cx="372" cy="242" r="5" fill="#EF9F27"/><text x="386" y="246" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#C3CCD6">Marseille</text><text x="610" y="246" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="#93A0B0">20%</text>
+<circle cx="372" cy="278" r="5" fill="#378ADD"/><text x="386" y="282" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#C3CCD6">Bordeaux</text><text x="610" y="282" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="#93A0B0">14%</text>
+<circle cx="372" cy="314" r="5" fill="#D4537E"/><text x="386" y="318" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#C3CCD6">Lille</text><text x="610" y="318" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="#93A0B0">10%</text>
+</svg>

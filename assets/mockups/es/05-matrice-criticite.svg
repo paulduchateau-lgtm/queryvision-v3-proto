@@ -1,0 +1,48 @@
+<svg width="680" height="440" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Mockup matriz de criticidad Qvision</title>
+<desc>Tarjeta azul grisáceo oscuro con una matriz de 5 por 5 probabilidad frente a impacto, casillas coloreadas del verde al rojo.</desc>
+<rect x="40" y="24" width="600" height="392" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+<text x="70" y="66" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Matriz de criticidad</text>
+<text x="610" y="65" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#03CF65">P × I</text>
+<line x1="70" y1="84" x2="610" y2="84" stroke="#2B3543" stroke-width="1"/>
+<text x="170" y="104" font-family="'JetBrains Mono',monospace" font-size="11" fill="#8C99A8">↑ Impacto</text>
+<g font-family="'JetBrains Mono',monospace" font-size="11">
+<rect x="170" y="110" width="48" height="48" rx="6" fill="#5E6315"/><text x="194" y="139" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.55">2</text>
+<rect x="222" y="110" width="48" height="48" rx="6" fill="#8A6212"/><text x="246" y="139" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.6">5</text>
+<rect x="274" y="110" width="48" height="48" rx="6" fill="#99481C"/><text x="298" y="139" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.65">9</text>
+<rect x="326" y="110" width="48" height="48" rx="6" fill="#992C2C"/><text x="350" y="139" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.7">14</text>
+<rect x="378" y="110" width="48" height="48" rx="6" fill="#992C2C"/><text x="402" y="139" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.7">8</text>
+<rect x="170" y="162" width="48" height="48" rx="6" fill="#5E6315"/><text x="194" y="191" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.55">4</text>
+<rect x="222" y="162" width="48" height="48" rx="6" fill="#8A6212"/><text x="246" y="191" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.6">11</text>
+<rect x="274" y="162" width="48" height="48" rx="6" fill="#99481C"/><text x="298" y="191" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.65">18</text>
+<rect x="326" y="162" width="48" height="48" rx="6" fill="#99481C"/><text x="350" y="191" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.7">22</text>
+<rect x="378" y="162" width="48" height="48" rx="6" fill="#992C2C"/><text x="402" y="191" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.7">12</text>
+<rect x="170" y="214" width="48" height="48" rx="6" fill="#0F5A38"/><text x="194" y="243" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">7</text>
+<rect x="222" y="214" width="48" height="48" rx="6" fill="#5E6315"/><text x="246" y="243" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.55">20</text>
+<rect x="274" y="214" width="48" height="48" rx="6" fill="#8A6212"/><text x="298" y="243" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.65">34</text>
+<rect x="326" y="214" width="48" height="48" rx="6" fill="#99481C"/><text x="350" y="243" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.65">19</text>
+<rect x="378" y="214" width="48" height="48" rx="6" fill="#99481C"/><text x="402" y="243" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.6">9</text>
+<rect x="170" y="266" width="48" height="48" rx="6" fill="#0F5A38"/><text x="194" y="295" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">9</text>
+<rect x="222" y="266" width="48" height="48" rx="6" fill="#0F5A38"/><text x="246" y="295" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">16</text>
+<rect x="274" y="266" width="48" height="48" rx="6" fill="#5E6315"/><text x="298" y="295" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.55">12</text>
+<rect x="326" y="266" width="48" height="48" rx="6" fill="#8A6212"/><text x="350" y="295" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.6">7</text>
+<rect x="378" y="266" width="48" height="48" rx="6" fill="#99481C"/><text x="402" y="295" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.55">3</text>
+<rect x="170" y="318" width="48" height="48" rx="6" fill="#0F5A38"/><text x="194" y="347" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">12</text>
+<rect x="222" y="318" width="48" height="48" rx="6" fill="#0F5A38"/><text x="246" y="347" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">8</text>
+<rect x="274" y="318" width="48" height="48" rx="6" fill="#0F5A38"/><text x="298" y="347" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">5</text>
+<rect x="326" y="318" width="48" height="48" rx="6" fill="#5E6315"/><text x="350" y="347" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">2</text>
+<rect x="378" y="318" width="48" height="48" rx="6" fill="#8A6212"/><text x="402" y="347" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5">1</text>
+</g>
+<g font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">
+<text x="158" y="138" text-anchor="end">5</text><text x="158" y="190" text-anchor="end">4</text><text x="158" y="242" text-anchor="end">3</text><text x="158" y="294" text-anchor="end">2</text><text x="158" y="346" text-anchor="end">1</text>
+<text x="194" y="384" text-anchor="middle">1</text><text x="246" y="384" text-anchor="middle">2</text><text x="298" y="384" text-anchor="middle">3</text><text x="350" y="384" text-anchor="middle">4</text><text x="402" y="384" text-anchor="middle">5</text>
+</g>
+<text x="298" y="406" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#8C99A8">Probabilidad →</text>
+<g font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6">
+<rect x="470" y="132" width="16" height="16" rx="3" fill="#0F5A38"/><text x="494" y="145">Bajo</text>
+<rect x="470" y="162" width="16" height="16" rx="3" fill="#5E6315"/><text x="494" y="175">Moderado</text>
+<rect x="470" y="192" width="16" height="16" rx="3" fill="#8A6212"/><text x="494" y="205">Medio</text>
+<rect x="470" y="222" width="16" height="16" rx="3" fill="#99481C"/><text x="494" y="235">Alto</text>
+<rect x="470" y="252" width="16" height="16" rx="3" fill="#992C2C"/><text x="494" y="265">Crítico</text>
+</g>
+</svg>

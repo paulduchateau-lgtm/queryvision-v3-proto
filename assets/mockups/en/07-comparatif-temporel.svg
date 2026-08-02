@@ -1,0 +1,25 @@
+<svg width="680" height="400" viewBox="0 0 680 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Qvision year-over-year comparison mockup</title>
+<desc>Dark blue-gray card, grouped bars comparing 2024 and 2025 scores for five cities.</desc>
+<rect x="40" y="24" width="600" height="352" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+<text x="70" y="64" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Trend 2024 → 2025</text>
+<text x="610" y="63" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.2" fill="#03CF65">Δ RAW SCORE</text>
+<rect x="70" y="84" width="11" height="11" rx="2" fill="#515C68"/><text x="88" y="94" font-family="'JetBrains Mono',monospace" font-size="11" fill="#93A0B0">2024</text>
+<rect x="150" y="84" width="11" height="11" rx="2" fill="#8C84D8"/><text x="168" y="94" font-family="'JetBrains Mono',monospace" font-size="11" fill="#93A0B0">2025</text>
+<line x1="84" y1="336" x2="610" y2="336" stroke="#313C4C" stroke-width="1"/>
+<line x1="84" y1="279" x2="610" y2="279" stroke="#28323F" stroke-width="1"/>
+<line x1="84" y1="222" x2="610" y2="222" stroke="#28323F" stroke-width="1"/>
+<line x1="84" y1="165" x2="610" y2="165" stroke="#28323F" stroke-width="1"/>
+<text x="78" y="340" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">0</text>
+<text x="78" y="283" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">2</text>
+<text x="78" y="226" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">4</text>
+<text x="78" y="169" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">6</text>
+<rect x="104" y="159" width="24" height="177" rx="3" fill="#515C68"/><rect x="132" y="156" width="24" height="180" rx="3" fill="#8C84D8"/>
+<rect x="200" y="193" width="24" height="143" rx="3" fill="#515C68"/><rect x="228" y="139" width="24" height="197" rx="3" fill="#8C84D8"/>
+<rect x="296" y="227" width="24" height="109" rx="3" fill="#515C68"/><rect x="324" y="193" width="24" height="143" rx="3" fill="#8C84D8"/>
+<rect x="392" y="190" width="24" height="146" rx="3" fill="#515C68"/><rect x="420" y="179" width="24" height="157" rx="3" fill="#8C84D8"/>
+<rect x="488" y="225" width="24" height="111" rx="3" fill="#515C68"/><rect x="516" y="202" width="24" height="134" rx="3" fill="#8C84D8"/>
+<g font-family="'JetBrains Mono',monospace" font-size="10" fill="#8C99A8">
+<text x="130" y="352" text-anchor="middle">Paris</text><text x="226" y="352" text-anchor="middle">Lyon</text><text x="322" y="352" text-anchor="middle">Marseille</text><text x="418" y="352" text-anchor="middle">Bordeaux</text><text x="514" y="352" text-anchor="middle">Lille</text>
+</g>
+</svg>

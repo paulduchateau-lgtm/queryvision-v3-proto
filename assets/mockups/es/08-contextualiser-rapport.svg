@@ -1,0 +1,31 @@
+<svg width="680" height="674" viewBox="0 0 680 674" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Mockup contextualización de informe Qvision</title>
+<desc>Tarjeta azul grisáceo oscuro, flujo conversacional Pilot que hace preguntas para personalizar un informe, con una lista de ciudades.</desc>
+<rect x="40" y="24" width="600" height="636" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+<text x="70" y="66" font-family="Georgia,'Times New Roman',serif" font-size="22" fill="#EDF1F4">Contextualizar el informe</text>
+<text x="70" y="90" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#93A0B0">Responda a QVision para personalizar su informe.</text>
+<text x="70" y="124" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.8" fill="#03CF65">QVISION</text>
+<rect x="70" y="134" width="480" height="60" rx="12" fill="#232E3E"/>
+<text x="90" y="162" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#DDE4EA">Ha elegido «Dashboard Riesgos». ¿Sobre qué</text>
+<text x="90" y="184" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#DDE4EA">periodo desea analizar los datos?</text>
+<text x="610" y="220" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.8" fill="#93A0B0">USTED</text>
+<rect x="534" y="230" width="76" height="36" rx="10" fill="#0E131A"/>
+<text x="572" y="254" text-anchor="middle" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#EDF1F4">2024</text>
+<text x="70" y="296" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.8" fill="#03CF65">QVISION</text>
+<rect x="70" y="306" width="300" height="40" rx="12" fill="#232E3E"/>
+<text x="90" y="331" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#DDE4EA">¿Y para qué alcance?</text>
+<rect x="70" y="362" width="540" height="230" rx="12" fill="#1F2734" stroke="#303B4D" stroke-width="1"/>
+<line x1="88" y1="408" x2="592" y2="408" stroke="#2A3340" stroke-width="1"/>
+<line x1="88" y1="454" x2="592" y2="454" stroke="#2A3340" stroke-width="1"/>
+<line x1="88" y1="500" x2="592" y2="500" stroke="#2A3340" stroke-width="1"/>
+<line x1="88" y1="546" x2="592" y2="546" stroke="#2A3340" stroke-width="1"/>
+<rect x="88" y="374" width="22" height="22" rx="6" fill="#2A3340"/><text x="99" y="390" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#8C99A8">1</text><text x="122" y="390" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Global</text>
+<rect x="88" y="420" width="22" height="22" rx="6" fill="#2A3340"/><text x="99" y="436" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#8C99A8">2</text><text x="122" y="436" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Paris</text>
+<rect x="88" y="466" width="22" height="22" rx="6" fill="#2A3340"/><text x="99" y="482" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#8C99A8">3</text><text x="122" y="482" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Lyon</text>
+<rect x="88" y="512" width="22" height="22" rx="6" fill="#2A3340"/><text x="99" y="528" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#8C99A8">4</text><text x="122" y="528" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Marseille</text>
+<rect x="88" y="558" width="22" height="22" rx="6" fill="#2A3340"/><text x="99" y="574" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#8C99A8">5</text><text x="122" y="574" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4">Otro</text>
+<rect x="70" y="606" width="466" height="46" rx="12" fill="#19212C" stroke="#2E3A49" stroke-width="1"/>
+<text x="90" y="634" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#67737F">Ej.: Grupo, Dirección Financiera</text>
+<rect x="550" y="606" width="46" height="46" rx="12" fill="#03CF65"/>
+<path d="M566 629 h14 m-4 -4 l4 4 l-4 4" fill="none" stroke="#06301C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

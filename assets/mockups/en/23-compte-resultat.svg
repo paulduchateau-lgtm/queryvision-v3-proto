@@ -1,0 +1,56 @@
+<svg width="680" height="440" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+  <title>Comparative income statement</title>
+  <desc>Q2 2025 P&amp;L: actual vs budget vs prior year, EBITDA and net income with AI analysis</desc>
+  <!-- Card background -->
+  <rect x="40" y="24" width="600" height="392" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+  <!-- Header -->
+  <text x="70" y="58" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Income statement — Q2 2025</text>
+  <text x="610" y="58" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#03CF65" text-anchor="end">CONSOLIDATED</text>
+  <line x1="70" y1="74" x2="610" y2="74" stroke="#2B3543" stroke-width="1"/>
+  <!-- Column headers -->
+  <text x="86" y="96" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#67737F">METRIC</text>
+  <text x="372" y="96" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#67737F" text-anchor="end">ACTUAL</text>
+  <text x="472" y="96" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#67737F" text-anchor="end">BUDGET</text>
+  <text x="572" y="96" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#67737F" text-anchor="end">VARIANCE</text>
+  <line x1="70" y1="104" x2="610" y2="104" stroke="#2B3543" stroke-width="1"/>
+  <!-- Row 1 : Chiffre d'affaires (highlight) -->
+  <rect x="70" y="108" width="540" height="30" rx="4" fill="#18242F"/>
+  <text x="86" y="128" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#EDF1F4" font-weight="600">Revenue</text>
+  <text x="372" y="128" font-family="'JetBrains Mono',monospace" font-size="13" fill="#EDF1F4" text-anchor="end">€48.3M</text>
+  <text x="472" y="128" font-family="'JetBrains Mono',monospace" font-size="13" fill="#8C99A8" text-anchor="end">€46.0M</text>
+  <text x="572" y="128" font-family="'JetBrains Mono',monospace" font-size="13" fill="#03CF65" text-anchor="end">+5.0%</text>
+  <!-- Row 2 : Marge brute -->
+  <text x="86" y="158" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#CDD4DC">Gross margin</text>
+  <text x="372" y="158" font-family="'JetBrains Mono',monospace" font-size="13" fill="#EDF1F4" text-anchor="end">€31.4M</text>
+  <text x="472" y="158" font-family="'JetBrains Mono',monospace" font-size="13" fill="#8C99A8" text-anchor="end">€29.9M</text>
+  <text x="572" y="158" font-family="'JetBrains Mono',monospace" font-size="13" fill="#03CF65" text-anchor="end">+4.9%</text>
+  <text x="86" y="172" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">rate: 65.0%</text>
+  <line x1="86" y1="182" x2="594" y2="182" stroke="#2B3543" stroke-width="0.5" stroke-dasharray="3 3"/>
+  <!-- Row 3 : EBITDA (highlight) -->
+  <rect x="70" y="186" width="540" height="30" rx="4" fill="#18242F"/>
+  <text x="86" y="206" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#CDD4DC">EBITDA</text>
+  <text x="372" y="206" font-family="'JetBrains Mono',monospace" font-size="13" fill="#EDF1F4" text-anchor="end">€9.7M</text>
+  <text x="472" y="206" font-family="'JetBrains Mono',monospace" font-size="13" fill="#8C99A8" text-anchor="end">€10.2M</text>
+  <text x="572" y="206" font-family="'JetBrains Mono',monospace" font-size="13" fill="#D07070" text-anchor="end">−4.9%</text>
+  <!-- Row 4 : EBIT -->
+  <text x="86" y="236" font-family="-apple-system,'Inter',sans-serif" font-size="13" fill="#CDD4DC">EBIT</text>
+  <text x="372" y="236" font-family="'JetBrains Mono',monospace" font-size="13" fill="#EDF1F4" text-anchor="end">€6.2M</text>
+  <text x="472" y="236" font-family="'JetBrains Mono',monospace" font-size="13" fill="#8C99A8" text-anchor="end">€6.8M</text>
+  <text x="572" y="236" font-family="'JetBrains Mono',monospace" font-size="13" fill="#D07070" text-anchor="end">−8.8%</text>
+  <line x1="86" y1="248" x2="594" y2="248" stroke="#2B3543" stroke-width="1"/>
+  <!-- Row 5 : Résultat net (bold) -->
+  <rect x="70" y="252" width="540" height="30" rx="4" fill="#18242F"/>
+  <text x="86" y="272" font-family="-apple-system,'Inter',sans-serif" font-size="14" fill="#EDF1F4" font-weight="700">Net income</text>
+  <text x="372" y="272" font-family="'JetBrains Mono',monospace" font-size="14" fill="#EDF1F4" font-weight="700" text-anchor="end">€4.1M</text>
+  <text x="472" y="272" font-family="'JetBrains Mono',monospace" font-size="14" fill="#8C99A8" text-anchor="end">€4.4M</text>
+  <text x="572" y="272" font-family="'JetBrains Mono',monospace" font-size="14" fill="#D07070" text-anchor="end">−6.8%</text>
+  <!-- AI annotation -->
+  <rect x="70" y="298" width="540" height="58" rx="8" fill="#1A2B3A" stroke="#293A4A" stroke-width="1"/>
+  <text x="86" y="318" font-family="'JetBrains Mono',monospace" font-size="10" fill="#03CF65" letter-spacing="1">AI · AUTOMATED ANALYSIS</text>
+  <text x="86" y="336" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#9BA4AE">EBITDA below budget: HR costs up +3.2%, not offset by revenue.</text>
+  <text x="86" y="351" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#6B7A8A">Ask: “Which line items are drifting this quarter?”</text>
+  <!-- Footer -->
+  <line x1="70" y1="370" x2="610" y2="370" stroke="#2B3543" stroke-width="1"/>
+  <text x="70" y="389" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">Source SAP FI · Close approved · 30 Jun 2025</text>
+  <text x="610" y="389" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F" text-anchor="end">3 consolidated entities</text>
+</svg>

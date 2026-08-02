@@ -1,0 +1,53 @@
+<svg width="680" height="440" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+  <title>Lieferantenanomalien Q1 2025</title>
+  <desc>Horizontales Balkendiagramm — 35 Anomalien in 3.847 Rechnungen erkannt, nach Kategorie</desc>
+  <rect x="40" y="24" width="600" height="392" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="70" y="58" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">Lieferantenanomalien Q1 2025</text>
+  <text x="610" y="58" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#D07070" text-anchor="end">35 ANOMALIEN</text>
+  <line x1="70" y1="74" x2="610" y2="74" stroke="#2B3543" stroke-width="1"/>
+  <text x="70" y="94" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">3.847 Rechnungen analysiert · 5 Kategorien · ML-Modell v2.4 · Konfidenz 94 %</text>
+
+  <!-- Bar chart — max=12, x=200→555 (355px), 1 unit ≈ 29.6px -->
+
+  <!-- Row 1: Doublons probables · 12 (red) -->
+  <text x="196" y="130" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6" text-anchor="end">Mögliche Dubletten</text>
+  <rect x="200" y="116" width="355" height="22" rx="3" fill="#B24B4B" fill-opacity="0.12"/>
+  <rect x="200" y="116" width="355" height="22" rx="3" fill="#B24B4B" fill-opacity="0.85"/>
+  <text x="562" y="131" font-family="'JetBrains Mono',monospace" font-size="12" fill="#D07070">12</text>
+
+  <!-- Row 2: Écarts de montant · 8 (amber) -->
+  <text x="196" y="172" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6" text-anchor="end">Betragsabweichungen</text>
+  <rect x="200" y="158" width="355" height="22" rx="3" fill="#C89432" fill-opacity="0.10"/>
+  <rect x="200" y="158" width="237" height="22" rx="3" fill="#C89432" fill-opacity="0.75"/>
+  <text x="444" y="173" font-family="'JetBrains Mono',monospace" font-size="12" fill="#C89432">8</text>
+
+  <!-- Row 3: Doublons exacts · 7 (red) -->
+  <text x="196" y="214" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6" text-anchor="end">Exakte Dubletten</text>
+  <rect x="200" y="200" width="355" height="22" rx="3" fill="#B24B4B" fill-opacity="0.10"/>
+  <rect x="200" y="200" width="207" height="22" rx="3" fill="#B24B4B" fill-opacity="0.65"/>
+  <text x="414" y="215" font-family="'JetBrains Mono',monospace" font-size="12" fill="#D07070">7</text>
+
+  <!-- Row 4: Factures sans BC · 5 (muted) -->
+  <text x="196" y="256" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#C3CCD6" text-anchor="end">Ohne Bestellbezug</text>
+  <rect x="200" y="242" width="355" height="22" rx="3" fill="#67737F" fill-opacity="0.10"/>
+  <rect x="200" y="242" width="148" height="22" rx="3" fill="#67737F" fill-opacity="0.55"/>
+  <text x="355" y="257" font-family="'JetBrains Mono',monospace" font-size="12" fill="#8C99A8">5</text>
+
+  <!-- Row 5: Montants suspects · 3 (muted) -->
+  <text x="196" y="298" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#8C99A8" text-anchor="end">Auffällige Beträge</text>
+  <rect x="200" y="284" width="355" height="22" rx="3" fill="#67737F" fill-opacity="0.07"/>
+  <rect x="200" y="284" width="89" height="22" rx="3" fill="#67737F" fill-opacity="0.35"/>
+  <text x="296" y="299" font-family="'JetBrains Mono',monospace" font-size="12" fill="#67737F">3</text>
+
+  <!-- AI interpretation block -->
+  <rect x="70" y="322" width="540" height="48" rx="8" fill="#1A2B3A" stroke="#293A4A" stroke-width="1"/>
+  <text x="86" y="338" font-family="'JetBrains Mono',monospace" font-size="10" fill="#03CF65" letter-spacing="1">KI ·</text>
+  <text x="110" y="338" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#9BA4AE">19 kritische Anomalien (Dubletten + Abweichungen). ACME SAS und DELTA Tech: Klärung vor Q1-Abschluss.</text>
+  <text x="86" y="356" font-family="-apple-system,'Inter',sans-serif" font-size="12" fill="#6B7A8A">Fragen Sie: „Welche Lieferanten haben bis 31. März zu prüfende Dubletten?“</text>
+
+  <!-- Footer -->
+  <line x1="70" y1="384" x2="610" y2="384" stroke="#2B3543" stroke-width="1"/>
+  <text x="70" y="400" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">Quelle: Kreditorenbuchhaltung · Import 31.03.2025 · Analyse auditiert</text>
+</svg>
