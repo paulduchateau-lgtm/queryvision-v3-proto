@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Demander une démo · QueryVision</title>
+<meta name="description" content="Parlez-nous de votre contexte : démonstration sur vos données, tarification ou partenariat. Réponse sous 48 h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'%3E%3Crect width='84' height='84' fill='%230F151C'/%3E%3Cpath d='M 14 14 L 70 14 L 70 44 L 60 44 L 60 24 L 24 24 L 24 60 L 47 60 L 47 70 L 14 70 Z' fill='white'/%3E%3Crect x='54' y='54' width='16' height='16' fill='%2303CF65'/%3E%3C/svg%3E">
+<link rel="alternate" hreflang="fr" href="../fr/contact.html">
+<link rel="alternate" hreflang="en" href="../en/contact.html">
+<link rel="alternate" hreflang="es" href="../es/contacto.html">
+<link rel="alternate" hreflang="de" href="../de/kontakt.html">
+<link rel="alternate" hreflang="x-default" href="../en/contact.html">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      QueryVision
+    </a>
+    <nav class="nav-links">
+      <div class="nav-drop">
+        <button type="button">Agents</button>
+        <div class="nav-drop-menu">
+          <a href="agents/query-vision.html">Query Vision <small>L'analyste — de la question au chiffre</small></a>
+          <a href="agents/spot-vision.html">Spot Vision <small>Le relais — l'information de référence</small></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button type="button">Métiers</button>
+        <div class="nav-drop-menu">
+          <a href="metiers/risques.html">Risques <small>Cartographier l'exposition en continu</small></a>
+          <a href="metiers/conformite.html">Conformité <small>La conformité, lisible à la demande</small></a>
+          <a href="metiers/audit.html">Audit &amp; Conseil interne <small>Constats, recommandations, processus</small></a>
+          <a href="metiers/finance.html">Finance <small>Clôturez. Analysez. Anticipez.</small></a>
+        </div>
+      </div>
+      <a href="index.html#souverainete">Souveraineté</a>
+      <a href="index.html#plateforme">Plateforme</a>
+      <a href="entreprise.html">Entreprise</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.demo.query.vision/login">Se connecter</a>
+      <a class="btn btn-primary" href="contact.html">Demander une démo</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero" style="padding-bottom: 2rem">
+  <div class="wrap">
+    <p class="kicker center rv">Contact</p>
+    <h1 class="rv d1">Parlez-nous de votre <span class="hl-g">contexte.</span></h1>
+    <p class="hero-sub rv d2">Une démonstration sur un échantillon de vos données, une question de tarification ou un projet de partenariat — nous revenons vers vous sous 48&nbsp;h.</p>
+  </div>
+</section>
+
+<!-- FORMULAIRE -->
+<section class="tight" style="padding-top: 1rem">
+  <div class="wrap" style="max-width: 52rem">
+    <form class="form-card rv" id="contact-form" novalidate>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="cf-name">Nom <span class="req">*</span></label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-company">Société</label>
+          <input id="cf-company" name="company" type="text" autocomplete="organization" maxlength="160">
+        </div>
+        <div class="form-field">
+          <label for="cf-email">E-mail professionnel <span class="req">*</span></label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-role">Fonction</label>
+          <select id="cf-role" name="role">
+            <option value="">—</option>
+            <option value="comex">Direction générale / COMEX</option>
+            <option value="metier">Direction métier</option>
+            <option value="dsi">DSI / IT</option>
+            <option value="data">Data / BI</option>
+            <option value="achats">Achats</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-field full">
+          <span style="font-size:0.8438rem;font-weight:700">Vous nous contactez pour</span>
+          <div class="intent-chips" role="radiogroup" aria-label="Motif de contact">
+            <input type="radio" id="int-demo" name="intent" value="demo" checked><label for="int-demo">Une démo</label>
+            <input type="radio" id="int-pricing" name="intent" value="pricing"><label for="int-pricing">La tarification</label>
+            <input type="radio" id="int-partner" name="intent" value="partner"><label for="int-partner">Un partenariat</label>
+            <input type="radio" id="int-other" name="intent" value="other"><label for="int-other">Autre</label>
+          </div>
+        </div>
+        <div class="form-field full">
+          <label for="cf-message">Votre message</label>
+          <textarea id="cf-message" name="message" maxlength="4000" placeholder="Votre contexte, vos données, vos échéances…"></textarea>
+        </div>
+      </div>
+      <div class="hp-field" aria-hidden="true">
+        <label>Ne pas remplir<input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="form-foot">
+        <button class="btn btn-primary" type="submit">Envoyer <span class="arr">→</span></button>
+        <p class="form-rgpd">Vos données sont uniquement utilisées pour vous recontacter. Voir notre <a href="legal/confidentialite.html">politique de confidentialité</a>.</p>
+      </div>
+      <p id="form-status" class="form-status" role="status" aria-live="polite" style="margin-top:0.875rem"></p>
+    </form>
+
+    <div class="rv d1" style="margin-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; font-size: 0.875rem; color: var(--body)">
+      <span>Ventes &amp; démos&nbsp;: <a href="mailto:contact@query.vision" style="color:var(--green-dark);font-weight:600">contact@query.vision</a></span>
+      <span>Partenariats&nbsp;: <a href="mailto:partners@query.vision" style="color:var(--green-dark);font-weight:600">partners@query.vision</a></span>
+      <span>Sécurité&nbsp;: <a href="mailto:security@query.vision" style="color:var(--green-dark);font-weight:600">security@query.vision</a></span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          QueryVision
+        </div>
+        <p class="foot-base">FROM QUERY TO VISION<br>QueryVision S.A.S. — Bordeaux, France</p>
+        <div class="foot-social"><a href="https://www.linkedin.com/company/queryvision" target="_blank" rel="noopener" aria-label="QueryVision sur LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a></div>
+      </div>
+      <div class="foot-links">
+        <div>
+          <b>Agents</b>
+          <a href="agents/query-vision.html">Query Vision</a>
+          <a href="agents/spot-vision.html">Spot Vision</a>
+        </div>
+        <div>
+          <b>Métiers</b>
+          <a href="metiers/risques.html">Risques</a>
+          <a href="metiers/conformite.html">Conformité</a>
+          <a href="metiers/audit.html">Audit &amp; Conseil</a>
+          <a href="metiers/finance.html">Finance</a>
+        </div>
+        <div>
+          <b>Société</b>
+          <a href="index.html#souverainete">Souveraineté</a>
+          <a href="entreprise.html">Entreprise</a>
+          <a href="entreprise.html#partenaires">Partenaires</a>
+          <a href="entreprise.html#implantations">Implantations</a>
+          <a href="trust-center.html">Trust Center</a>
+          <a href="mailto:contact@query.vision">Contact</a>
+        </div>
+        <div>
+          <b>Légal</b>
+          <a href="legal/mentions-legales.html">Mentions légales</a>
+          <a href="legal/cgu.html">CGU</a>
+          <a href="legal/confidentialite.html">Confidentialité</a>
+          <a href="legal/cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 QueryVision S.A.S. — Tous droits réservés.</span>
+      <span>Hébergé en France — Scaleway</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>

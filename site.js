@@ -27,9 +27,14 @@
     if (path.length && LANGS[path[0]]) path = path.slice(1);
     return path.join('/') || 'index.html';
   }
-  // rootPrefix pointe toujours vers la racine réelle du site (site.css n'existe qu'à la racine)
+  // Slugs localisés : on s'appuie d'abord sur les <link rel="alternate" hreflang> de la page
+  const alternates = {};
+  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(l => {
+    alternates[l.getAttribute('hreflang')] = l.getAttribute('href');
+  });
   function langHref(code) {
-    return rootPrefix + (code === 'fr' ? '' : code + '/') + treePath();
+    if (alternates[code]) return alternates[code];
+    return rootPrefix + code + '/' + treePath();
   }
   const navInner = document.querySelector('.nav-inner');
   if (navInner) {
@@ -140,6 +145,16 @@
       cta.textContent = demo.textContent.trim();
       menu.appendChild(cta);
     }
+    const mmLangs = document.createElement('div');
+    mmLangs.className = 'mm-langs';
+    Object.keys(LANGS).forEach(c => {
+      const a = document.createElement('a');
+      a.href = langHref(c);
+      a.textContent = c.toUpperCase();
+      if (c === curLang) a.style.color = 'var(--green-dark)';
+      mmLangs.appendChild(a);
+    });
+    menu.appendChild(mmLangs);
     nav.appendChild(menu);
     inner.appendChild(burger);
     burger.addEventListener('click', () => {

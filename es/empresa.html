@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empresa — Socios, Trust Center y sedes · QueryVision</title>
+<meta name="description" content="QueryVision como empresa: el programa de socios, el Trust Center y nuestras sedes en Europa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../site.css">
+<style>
+  .pcat-grid { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  @media (max-width: 760px) { .pcat-grid { grid-template-columns: 1fr; } }
+  .pcat {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.875rem 1.75rem; transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .pcat:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -18px rgba(15,21,28,0.18); }
+  .pcat .pc-cat { font-family: var(--mono); font-size: 0.6563rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green-dark); }
+  .pcat h3 { margin-top: 0.75rem; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.015em; }
+  .pcat p { margin-top: 0.625rem; font-size: 0.9063rem; color: var(--body); }
+  .tiers-h { margin: 4.5rem 0 0; text-align: center; font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--body); }
+  .tier-grid { margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: stretch; }
+  @media (max-width: 860px) { .tier-grid { grid-template-columns: 1fr; } }
+  .tier {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 2rem 1.75rem; position: relative; display: flex; flex-direction: column; gap: 0.625rem;
+  }
+  .tier.reco { border: 1.5px solid var(--green-dark); box-shadow: 0 22px 50px -22px rgba(10, 124, 66, 0.35); }
+  .tier .tier-badge {
+    position: absolute; top: -0.8125rem; left: 50%; transform: translateX(-50%);
+    font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.14em; text-transform: uppercase;
+    background: var(--green); color: var(--green-deep); border-radius: 999px; padding: 0.25rem 0.875rem; font-weight: 700;
+  }
+  .tier .tier-n { font-family: var(--mono); font-size: 0.6563rem; letter-spacing: 0.14em; color: var(--body); }
+  .tier h3 { font-size: 1.375rem; font-weight: 800; font-style: italic; letter-spacing: -0.02em; }
+  .tier p { font-size: 0.875rem; color: var(--body); }
+  .office-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 860px) { .office-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .office-grid { grid-template-columns: 1fr; } }
+  .office {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.625rem 1.5rem; display: flex; flex-direction: column; gap: 0.375rem;
+  }
+  .office .of-city { font-size: 1.1875rem; font-weight: 800; letter-spacing: -0.015em; display: flex; align-items: center; gap: 0.5rem; }
+  .office .of-region { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--body); }
+  .office .of-status { margin-top: 0.625rem; }
+  .impl-stats { margin-top: 2.5rem; display: flex; gap: 2.5rem; flex-wrap: wrap; font-family: var(--mono); font-size: 0.75rem; color: var(--body); letter-spacing: 0.04em; }
+  .impl-stats b { color: var(--ink); }
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'%3E%3Crect width='84' height='84' fill='%230F151C'/%3E%3Cpath d='M 14 14 L 70 14 L 70 44 L 60 44 L 60 24 L 24 24 L 24 60 L 47 60 L 47 70 L 14 70 Z' fill='white'/%3E%3Crect x='54' y='54' width='16' height='16' fill='%2303CF65'/%3E%3C/svg%3E">
+<link rel="alternate" hreflang="fr" href="../fr/entreprise.html">
+<link rel="alternate" hreflang="en" href="../en/company.html">
+<link rel="alternate" hreflang="es" href="../es/empresa.html">
+<link rel="alternate" hreflang="de" href="../de/unternehmen.html">
+<link rel="alternate" hreflang="x-default" href="../en/company.html">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#0F151C"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      QueryVision
+    </a>
+    <nav class="nav-links">
+      <div class="nav-drop">
+        <button type="button">Agentes</button>
+        <div class="nav-drop-menu">
+          <a href="agentes/query-vision.html">Query Vision <small>El analista — de la pregunta a la cifra</small></a>
+          <a href="agentes/spot-vision.html">Spot Vision <small>El enlace — la información de referencia</small></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button type="button">Funciones</button>
+        <div class="nav-drop-menu">
+          <a href="funciones/riesgos.html">Riesgos <small>Cartografiar la exposición en continuo</small></a>
+          <a href="funciones/cumplimiento.html">Cumplimiento <small>El cumplimiento, legible bajo demanda</small></a>
+          <a href="funciones/auditoria.html">Auditoría y Consultoría interna <small>Hallazgos, recomendaciones, procesos</small></a>
+          <a href="funciones/finanzas.html">Finanzas <small>Cierre. Analice. Anticipe.</small></a>
+        </div>
+      </div>
+      <a href="index.html#souverainete">Soberanía</a>
+      <a href="index.html#plateforme">Plataforma</a>
+      <a href="empresa.html">Empresa</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.demo.query.vision/login">Iniciar sesión</a>
+      <a class="btn btn-primary" href="contacto.html">Solicitar una demo</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="kicker center rv">Empresa</p>
+    <h1 class="rv d1">Una empresa francesa, un <span class="hl-g">ecosistema</span> de confianza.</h1>
+    <p class="hero-sub rv d2">QueryVision se construye con una red de socios de consultoría, tecnología y reventa — y con compromisos de transparencia documentados en nuestro Trust Center.</p>
+    <div class="hero-ctas rv d3" style="justify-content:center">
+      <a class="btn btn-primary" href="#partenaires">Programa de socios <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="trust-center.html">Trust Center</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMA DE SOCIOS -->
+<section id="partenaires" style="padding-top: 2rem">
+  <div class="wrap">
+    <p class="kicker rv">01 — Programa de socios</p>
+    <h2 class="sec-title rv d1">Construyamos juntos la decisión basada en datos del mañana.</h2>
+    <p class="sec-lead rv d2">QueryVision Partners abre la plataforma a un ecosistema de socios de consultoría, tecnología y reventa. Aporte su experiencia local, su cartera de clientes y su saber hacer — nosotros aportamos la plataforma, la marca y un programa de crecimiento a su medida.</p>
+
+    <div class="pcat-grid">
+      <div class="pcat rv">
+        <p class="pc-cat">Consultoras e integradores</p>
+        <h3>Despliegue la plataforma en sus clientes.</h3>
+        <p>Integre QueryVision en sus proyectos de transformación de datos. Formación, certificación y venta conjunta en sus cuentas estratégicas.</p>
+      </div>
+      <div class="pcat rv d1">
+        <p class="pc-cat">Socios tecnológicos</p>
+        <h3>Conecte su producto a QueryVision.</h3>
+        <p>Editores SaaS, plataformas de datos, ERP, CRM — integre nuestras API y aparezca en el marketplace de QueryVision.</p>
+      </div>
+      <div class="pcat rv d1">
+        <p class="pc-cat">Revendedores regionales</p>
+        <h3>Abra un nuevo mercado.</h3>
+        <p>Represente a QueryVision en su territorio. Exclusividad geográfica, fondos MDF, soporte de preventa dedicado.</p>
+      </div>
+      <div class="pcat rv d2">
+        <p class="pc-cat">Expertos en datos y formadores</p>
+        <h3>Forme a los equipos del mañana.</h3>
+        <p>Conviértase en QueryVision Certified Expert. Imparta formaciones, acompañe los despliegues y facture su experiencia.</p>
+      </div>
+    </div>
+
+    <p class="tiers-h rv">— Tres niveles de compromiso —</p>
+    <div class="tier-grid">
+      <div class="tier rv">
+        <span class="tier-n">Nivel 1</span>
+        <h3>Authorized</h3>
+        <p>Formación de producto + soporte técnico. La puerta de entrada al programa.</p>
+      </div>
+      <div class="tier reco rv d1">
+        <span class="tier-badge">Recomendado</span>
+        <span class="tier-n">Nivel 2</span>
+        <h3>Certified</h3>
+        <p>Co-marketing, fondos MDF, registro de oportunidades, formación avanzada, acceso a la hoja de ruta.</p>
+      </div>
+      <div class="tier rv d2">
+        <span class="tier-n">Nivel 3</span>
+        <h3>Premier</h3>
+        <p>Prioridad comercial, exclusividad regional, hoja de ruta compartida, equipo de cuenta dedicado.</p>
+      </div>
+    </div>
+
+    <div class="hero-ctas rv" style="margin-top: 3rem; justify-content: center">
+      <a class="btn btn-primary" href="contacto.html?motif=partenariat">Convertirse en socio <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST CENTER -->
+<section class="tight">
+  <div class="wrap">
+    <p class="kicker rv">02 — Transparencia</p>
+    <div class="sec-band on-ink rv d1">
+      <div>
+        <h3>El Trust Center, negro sobre blanco.</h3>
+        <p>Nuestro Trust Center detalla la totalidad de nuestros compromisos: alojamiento soberano, seguridad, cumplimiento del RGPD, registro de subcontratistas y auditorías externas.</p>
+        <div class="sb-chips">
+          <span>Alojamiento soberano</span>
+          <span>RGPD</span>
+          <span>Registro de subcontratistas</span>
+          <span>Auditorías externas</span>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="trust-center.html">Ver el Trust Center <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SEDES -->
+<section id="implantations" style="background: var(--paper-deep); border-top: 1px solid var(--line)">
+  <div class="wrap">
+    <p class="kicker rv">03 — Sedes</p>
+    <h2 class="sec-title rv d1">Cerca de sus equipos, en toda Europa.</h2>
+
+    <div class="office-grid">
+      <div class="office rv" style="border-top: 3px solid var(--green)">
+        <div class="of-city">Burdeos <span style="font-size:0.75rem">★</span></div>
+        <div class="of-region">Francia — Nueva Aquitania</div>
+        <div class="of-status"><span class="chip green">Sede central — activa</span></div>
+      </div>
+      <div class="office rv d1">
+        <div class="of-city">París</div>
+        <div class="of-region">Francia — Isla de Francia</div>
+        <div class="of-status"><span class="chip yellow">Apertura — 2026</span></div>
+      </div>
+      <div class="office rv d1">
+        <div class="of-city">Bruselas</div>
+        <div class="of-region">Bélgica — Unión Europea</div>
+        <div class="of-status"><span class="chip yellow">Apertura — 2026</span></div>
+      </div>
+      <div class="office rv d2">
+        <div class="of-city">Ginebra</div>
+        <div class="of-region">Suiza — Lago Lemán</div>
+        <div class="of-status"><span class="chip gray">Apertura — 2027</span></div>
+      </div>
+      <div class="office rv d2">
+        <div class="of-city">Luxemburgo</div>
+        <div class="of-region">Luxemburgo — Gran Ducado</div>
+        <div class="of-status"><span class="chip gray">Apertura — 2027</span></div>
+      </div>
+      <div class="office rv d3">
+        <div class="of-city">Casablanca</div>
+        <div class="of-region">Marruecos — Casablanca Finance City</div>
+        <div class="of-status"><span class="chip gray">Apertura — 2027</span></div>
+      </div>
+    </div>
+    <div class="impl-stats rv">
+      <span><b>1</b> oficina activa</span>
+      <span><b>2</b> aperturas en 2026</span>
+      <span><b>3</b> aperturas en 2027</span>
+      <span>Accesible <b>en todo el mundo</b> a través de nuestros socios integradores</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" id="contact">
+  <div class="wrap">
+    <p class="kicker rv" style="justify-content:center">Siguiente paso</p>
+    <h2 class="rv d1">¿Listo para unirse al ecosistema?</h2>
+    <p class="rv d2">Descríbanos su actividad, su territorio y sus clientes objetivo. Le respondemos en un plazo de 48 horas con un punto de entrada concreto.</p>
+    <div class="hero-ctas rv d3" style="margin-top:2.25rem">
+      <a class="btn btn-primary" href="contacto.html?motif=partenariat">Convertirse en socio <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="index.html">Volver a la página de inicio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+          QueryVision
+        </div>
+        <p class="foot-base">FROM QUERY TO VISION<br>QueryVision S.A.S. — Burdeos, Francia</p>
+        <div class="foot-social"><a href="https://www.linkedin.com/company/queryvision" target="_blank" rel="noopener" aria-label="QueryVision en LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a></div>
+      </div>
+      <div class="foot-links">
+        <div>
+          <b>Agentes</b>
+          <a href="agentes/query-vision.html">Query Vision</a>
+          <a href="agentes/spot-vision.html">Spot Vision</a>
+        </div>
+        <div>
+          <b>Funciones</b>
+          <a href="funciones/riesgos.html">Riesgos</a>
+          <a href="funciones/cumplimiento.html">Cumplimiento</a>
+          <a href="funciones/auditoria.html">Auditoría y Consultoría</a>
+          <a href="funciones/finanzas.html">Finanzas</a>
+        </div>
+        <div>
+          <b>Compañía</b>
+          <a href="index.html#souverainete">Soberanía</a>
+          <a href="empresa.html">Empresa</a>
+          <a href="empresa.html#partenaires">Socios</a>
+          <a href="empresa.html#implantations">Sedes</a>
+          <a href="trust-center.html">Trust Center</a>
+          <a href="mailto:contact@query.vision">Contacto</a>
+        </div>
+        <div>
+          <b>Legal</b>
+          <a href="legal/aviso-legal.html">Aviso legal</a>
+          <a href="legal/condiciones-de-uso.html">Condiciones de uso</a>
+          <a href="legal/privacidad.html">Privacidad</a>
+          <a href="legal/cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 QueryVision S.A.S. — Todos los derechos reservados.</span>
+      <span>Alojado en Francia — Scaleway</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>
