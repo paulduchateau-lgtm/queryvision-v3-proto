@@ -3,7 +3,7 @@
   // Clé Web3Forms (publique par conception, comme sur le site en prod :
   // même clé que le secret VITE_WEB3FORMS_KEY des GitHub Actions du site actuel).
   // Vide = repli gracieux : le formulaire compose un email via mailto.
-  const WEB3FORMS_KEY = '';
+  const WEB3FORMS_KEY = 'b4af91e4-b552-4087-8746-c5328507ebed';
   const CONTACT_EMAIL = 'contact@query.vision';
   const LANGS = { fr: 'Français', en: 'English', es: 'Español', de: 'Deutsch' };
   const FORM_MSG = {
