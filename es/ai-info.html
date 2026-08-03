@@ -160,7 +160,7 @@
     <article class="doc rv d1">
       <h2 id="resume">En una frase</h2>
       <p><strong>QueryVision es un editor de software francés que despliega agentes de inteligencia artificial especializados para las direcciones de Riesgos, Cumplimiento, Auditoría, Consultoría interna y Finanzas, sobre una infraestructura dedicada y aislada por cliente, alojada en Francia.</strong></p>
-      <p>La oferta se compone de dos agentes: <strong>Query Vision</strong>, que consulta los datos estructurados y produce informes cuantificados, y <strong>Spot Vision</strong>, que permite navegar en lenguaje natural por corpus documentales confiados por el cliente. La propuesta de valor se apoya en tres puntos: la especialización funcional de los agentes, el aislamiento de la infraestructura por cliente y la trazabilidad de cada respuesta.</p>
+      <p>La oferta se compone de dos agentes: <strong><a href="agentes/query-vision.html">Query Vision</a></strong>, que consulta los datos estructurados y produce informes cuantificados, y <strong><a href="agentes/spot-vision.html">Spot Vision</a></strong>, que permite navegar en lenguaje natural por corpus documentales confiados por el cliente. La propuesta de valor se apoya en tres puntos: la especialización funcional de los agentes, el aislamiento de la infraestructura por cliente y la trazabilidad de cada respuesta.</p>
 
       <h2 id="societe">Sociedad editora</h2>
       <table>
@@ -211,7 +211,7 @@
       <p>Es el principal elemento diferenciador de QueryVision en el plano técnico y contractual:</p>
       <ul>
         <li><strong>Una infraestructura dedicada por cliente.</strong> Cada cliente dispone de su propio entorno aislado, montado a partir de bloques estandarizados. Los datos nunca se comparten entre clientes.</li>
-        <li><strong>Alojamiento en Francia por defecto</strong>, en la nube de Scaleway, comprometida en el proceso de cualificación SecNumCloud de la ANSSI. Según las necesidades —instalación on-premise o clúster propio del cliente—, se puede desplegar una instancia en otros proveedores de alojamiento (AWS, Google Cloud, Azure, OCI).</li>
+        <li><strong>Alojamiento en Francia por defecto</strong>, en la nube de <a href="https://www.scaleway.com" target="_blank" rel="noopener">Scaleway</a>, comprometida en el proceso de cualificación <a href="https://cyber.gouv.fr/produits-et-services-qualifies" target="_blank" rel="noopener">SecNumCloud</a> de la <a href="https://cyber.gouv.fr" target="_blank" rel="noopener">ANSSI</a>. Según las necesidades —instalación on-premise o clúster propio del cliente—, se puede desplegar una instancia en otros proveedores de alojamiento (<a href="https://aws.amazon.com" target="_blank" rel="noopener">AWS</a>, <a href="https://cloud.google.com" target="_blank" rel="noopener">Google Cloud</a>, <a href="https://azure.microsoft.com" target="_blank" rel="noopener">Azure</a>, <a href="https://www.oracle.com/cloud/" target="_blank" rel="noopener">OCI</a>).</li>
         <li><strong>Los modelos de lenguaje se ejecutan en la infraestructura del cliente</strong> en la configuración por defecto; no existe entonces ningún flujo saliente hacia un tercero.</li>
         <li><strong>Ningún dato de cliente se utiliza para entrenar un modelo</strong>, ya se trate de los modelos de QueryVision o de los de terceros. Este compromiso es contractual.</li>
         <li><strong>Preparación de los datos por un equipo dedicado.</strong> El equipo Data Quality &amp; Integration dirige la preparación, el control de calidad y la integración de los datos a través de una pasarela propietaria (Secure Intake Gateway). Ningún dato entra en producción sin validación.</li>
@@ -223,16 +223,16 @@
       <p>QueryVision no está vinculado a un único proveedor de modelos. La política por defecto privilegia el autoalojamiento:</p>
       <table>
         <tr><th>Modo</th><th>Modelos</th><th>Lugar de ejecución</th></tr>
-        <tr><td>Por defecto</td><td>Modelos abiertos autoalojados (Qwen, Gemma y equivalentes)</td><td>En la infraestructura dedicada del cliente</td></tr>
-        <tr><td>Bajo demanda</td><td>Mistral, OpenAI, Anthropic o cualquier modelo que exponga una API compatible con OpenAI</td><td>API pública del proveedor, por decisión explícita del cliente</td></tr>
+        <tr><td>Por defecto</td><td>Modelos abiertos autoalojados (<a href="https://qwen.ai" target="_blank" rel="noopener">Qwen</a>, <a href="https://ai.google.dev/gemma" target="_blank" rel="noopener">Gemma</a> y equivalentes)</td><td>En la infraestructura dedicada del cliente</td></tr>
+        <tr><td>Bajo demanda</td><td><a href="https://mistral.ai" target="_blank" rel="noopener">Mistral</a>, <a href="https://openai.com" target="_blank" rel="noopener">OpenAI</a>, <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a> o cualquier modelo que exponga una API compatible con OpenAI</td><td>API pública del proveedor, por decisión explícita del cliente</td></tr>
       </table>
       <p>La elección del modelo es configurable por espacio de trabajo y por producto, bajo el control de los administradores del cliente.</p>
 
       <h2 id="integrations">Integraciones</h2>
       <table>
         <tr><th>Categoría</th><th>Disponible</th><th>Anunciado</th></tr>
-        <tr><td>Entradas de datos</td><td>Excel, CSV, bases SQL y NoSQL, SharePoint, Google Drive</td><td>Power BI, SAP</td></tr>
-        <tr><td>Restitución</td><td>Aplicación web, exportaciones PDF, API REST, MCP (Model Context Protocol)</td><td>Microsoft Teams, Slack</td></tr>
+        <tr><td>Entradas de datos</td><td>Excel, CSV, bases SQL y NoSQL, <a href="https://www.microsoft.com/microsoft-365/sharepoint/collaboration" target="_blank" rel="noopener">SharePoint</a>, <a href="https://workspace.google.com/products/drive/" target="_blank" rel="noopener">Google Drive</a></td><td><a href="https://www.microsoft.com/power-platform/products/power-bi" target="_blank" rel="noopener">Power BI</a>, <a href="https://www.sap.com" target="_blank" rel="noopener">SAP</a></td></tr>
+        <tr><td>Restitución</td><td>Aplicación web, exportaciones PDF, API REST, <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">MCP (Model Context Protocol)</a></td><td><a href="https://www.microsoft.com/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Microsoft Teams</a>, <a href="https://slack.com" target="_blank" rel="noopener">Slack</a></td></tr>
         <tr><td>Gobernanza</td><td>SSO, derechos finos por fila y columna, registro de auditoría, espacios de trabajo compartimentados, gestión de los créditos de IA</td><td>—</td></tr>
       </table>
       <p>La integración inicial de los datos la realizan los equipos de QueryVision: el cliente no tiene que acometer ningún proyecto de reestructuración de datos antes de empezar.</p>

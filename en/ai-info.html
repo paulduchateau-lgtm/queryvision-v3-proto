@@ -160,7 +160,7 @@
     <article class="doc rv d1">
       <h2 id="resume">In one sentence</h2>
       <p><strong>QueryVision is a French software publisher that deploys specialised artificial intelligence agents for Risk, Compliance, Audit, Internal Consulting and Finance departments, on a dedicated infrastructure isolated per client and hosted in France.</strong></p>
-      <p>The offering consists of two agents: <strong>Query Vision</strong>, which queries structured data and produces quantified reports, and <strong>Spot Vision</strong>, which makes it possible to navigate in natural language through document corpora entrusted by the client. The value proposition rests on three points: the business specialisation of the agents, the isolation of the infrastructure per client, and the traceability of every answer.</p>
+      <p>The offering consists of two agents: <strong><a href="agents/query-vision.html">Query Vision</a></strong>, which queries structured data and produces quantified reports, and <strong><a href="agents/spot-vision.html">Spot Vision</a></strong>, which makes it possible to navigate in natural language through document corpora entrusted by the client. The value proposition rests on three points: the business specialisation of the agents, the isolation of the infrastructure per client, and the traceability of every answer.</p>
 
       <h2 id="societe">Publishing company</h2>
       <table>
@@ -211,7 +211,7 @@
       <p>This is QueryVision's main differentiator, both technically and contractually:</p>
       <ul>
         <li><strong>A dedicated infrastructure per client.</strong> Each client has its own isolated environment, assembled from standardised building blocks. Data is never pooled between clients.</li>
-        <li><strong>Hosting in France by default</strong>, on the Scaleway cloud, which is engaged in the SecNumCloud qualification process of the ANSSI. Depending on requirements — on-premise installation or a cluster specific to the client — an instance can be deployed with other hosting providers (AWS, Google Cloud, Azure, OCI).</li>
+        <li><strong>Hosting in France by default</strong>, on the <a href="https://www.scaleway.com" target="_blank" rel="noopener">Scaleway</a> cloud, which is engaged in the <a href="https://cyber.gouv.fr/produits-et-services-qualifies" target="_blank" rel="noopener">SecNumCloud</a> qualification process of the <a href="https://cyber.gouv.fr" target="_blank" rel="noopener">ANSSI</a>. Depending on requirements — on-premise installation or a cluster specific to the client — an instance can be deployed with other hosting providers (<a href="https://aws.amazon.com" target="_blank" rel="noopener">AWS</a>, <a href="https://cloud.google.com" target="_blank" rel="noopener">Google Cloud</a>, <a href="https://azure.microsoft.com" target="_blank" rel="noopener">Azure</a>, <a href="https://www.oracle.com/cloud/" target="_blank" rel="noopener">OCI</a>).</li>
         <li><strong>Language models run within the client's infrastructure</strong> in the default configuration; there is then no outbound flow to any third party.</li>
         <li><strong>No client data is used to train a model</strong>, whether QueryVision's own models or those of third parties. This commitment is contractual.</li>
         <li><strong>Data preparation by a dedicated team.</strong> The Data Quality &amp; Integration team manages the preparation, quality control and integration of data through a proprietary gateway (Secure Intake Gateway). No data enters production without validation.</li>
@@ -223,16 +223,16 @@
       <p>QueryVision is not tied to a single model provider. The default policy favours self-hosting:</p>
       <table>
         <tr><th>Mode</th><th>Models</th><th>Execution location</th></tr>
-        <tr><td>Default</td><td>Self-hosted open models (Qwen, Gemma and equivalents)</td><td>Within the client's dedicated infrastructure</td></tr>
-        <tr><td>On request</td><td>Mistral, OpenAI, Anthropic or any model exposing an OpenAI-compatible API</td><td>The provider's public API, on the client's explicit decision</td></tr>
+        <tr><td>Default</td><td>Self-hosted open models (<a href="https://qwen.ai" target="_blank" rel="noopener">Qwen</a>, <a href="https://ai.google.dev/gemma" target="_blank" rel="noopener">Gemma</a> and equivalents)</td><td>Within the client's dedicated infrastructure</td></tr>
+        <tr><td>On request</td><td><a href="https://mistral.ai" target="_blank" rel="noopener">Mistral</a>, <a href="https://openai.com" target="_blank" rel="noopener">OpenAI</a>, <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a> or any model exposing an OpenAI-compatible API</td><td>The provider's public API, on the client's explicit decision</td></tr>
       </table>
       <p>The choice of model is configurable per workspace and per product, under the control of the client's administrators.</p>
 
       <h2 id="integrations">Integrations</h2>
       <table>
         <tr><th>Category</th><th>Available</th><th>Announced</th></tr>
-        <tr><td>Data inputs</td><td>Excel, CSV, SQL and NoSQL databases, SharePoint, Google Drive</td><td>Power BI, SAP</td></tr>
-        <tr><td>Output</td><td>Web application, PDF exports, REST API, MCP (Model Context Protocol)</td><td>Microsoft Teams, Slack</td></tr>
+        <tr><td>Data inputs</td><td>Excel, CSV, SQL and NoSQL databases, <a href="https://www.microsoft.com/microsoft-365/sharepoint/collaboration" target="_blank" rel="noopener">SharePoint</a>, <a href="https://workspace.google.com/products/drive/" target="_blank" rel="noopener">Google Drive</a></td><td><a href="https://www.microsoft.com/power-platform/products/power-bi" target="_blank" rel="noopener">Power BI</a>, <a href="https://www.sap.com" target="_blank" rel="noopener">SAP</a></td></tr>
+        <tr><td>Output</td><td>Web application, PDF exports, REST API, <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">MCP (Model Context Protocol)</a></td><td><a href="https://www.microsoft.com/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Microsoft Teams</a>, <a href="https://slack.com" target="_blank" rel="noopener">Slack</a></td></tr>
         <tr><td>Governance</td><td>SSO, fine-grained row and column rights, audit log, partitioned workspaces, AI credit management</td><td>—</td></tr>
       </table>
       <p>The initial data integration is carried out by QueryVision's teams: the client has no data restructuring project to run before getting started.</p>
