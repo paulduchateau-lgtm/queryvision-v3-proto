@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QueryVision — Agentes de IA soberanos para las direcciones de Riesgos, Cumplimiento, Auditoría y Finanzas</title>
-<meta name="description" content="QueryVision despliega agentes de IA expertos en sus funciones de Riesgos, Cumplimiento, Auditoría, Consultoría interna y Finanzas — sobre una infraestructura dedicada, en Francia.">
+<title>QueryVision — Agentes de IA soberanos para interrogar sus datos de negocio</title>
+<meta name="description" content="Interrogue sus datos en lenguaje natural — Riesgos, Cumplimiento, Auditoría, Consultoría interna, Finanzas — infraestructura dedicada, en Francia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -72,10 +72,10 @@
     </div>
 
     <div class="stage rv" id="stage-demo">
-      <div class="fc dim" style="left: -3%; top: 2rem; width: 24rem;"><img src="../assets/mockups/es/05-matrice-criticite.svg" alt="Matriz de criticidad"></div>
-      <div class="fc" style="left: 2%; top: 17rem; width: 21rem;"><img src="../assets/mockups/es/04-anneau-repartition.svg" alt="Distribución por dominio"></div>
+      <div class="fc" style="left: -3%; top: 2rem; width: 24rem;"><img src="../assets/mockups/es/25-prevision-tresorerie.svg" alt="Previsión de tesorería"></div>
+      <div class="fc dim" style="left: 2%; top: 17rem; width: 21rem;"><img src="../assets/mockups/es/05-matrice-criticite.svg" alt="Matriz de criticidad"></div>
       <div class="fc dim" style="right: -3%; top: 1rem; width: 24rem;"><img src="../assets/mockups/es/12-couverture-reglementaire.svg" alt="Cobertura regulatoria"></div>
-      <div class="fc" style="right: 1%; top: 16rem; width: 23rem;"><img src="../assets/mockups/es/25-prevision-tresorerie.svg" alt="Previsión de tesorería"></div>
+      <div class="fc" style="right: 1%; top: 16rem; width: 23rem;"><img src="../assets/mockups/es/04-anneau-repartition.svg" alt="Distribución por dominio"></div>
 
       <div class="chat-card">
         <div class="cc-head">
@@ -83,15 +83,15 @@
           Query Vision
           <span class="cc-role">Agente analista</span>
         </div>
-        <div class="cm cm-1 cm-user">¿Puedes analizar la deriva de nuestros riesgos de proveedores este trimestre?</div>
+        <div class="cm cm-1 cm-user">¿Cuál es la proyección de cierre 2026 por actividad, y qué explica la desviación respecto al presupuesto?</div>
         <div class="cm cm-2 cm-process">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           Consulta generada, verificada, ejecutada — 0,6 s
         </div>
-        <div class="cm cm-3 cm-answer">He preparado un análisis detallado de su exposición a proveedores:</div>
-        <a class="cm cm-4 cm-doc" href="agentes/query-vision.html">
+        <div class="cm cm-3 cm-answer">He preparado una síntesis detallada de su proyección de cierre por actividad:</div>
+        <a class="cm cm-4 cm-doc" href="funciones/finanzas.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Exposición a proveedores — T2 2026
+          Proyección de cierre 2026 — reproyección T2
           <span class="cd-arr">›</span>
         </a>
         <div class="cc-input"><span class="plus">+</span> Haga una pregunta, o componga un informe…</div>
@@ -165,15 +165,15 @@
     <p class="sec-lead rv d2">La fuerza de QueryVision no es solo tecnológica: cada dominio incorpora un corpus profesional de referencia, construido con expertos en ejercicio.</p>
 
     <div class="tabs-bar rv" role="tablist">
-      <button class="tab-btn active" data-tab="risques" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Riesgos</button>
-      <button class="tab-btn" data-tab="conformite" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Cumplimiento</button>
-      <button class="tab-btn" data-tab="audit" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Auditoría interna</button>
-      <button class="tab-btn" data-tab="conseil" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Consultoría interna</button>
-      <button class="tab-btn" data-tab="finance" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Finanzas</button>
+      <button class="tab-btn" data-tab="risques" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Riesgos</button>
+      <button class="tab-btn" data-tab="conformite" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Cumplimiento</button>
+      <button class="tab-btn" data-tab="audit" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Auditoría interna</button>
+      <button class="tab-btn" data-tab="conseil" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Consultoría interna</button>
+      <button class="tab-btn active" data-tab="finance" role="tab" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Finanzas</button>
     </div>
 
     <!-- RISQUES -->
-    <div class="tab-pane active" id="pane-risques" style="--acc: var(--terra)">
+    <div class="tab-pane" id="pane-risques" style="--acc: var(--terra)">
       <div class="tab-copy">
         <h3>Riesgos</h3>
         <p class="t-desc">Cartografías actualizadas con cada pregunta, concentración de exposición por entidad, seguimiento de los planes de mitigación — la visión consolidada que espera el comité de dirección, sin las tres semanas de hoja de cálculo.</p>
@@ -234,6 +234,12 @@
           <span class="ah-badge">87 % conforme</span>
         </div>
         <div class="app-body">
+          <div class="kpi-row">
+            <div class="kpi"><div class="k-l">Controles evaluados</div><div class="k-v">93</div><div class="k-d">Anexo A — perímetro completo</div></div>
+            <div class="kpi"><div class="k-l">Conformes</div><div class="k-v">81</div><div class="k-d up">87 % del perímetro</div></div>
+            <div class="kpi"><div class="k-l">A vigilar</div><div class="k-v">8</div><div class="k-d">Acciones propuestas</div></div>
+            <div class="kpi"><div class="k-l">No conformes</div><div class="k-v">4</div><div class="k-d down">Planes en curso</div></div>
+          </div>
           <table class="app-table">
             <tr><th style="width:38%">Requisito</th><th style="width:14%">Estado</th><th>Acción correctiva propuesta</th></tr>
             <tr><td><b>A.5</b> — Políticas de seguridad de la información</td><td><span class="chip green">● Conforme</span></td><td style="color:#8a9199">—</td></tr>
@@ -279,6 +285,14 @@
                 <div class="src-chips"><span>Plan de seguimiento — auditoría de compras 2025</span><span>Evidencias T2 2026 — carpeta 4</span><span>Marco IFACI — norma 2500</span></div>
               </div>
             </div>
+          </div>
+          <div>
+            <div class="app-sec-title">Acciones pendientes — auditoría de compras 2025</div>
+            <table class="app-table">
+              <tr><th>Recomendación</th><th>Plazo</th><th>Estado</th></tr>
+              <tr><td>Revisión anual de los proveedores homologados</td><td>Septiembre de 2026</td><td><span class="chip yellow">En curso</span></td></tr>
+              <tr><td>Digitalización de las órdenes de servicio</td><td>Superado — 2 meses</td><td><span class="chip red">Con retraso</span></td></tr>
+            </table>
           </div>
         </div>
       </div>
@@ -336,12 +350,21 @@
             <rect x="150" y="272" width="340" height="1" fill="#f0ede7"/>
             <text x="320" y="292" text-anchor="middle" font-size="11.5" fill="#444c56"><tspan font-weight="700" fill="#D96A44">Camino crítico: 11,3 d</tspan> — la etapa de peritaje concentra el 60 % del plazo</text>
           </svg>
+          <div>
+            <div class="app-sec-title">Plazos por etapa — lectura</div>
+            <table class="app-table">
+              <tr><th>Etapa</th><th>Plazo medio</th><th>Lectura</th></tr>
+              <tr><td>Peritaje</td><td style="font-family:var(--mono)">6,8 d</td><td><span class="chip red">Cuello de botella principal</span></td></tr>
+              <tr><td>Validación</td><td style="font-family:var(--mono)">2,3 d</td><td><span class="chip yellow">Por fluidificar</span></td></tr>
+              <tr><td>Análisis simple</td><td style="font-family:var(--mono)">2,1 d</td><td><span class="chip gray">Conforme al objetivo</span></td></tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- FINANCE -->
-    <div class="tab-pane" id="pane-finance" style="--acc: var(--sun)">
+    <div class="tab-pane active" id="pane-finance" style="--acc: var(--sun)">
       <div class="tab-copy">
         <h3>Finanzas</h3>
         <p class="t-desc">Proyección de cierre, variaciones, contribución por actividad — el diálogo de gestión se apoya en cifras consultables en directo, presentadas en lenguaje de dirección.</p>
@@ -662,33 +685,21 @@
         <div class="st-num">12&nbsp;d&nbsp;<span class="u">→</span>&nbsp;2&nbsp;d</div>
         <p class="st-what">Producción de la cartografía trimestral</p>
         <p class="st-desc">La consolidación multientidad, los controles de coherencia y la restitución al comité de dirección pasan de dos semanas de hoja de cálculo a dos días — cada cifra trazable hasta el dato de origen.</p>
-        <div class="story-author">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Retrato — Julien Mercier">
-          <div><div class="sa-name">Julien Mercier</div><div class="sa-role">Director de Riesgos</div></div>
-        </div>
       </article>
       <article class="story-card rv d1" style="--sc: var(--green)">
         <span class="st-sector">Cumplimiento — bancaseguros</span>
         <div class="st-num">−60<span class="u">%</span></div>
         <p class="st-what">Tiempo de preparación de las auditorías</p>
         <p class="st-desc">Cuatro referenciales seguidos en continuo (RGPD, ISO 27001, Solvencia II, PBC-FT). Las evidencias y las desviaciones abiertas se producen bajo demanda, ya no se reconstruyen con urgencia.</p>
-        <div class="story-author">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Retrato — Nadia Belkacem">
-          <div><div class="sa-name">Nadia Belkacem</div><div class="sa-role">Responsable de Cumplimiento</div></div>
-        </div>
       </article>
       <article class="story-card rv d2" style="--sc: var(--purple)">
         <span class="st-sector">Dirección general — protección social</span>
         <div class="st-num">3.800</div>
         <p class="st-what">Empleados alineados con el plan estratégico</p>
         <p class="st-desc">Todos los mánagers pueden interrogar el nuevo plan estratégico: objetivos, despliegue en acciones, metas. Una única versión de la verdad, difundida en directo.</p>
-        <div class="story-author">
-          <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Retrato — Claire Delattre">
-          <div><div class="sa-name">Claire Delattre</div><div class="sa-role">Directora General Adjunta</div></div>
-        </div>
       </article>
     </div>
-    <p class="stories-note">Testimonios de despliegues piloto — cifras e identidades ilustrativas para el prototipo.</p>
+    <p class="stories-note">Testimonios de despliegues piloto — cifras ilustrativas para el prototipo.</p>
   </div>
 </section>
 

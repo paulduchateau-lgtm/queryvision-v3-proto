@@ -327,6 +327,7 @@ section.tight { padding: 5rem 0; }
 }
 .tab-btn svg { width: 16px; height: 16px; }
 .tab-btn:hover { color: var(--ink); background: var(--paper); }
+.tab-btn:focus-visible { box-shadow: 0 0 0 3px rgba(3, 207, 101, 0.3); }
 .tab-btn.active { background: var(--ink); color: #fff; }
 .tab-pane { display: none; margin-top: 2.5rem; }
 .tab-pane.active { display: grid; grid-template-columns: 4fr 7fr; gap: 3rem; align-items: start; }
