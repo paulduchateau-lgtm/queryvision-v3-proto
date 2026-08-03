@@ -412,9 +412,7 @@ section.tight { padding: 5rem 0; }
 .quote-inner blockquote { font-size: clamp(1.375rem, 2.6vw, 1.875rem); font-weight: 700; font-style: italic; letter-spacing: -0.02em; line-height: 1.35; }
 .quote-inner blockquote .qm { color: var(--terra); }
 .quote-author { margin-top: 2rem; display: flex; align-items: center; justify-content: center; gap: 1rem; }
-.quote-author img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2.5px solid #fff; box-shadow: 0 6px 18px rgba(15,21,28,0.18); }
-.quote-author .qa-name { font-weight: 700; font-size: 0.9375rem; text-align: left; }
-.quote-author .qa-role { font-size: 0.8125rem; color: var(--body); text-align: left; }
+.quote-author .qa-role { font-size: 0.8125rem; color: var(--body); text-align: center; }
 
 /* ── Souveraineté (dark) ── */
 .sov { background: var(--ink); color: #fff; position: relative; overflow: hidden; }
@@ -591,10 +589,6 @@ section.tight { padding: 5rem 0; }
 .story-card .st-num .u { font-size: 1.4rem; letter-spacing: 0; }
 .story-card .st-what { margin-top: 0.5rem; font-weight: 700; font-size: 0.9688rem; }
 .story-card p.st-desc { margin-top: 0.875rem; font-size: 0.875rem; color: var(--body); flex: 1; }
-.story-author { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid #f0ede7; display: flex; align-items: center; gap: 0.75rem; }
-.story-author img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
-.story-author .sa-name { font-weight: 700; font-size: 0.8125rem; }
-.story-author .sa-role { font-size: 0.75rem; color: var(--body); }
 @media (max-width: 900px) { .stories-grid { grid-template-columns: 1fr; } }
 .stories-note { margin-top: 1.75rem; font-size: 0.75rem; color: var(--body); opacity: 0.7; }
 
