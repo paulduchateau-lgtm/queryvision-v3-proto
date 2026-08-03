@@ -78,6 +78,39 @@ body{
 .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-dark);margin-bottom:14px;
   display:flex;align-items:center;gap:11px;}
 .on-ink .kicker{color:var(--green);}
+/* ═══ Thème produit Spot Vision — violet ═══
+   Reprend l'association violet ↔ Spot Vision du site (.agent-card.sv) et de l'app.
+   Sur fond clair : --purple-dark ; sur fond encre : --purple (plus lumineux). */
+.slide.sv .s-num,
+.slide.sv .kicker,
+.slide.sv .card .idx        { color:var(--purple-dark); }
+.slide.sv.on-ink .s-num,
+.slide.sv.on-ink .kicker,
+.slide.sv.on-ink .card .idx { color:var(--purple); }
+.slide.sv h1.t .g           { color:var(--purple-dark); }
+.slide.sv.on-ink h1.t .g    { color:var(--purple); }
+.slide.sv h1.t .hl::after   { background:var(--purple); }
+.slide.sv ul.sq li::before  { background:var(--purple); }
+.slide.sv .query            { border-left-color:var(--purple); }
+.slide.sv .prod-badge       { background:var(--purple); color:#fff; }
+.slide.sv .card.accent      { border-color:var(--purple); box-shadow:0 0 0 3px rgba(140,132,216,.12); }
+.slide.sv .ticks .tk        { color:var(--purple-dark); }
+.slide.sv.on-ink .ticks .tk { color:var(--purple); }
+/* Carte Spot Vision isolée (slide comparative des deux agents) */
+.card.sv,
+.card.accent.sv             { border-color:var(--purple); box-shadow:0 0 0 3px rgba(140,132,216,.12); }
+.card.sv .idx               { color:var(--purple-dark); }
+.on-ink .card.sv .idx       { color:var(--purple); }
+.card.sv ul.sq li::before   { background:var(--purple); }
+
+/* Capture d'écran applicative */
+.shot{border:1px solid var(--ink-line);border-radius:12px;overflow:hidden;
+  box-shadow:0 26px 64px -26px rgba(0,0,0,.7);}
+.shot img{width:100%;display:block;}
+
+/* Adresses de contact — slide de remerciement */
+.card p.mail{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.01em;}
+.on-ink .card p.mail{color:#fff;}
 /* Badge produit — rend le nom de l'agent lisible d'un coup d'œil */
 .prod-badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
   padding:6px 13px;border-radius:999px;background:var(--green);color:var(--green-deep);white-space:nowrap;}
@@ -351,9 +384,9 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
           <li>Droits ligne et colonne appliqués à chaque réponse</li>
         </ul>
       </div>
-      <div class="card accent" style="padding:24px 26px;">
+      <div class="card accent sv" style="padding:24px 26px;">
         <span class="idx">Agent relais · objet de cette présentation</span>
-        <h3 style="font-size:28px;font-style:italic;color:var(--green-dark);">Spot Vision</h3>
+        <h3 style="font-size:28px;font-style:italic;color:var(--purple-dark);">Spot Vision</h3>
         <p style="margin:9px 0 15px;">Interroge en langage naturel des <strong style="color:var(--ink)">corpus documentaires confiés</strong> : procédures, historiques contractuels, archives financières, plan stratégique, référentiels métier.</p>
         <ul class="sq">
           <li>Réponses <strong>ancrées dans le contenu confié</strong>, sources citées</li>
@@ -367,7 +400,7 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
 </section>
 
 <!-- ═══════════ 05 — SPOT VISION ═══════════ -->
-<section class="slide on-ink">
+<section class="slide on-ink sv">
   <div class="glow"></div>
   <div class="s-head"><span class="s-num">04</span><div class="rule"></div><span class="tag">Spot Vision</span></div>
   <div class="body-area">
@@ -395,10 +428,34 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
   <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>05</span></div>
 </section>
 
-<!-- ═══════════ 06 — CORPUS ═══════════ -->
-<section class="slide">
+<!-- ═══════════ 06 — CAPTURE APPLICATIVE ═══════════ -->
+<section class="slide on-ink sv">
   <div class="glow"></div>
-  <div class="s-head"><span class="s-num">05</span><div class="rule"></div><span class="tag">Corpus documentaires</span></div>
+  <div class="s-head"><span class="s-num">05</span><div class="rule"></div><span class="tag">L'agent en situation</span></div>
+  <div class="body-area">
+    <div class="grid" style="grid-template-columns:0.78fr 1.22fr;gap:28px;align-items:center;">
+      <div>
+        <div class="kicker"><span class="prod-badge">Spot Vision</span></div>
+        <h1 class="t" style="font-size:33px;">Une question.<br>Une réponse <span class="g">sourcée</span>.</h1>
+        <ul class="sq" style="margin-top:18px;">
+          <li>Conversation en langage naturel, <strong>sans formation préalable</strong></li>
+          <li><strong>Sources citées</strong> sous chaque réponse, document et ligne à l'appui</li>
+          <li>Espace de travail dédié, <strong>cloisonné par périmètre</strong></li>
+          <li>Modèle <strong>auto-hébergé sur machine dédiée</strong>, affiché en clair</li>
+        </ul>
+      </div>
+      <figure class="shot">
+        <img src="assets/spot-vision-app.png" alt="Spot Vision — réponse sourcée dans un espace de travail Risques, avec citation des documents de référence">
+      </figure>
+    </div>
+  </div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>06</span></div>
+</section>
+
+<!-- ═══════════ 07 — CORPUS ═══════════ -->
+<section class="slide sv">
+  <div class="glow"></div>
+  <div class="s-head"><span class="s-num">06</span><div class="rule"></div><span class="tag">Corpus documentaires</span></div>
   <div class="body-area">
     <div class="kicker"><span class="prod-badge">Spot Vision</span> Ce que vos équipes lui confient</div>
     <h1 class="t">Un agent, autant de corpus<br>que de besoins.</h1>
@@ -428,13 +485,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       Spot Vision <strong>ne localise pas les fichiers</strong> dans votre système d'information et ne produit pas de synthèse documentaire généraliste : il répond sur le fond des corpus qui lui sont confiés.
     </p>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>06</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>07</span></div>
 </section>
 
 <!-- ═══════════ 07 — DÉPLOIEMENT À L'ÉCHELLE ═══════════ -->
-<section class="slide">
+<section class="slide sv">
   <div class="glow"></div><div class="grid-bg"></div>
-  <div class="s-head"><span class="s-num">06</span><div class="rule"></div><span class="tag">Cas d'usage type</span></div>
+  <div class="s-head"><span class="s-num">07</span><div class="rule"></div><span class="tag">Cas d'usage type</span></div>
   <div class="body-area">
     <div class="kicker"><span class="prod-badge">Spot Vision</span> Diffusion d'un plan stratégique</div>
     <h1 class="t">Un référentiel unique,<br>diffusé à <span class="g">toute l'organisation</span>.</h1>
@@ -455,13 +512,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       <div class="stat"><span class="v">100<span class="u">%</span></span><span class="l">des réponses sourcées</span></div>
     </div>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>07</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>08</span></div>
 </section>
 
 <!-- ═══════════ 08 — LES 3 TEMPS ═══════════ -->
 <section class="slide">
   <div class="glow"></div>
-  <div class="s-head"><span class="s-num">07</span><div class="rule"></div><span class="tag">Mise en œuvre</span></div>
+  <div class="s-head"><span class="s-num">08</span><div class="rule"></div><span class="tag">Mise en œuvre</span></div>
   <div class="body-area">
     <div class="kicker">Comment il travaille</div>
     <h1 class="t">Trois temps,<br>aucune ambiguïté.</h1>
@@ -486,13 +543,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       le client n'a pas de chantier de restructuration de données à mener avant de démarrer.
     </p>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>08</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>09</span></div>
 </section>
 
 <!-- ═══════════ 09 — ARCHITECTURE ═══════════ -->
 <section class="slide on-ink">
   <div class="glow"></div>
-  <div class="s-head"><span class="s-num">08</span><div class="rule"></div><span class="tag">Architecture</span></div>
+  <div class="s-head"><span class="s-num">09</span><div class="rule"></div><span class="tag">Architecture</span></div>
   <div class="body-area">
     <div class="kicker">Souveraineté</div>
     <h1 class="t">Une infrastructure<br><span class="g">dédiée par client</span>.</h1>
@@ -513,13 +570,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       <p style="color:#fff;font-size:15px;"><strong>Aucune donnée client n'est utilisée pour entraîner un modèle</strong> — qu'il s'agisse des modèles de QueryVision ou de ceux de tiers. Cet engagement est contractuel.</p>
     </div>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>09</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>10</span></div>
 </section>
 
 <!-- ═══════════ 10 — MODÈLES ═══════════ -->
 <section class="slide">
   <div class="glow"></div>
-  <div class="s-head"><span class="s-num">09</span><div class="rule"></div><span class="tag">Modèles de langage</span></div>
+  <div class="s-head"><span class="s-num">10</span><div class="rule"></div><span class="tag">Modèles de langage</span></div>
   <div class="body-area">
     <div class="kicker">Politique modèle</div>
     <h1 class="t">L'auto-hébergement<br>par <span class="g">défaut</span>.</h1>
@@ -548,13 +605,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       </div>
     </div>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>10</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>11</span></div>
 </section>
 
 <!-- ═══════════ 11 — SÉCURITÉ ═══════════ -->
 <section class="slide on-ink dense">
   <div class="glow"></div>
-  <div class="s-head"><span class="s-num">10</span><div class="rule"></div><span class="tag">Sécurité</span></div>
+  <div class="s-head"><span class="s-num">11</span><div class="rule"></div><span class="tag">Sécurité</span></div>
   <div class="body-area">
     <div class="kicker">Sécurité &amp; contrôle d'accès</div>
     <h1 class="t">La confiance n'est pas<br>une promesse. C'est une <span class="g">architecture</span>.</h1>
@@ -570,13 +627,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       <div class="card"><h3>Incidents &amp; vulnérabilités</h3><p>Processus formalisé, aligné <strong style="color:#fff">RGPD et ANSSI</strong> : délais de notification client, matrice de classification impact/urgence. Signalement : security@query.vision</p></div>
     </div>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>11</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>12</span></div>
 </section>
 
 <!-- ═══════════ 12 — CONFORMITÉ ═══════════ -->
 <section class="slide dense">
   <div class="glow"></div>
-  <div class="s-head"><span class="s-num">11</span><div class="rule"></div><span class="tag">Conformité</span></div>
+  <div class="s-head"><span class="s-num">12</span><div class="rule"></div><span class="tag">Conformité</span></div>
   <div class="body-area">
     <div class="kicker">Certifications &amp; référentiels</div>
     <h1 class="t">Des référentiels,<br>pas des slogans.</h1>
@@ -594,13 +651,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       <tr><td class="k">SOC 2 Type II</td><td><span class="pill plan">Prévu 2027</span></td><td>Attestation SOC 2 Type II (Trust Service Criteria) planifiée pour 2027.</td></tr>
     </table>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>12</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>13</span></div>
 </section>
 
 <!-- ═══════════ 13 — ENGAGEMENTS / SLA ═══════════ -->
 <section class="slide">
   <div class="glow"></div>
-  <div class="s-head"><span class="s-num">12</span><div class="rule"></div><span class="tag">Engagements</span></div>
+  <div class="s-head"><span class="s-num">13</span><div class="rule"></div><span class="tag">Engagements</span></div>
   <div class="body-area">
     <div class="kicker">Continuité d'activité &amp; SLA</div>
     <h1 class="t">Des engagements chiffrés,<br><span class="g">contractuels</span>.</h1>
@@ -632,13 +689,13 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       </div>
     </div>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>13</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>14</span></div>
 </section>
 
 <!-- ═══════════ 14 — CE QUE CE N'EST PAS ═══════════ -->
 <section class="slide">
   <div class="glow"></div><div class="grid-bg"></div>
-  <div class="s-head"><span class="s-num">13</span><div class="rule"></div><span class="tag">Cadrage</span></div>
+  <div class="s-head"><span class="s-num">14</span><div class="rule"></div><span class="tag">Cadrage</span></div>
   <div class="body-area">
     <div class="kicker">Éviter les confusions de catégorie</div>
     <h1 class="t">Ce que QueryVision<br><span class="g">n'est pas</span>.</h1>
@@ -649,14 +706,14 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
       <div class="card accent"><h3>Pas une offre SaaS mutualisée</h3><p>Le modèle repose sur une <strong style="color:var(--ink)">infrastructure isolée par client</strong>. Les données ne sont jamais mutualisées entre clients.</p></div>
     </div>
   </div>
-  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>14</span></div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span>15</span></div>
 </section>
 
 <!-- ═══════════ 15 — DÉMARRAGE + CONTACTS ═══════════ -->
 <section class="slide on-ink">
   <div class="glow"></div>
   <svg class="cover-mark" viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
-  <div class="s-head"><span class="s-num">14</span><div class="rule"></div><span class="tag">Prochaine étape</span></div>
+  <div class="s-head"><span class="s-num">15</span><div class="rule"></div><span class="tag">Prochaine étape</span></div>
   <div class="body-area">
     <div class="kicker">Démarrage &amp; interlocuteurs</div>
     <h1 class="t">Une démonstration<br>sur <span class="g">votre corpus</span>.</h1>
@@ -681,6 +738,49 @@ table.qv td.num{font-family:var(--mono);color:var(--ink);font-weight:600;white-s
     </div>
     <p class="lead" style="margin-top:18px;font-size:14px;">Toute demande de documentation est traitée <strong>sous 24 h ouvrées</strong> par l'équipe sécurité.</p>
   </div>
+  <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span class="sig">From query to vision</span></div>
+</section>
+
+<!-- ═══════════ 16 — REMERCIEMENT ═══════════ -->
+<section class="slide on-ink">
+  <div class="glow"></div>
+  <div class="s-head">
+    <div class="logo">
+      <svg viewBox="0 0 84 84"><path d="M 0 0 L 84 0 L 84 45 L 69 45 L 69 15 L 15 15 L 15 69 L 50 69 L 50 84 L 0 84 Z" fill="#fff"/><rect x="65" y="65" width="19" height="19" fill="#03CF65"/></svg>
+      QueryVision
+    </div>
+    <div class="rule"></div>
+    <div class="tag">Contact</div>
+  </div>
+
+  <div class="body-area">
+    <h1 class="t big">Merci.</h1>
+    <p class="lead" style="font-size:18px;max-width:52ch;margin-top:18px;">
+      Nous restons à votre disposition pour approfondir l'un des points de cette présentation
+      ou organiser une <strong>démonstration sur l'un de vos corpus</strong>.
+    </p>
+
+    <div class="grid g3 mt" style="margin-top:32px;gap:14px;">
+      <div class="card">
+        <span class="idx">Ventes &amp; démos</span>
+        <p class="mail">contact@query.vision</p>
+      </div>
+      <div class="card">
+        <span class="idx">Partenariats</span>
+        <p class="mail">partners@query.vision</p>
+      </div>
+      <div class="card">
+        <span class="idx">Sécurité</span>
+        <p class="mail">security@query.vision</p>
+      </div>
+    </div>
+
+    <div class="ticks" style="margin-top:30px;gap:0;flex-direction:column;align-items:flex-start;">
+      <span style="margin-bottom:7px;">QueryVision S.A.S. — 9, place Jean Jaurès, 33000 Bordeaux, France</span>
+      <span>queryvision.ai&nbsp;&nbsp;·&nbsp;&nbsp;linkedin.com/company/queryvision</span>
+    </div>
+  </div>
+
   <div class="s-foot"><span>Document à destination de la MNT — Mutuelle Nationale Territoriale · <strong class="conf">Strictement confidentiel</strong></span><span class="sig">From query to vision</span></div>
 </section>
 
