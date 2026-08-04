@@ -80,7 +80,7 @@
   <div class="wrap">
     <p class="kicker center rv">Vertrauen — Trust Center</p>
     <h1 class="rv d1">Vertrauen ist kein Versprechen. <span class="hl-g">Es ist eine Architektur.</span></h1>
-    <p class="doc-meta rv d1">Letzte Aktualisierung — 23. Juni 2026 · v0.2</p>
+    <p class="doc-meta rv d1">Letzte Aktualisierung — 4. August 2026 · v0.2</p>
     <p class="hero-sub rv d2">QueryVision ist von Grund auf für Teams mit hohen Anforderungen an Sicherheit, Compliance und Datensouveränität konzipiert. Dieses Dokument fasst sämtliche unserer technischen, organisatorischen und vertraglichen Verpflichtungen zusammen.</p>
     <div class="hero-meta rv d3" style="justify-content:center">
       <span><span class="tick">✓</span> Souveränes EU-Hosting</span>
@@ -96,16 +96,18 @@
 <section class="tight" id="plateforme" style="padding-top: 3rem">
   <div class="wrap">
     <p class="kicker rv">01 — Vorstellung der Plattform</p>
-    <h2 class="sec-title rv d1">Eine Plattform, ein Hersteller, eine Infrastruktur.</h2>
-    <p class="sec-lead rv d2">QueryVision ist eine SaaS-Plattform für Datenanalyse und Entscheidungsintelligenz mit LLM-, NLP- und Dokumentenverarbeitungsmodulen zur Automatisierung von Analysen, Zusammenfassungen und Entscheidungsaufgaben.</p>
-    <p class="sec-lead rv d2">Sie wird im exklusiven SaaS-Modell betrieben: QueryVision setzt für die Bereitstellung der Plattform weder Dienstleister noch Integratoren ein. Der gesamte Quellcode, die Algorithmen und die Dokumentation gehören QueryVision.</p>
+    <h2 class="sec-title rv d1">Eine Plattform, ein Hersteller, eine Infrastruktur pro Kunde.</h2>
+    <p class="sec-lead rv d2">QueryVision ist eine Plattform für Datenanalyse und Entscheidungsintelligenz mit LLM-, NLP- und Dokumentenverarbeitungsmodulen zur Automatisierung von Analysen, Zusammenfassungen und Entscheidungsaufgaben. Sie wird auf einer dedizierten, isolierten Infrastruktur je Kunde bereitgestellt.</p>
+    <p class="sec-lead rv d2">Es handelt sich nicht um ein mandantenübergreifendes SaaS-Angebot. Die Komponenten, die Ihre Daten verarbeiten — Anwendungen, Abfrage-Gateway, Datenbanken, Sprachmodelle, Audit-Protokolle — laufen in <strong>Ihrer</strong> Infrastruktur, aufgebaut aus standardisierten Bausteinen und niemals mit einem anderen Kunden geteilt. Gemeinsam genutzt werden ausschließlich übergreifende Dienste: die Web-Konsole zur Verwaltung von Vertrag und Infrastruktur sowie die zentrale Authentifizierung. Dort werden keine Fachdaten verarbeitet oder gespeichert.</p>
+    <p class="sec-lead rv d2">Die Plattform wird ausschließlich von QueryVision betrieben: Weder Dienstleister noch Integratoren Dritter sind an der Leistungserbringung beteiligt. Der gesamte Quellcode, die Algorithmen und die Dokumentation gehören QueryVision.</p>
     <article class="doc rv d2" style="margin-top: 2.5rem">
       <table>
         <tbody>
           <tr><th scope="row">Gesellschaft</th><td>QueryVision, S.A.S.</td></tr>
           <tr><th scope="row">Sitz</th><td>9, place Jean Jaurès, 33000 Bordeaux</td></tr>
           <tr><th scope="row">Datenresidenz</th><td>Ausschließlich Europäische Union</td></tr>
-          <tr><th scope="row">Bereitstellungsmodell</th><td>SaaS Multi-Tenant, souveräne Cloud</td></tr>
+          <tr><th scope="row">Bereitstellungsmodell</th><td>Dedizierte, isolierte Infrastruktur pro Kunde, souveräne Cloud</td></tr>
+          <tr><th scope="row">Gemeinsam genutzte Komponenten</th><td>Konsole zur Vertragsverwaltung, zentrale Authentifizierung</td></tr>
           <tr><th scope="row">Ziel-Verfügbarkeit</th><td>99,5&nbsp;% / Monat</td></tr>
           <tr><th scope="row">Support</th><td>8:00–18:30 Uhr, an Werktagen</td></tr>
         </tbody>
@@ -119,7 +121,7 @@
   <div class="wrap">
     <p class="kicker rv">02 — Hosting &amp; Souveränität</p>
     <h2 class="sec-title rv d1">Souverän per Standard, nicht per Option.</h2>
-    <p class="sec-lead rv d2">Sämtliche Komponenten der Plattform — Frontend, Backend, SQL-Datenbanken und Object Storage — werden bei <strong>Scaleway S.A.S.</strong> gehostet, einem französischen souveränen Cloud-Anbieter mit ISO/IEC-27001- und HDS-Zertifizierung, mit Standort in Frankreich.</p>
+    <p class="sec-lead rv d2">Sämtliche Komponenten der Plattform — sowohl die dedizierten Kundeninfrastrukturen als auch die übergreifenden Dienste, Frontend, Backend, SQL-Datenbanken und Object Storage — werden bei <strong>Scaleway S.A.S.</strong> gehostet, einem französischen souveränen Cloud-Anbieter mit ISO/IEC-27001- und HDS-Zertifizierung, mit Standort in Frankreich.</p>
     <p class="sec-lead rv d2">Standardmäßig werden die LLM-Modelle <strong>lokal auf unseren Scaleway-Maschinen gehostet und ausgeführt</strong> — die Inferenz verlässt unsere souveräne Infrastruktur nicht. In der Standardkonfiguration fließen keine Kundendaten zur KI-Verarbeitung an Dritte.</p>
     <p class="sec-lead rv d2">Die Option <strong>Mistral ZDR (Zero Data Retention)</strong> steht Kunden zur Verfügung, die auf Mistral-Modelle im API-Modus mit vertraglicher Zero-Retention-Garantie zugreifen möchten: Keine Daten werden von Mistral AI gespeichert oder für das Training verwendet.</p>
     <article class="doc rv d2" style="margin-top: 2.5rem">
@@ -128,7 +130,8 @@
           <tr><th>Komponente</th><th>Hoster</th><th>Standort</th><th>Zertifizierungen</th></tr>
         </thead>
         <tbody>
-          <tr><td>Frontend · Backend · SQL · Object Storage</td><td>Scaleway S.A.S.</td><td>Frankreich (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
+          <tr><td>Dedizierte Kundeninfrastruktur — Anwendungen, Daten, Protokolle</td><td>Scaleway S.A.S.</td><td>Frankreich (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
+          <tr><td>Übergreifende Dienste — Verwaltungskonsole, Authentifizierung</td><td>Scaleway S.A.S.</td><td>Frankreich (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
           <tr><td>LLM-Inferenz — Standard (selbst gehostete Modelle)</td><td>Scaleway S.A.S.</td><td>Frankreich (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
           <tr><td>LLM-Inferenz via Mistral ZDR — Option</td><td>Mistral AI S.A.S.</td><td>Europäische Union</td><td>ISO/IEC 27001</td></tr>
         </tbody>

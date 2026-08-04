@@ -80,7 +80,7 @@
   <div class="wrap">
     <p class="kicker center rv">Trust — Trust Center</p>
     <h1 class="rv d1">Trust is not a promise. <span class="hl-g">It's an architecture.</span></h1>
-    <p class="doc-meta rv d1">Last updated — June 23, 2026 · v0.2</p>
+    <p class="doc-meta rv d1">Last updated — August 4, 2026 · v0.2</p>
     <p class="hero-sub rv d2">QueryVision is designed from the ground up for teams with demanding requirements around security, compliance and data sovereignty. This document brings together all of our technical, organizational and contractual commitments.</p>
     <div class="hero-meta rv d3" style="justify-content:center">
       <span><span class="tick">✓</span> Sovereign EU hosting</span>
@@ -96,16 +96,18 @@
 <section class="tight" id="plateforme" style="padding-top: 3rem">
   <div class="wrap">
     <p class="kicker rv">01 — Platform overview</p>
-    <h2 class="sec-title rv d1">One platform, one vendor, one infrastructure.</h2>
-    <p class="sec-lead rv d2">QueryVision is a SaaS platform for data analysis and decision intelligence, embedding LLM, NLP and document-processing modules to automate analyses, summaries and decision-support tasks.</p>
-    <p class="sec-lead rv d2">It is operated as an exclusive SaaS: QueryVision relies on no service providers or integrators to deliver the platform. All source code, algorithms and documentation belong to QueryVision.</p>
+    <h2 class="sec-title rv d1">One platform, one vendor, one infrastructure per client.</h2>
+    <p class="sec-lead rv d2">QueryVision is a platform for data analysis and decision intelligence, embedding LLM, NLP and document-processing modules to automate analyses, summaries and decision-support tasks. It is deployed on a dedicated, isolated infrastructure for each client.</p>
+    <p class="sec-lead rv d2">This is not a shared, multi-tenant SaaS. The components that process your data — applications, query gateway, databases, language models, audit logs — run inside <strong>your</strong> infrastructure, built from standardised components and never shared with another client. Only cross-cutting services are shared: the web console used to manage your contract and infrastructure, and central authentication. No business data is processed or stored there.</p>
+    <p class="sec-lead rv d2">The platform is operated exclusively by QueryVision: no third-party provider or integrator is involved in delivering the service. All source code, algorithms and documentation belong to QueryVision.</p>
     <article class="doc rv d2" style="margin-top: 2.5rem">
       <table>
         <tbody>
           <tr><th scope="row">Company</th><td>QueryVision, S.A.S.</td></tr>
           <tr><th scope="row">Headquarters</th><td>9, place Jean Jaurès, 33000 Bordeaux, France</td></tr>
           <tr><th scope="row">Data residency</th><td>European Union only</td></tr>
-          <tr><th scope="row">Deployment model</th><td>Multi-tenant SaaS, sovereign cloud</td></tr>
+          <tr><th scope="row">Deployment model</th><td>Dedicated, isolated infrastructure per client, sovereign cloud</td></tr>
+          <tr><th scope="row">Shared components</th><td>Contract management console, central authentication</td></tr>
           <tr><th scope="row">Target availability</th><td>99.5% / month</td></tr>
           <tr><th scope="row">Support</th><td>8:00 am – 6:30 pm, business days</td></tr>
         </tbody>
@@ -119,7 +121,7 @@
   <div class="wrap">
     <p class="kicker rv">02 — Hosting &amp; sovereignty</p>
     <h2 class="sec-title rv d1">Sovereign by default, not by option.</h2>
-    <p class="sec-lead rv d2">Every component of the platform — frontend, backend, SQL databases and object storage — is hosted at <strong>Scaleway S.A.S.</strong>, a French sovereign cloud provider certified ISO/IEC 27001 and HDS, located in France.</p>
+    <p class="sec-lead rv d2">Every component of the platform — client-dedicated infrastructures as well as cross-cutting services, frontend, backend, SQL databases and object storage — is hosted at <strong>Scaleway S.A.S.</strong>, a French sovereign cloud provider certified ISO/IEC 27001 and HDS, located in France.</p>
     <p class="sec-lead rv d2">By default, LLM models are <strong>hosted and executed locally on our Scaleway machines</strong> — inference never leaves our sovereign infrastructure. No client data transits through any third party for AI processing in the standard configuration.</p>
     <p class="sec-lead rv d2">The <strong>Mistral ZDR (Zero Data Retention)</strong> option is available for clients who wish to access Mistral models via API with a contractual zero-retention guarantee: no data is retained or used for training by Mistral AI.</p>
     <article class="doc rv d2" style="margin-top: 2.5rem">
@@ -128,7 +130,8 @@
           <tr><th>Component</th><th>Hosting provider</th><th>Location</th><th>Certifications</th></tr>
         </thead>
         <tbody>
-          <tr><td>Frontend · Backend · SQL · Object Storage</td><td>Scaleway S.A.S.</td><td>France (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
+          <tr><td>Client-dedicated infrastructure — applications, data, logs</td><td>Scaleway S.A.S.</td><td>France (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
+          <tr><td>Cross-cutting services — management console, authentication</td><td>Scaleway S.A.S.</td><td>France (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
           <tr><td>LLM inference — default (self-hosted models)</td><td>Scaleway S.A.S.</td><td>France (EU)</td><td>ISO/IEC 27001, HDS</td></tr>
           <tr><td>LLM inference via Mistral ZDR — optional</td><td>Mistral AI S.A.S.</td><td>European Union</td><td>ISO/IEC 27001</td></tr>
         </tbody>
