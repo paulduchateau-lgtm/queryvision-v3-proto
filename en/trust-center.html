@@ -80,7 +80,7 @@
   <div class="wrap">
     <p class="kicker center rv">Trust — Trust Center</p>
     <h1 class="rv d1">Trust is not a promise. <span class="hl-g">It's an architecture.</span></h1>
-    <p class="doc-meta rv d1">Last updated — August 4, 2026 · v0.2</p>
+    <p class="doc-meta rv d1">Last updated — August 5, 2026</p>
     <p class="hero-sub rv d2">QueryVision is designed from the ground up for teams with demanding requirements around security, compliance and data sovereignty. This document brings together all of our technical, organizational and contractual commitments.</p>
     <div class="hero-meta rv d3" style="justify-content:center">
       <span><span class="tick">✓</span> Sovereign EU hosting</span>
@@ -137,6 +137,18 @@
         </tbody>
       </table>
       <p>No client data is transferred outside the European Economic Area by default. Our sovereignty posture relies on a hosting provider qualified ANSSI SecNumCloud Scope 3.2 J2 (Scaleway) and on the EBIOS RM and HDS frameworks.</p>
+      <h3 id="sous-traitants">Sub-processors within the client perimeter</h3>
+      <p>Two sub-processors act on the data entrusted to the platform. There are no others. The list is published here — it does not have to be requested.</p>
+      <table>
+        <thead>
+          <tr><th>Sub-processor</th><th>Role</th><th>Location</th><th>Certifications</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Scaleway S.A.S.</strong></td><td>Hosting of the client-dedicated infrastructure and self-hosted inference</td><td>France</td><td>ISO/IEC 27001, HDS, SecNumCloud 3.2 J2</td></tr>
+          <tr><td><strong>Mistral AI S.A.S.</strong></td><td>API-based inference, only where the client expressly enables that option</td><td>European Union</td><td>ISO/IEC 27001</td></tr>
+        </tbody>
+      </table>
+      <p>The data processing addenda of both sub-processors are incorporated into our service contracts: <a href="https://legal.mistral.ai/terms/data-processing-addendum" target="_blank" rel="noopener">Mistral AI's</a> is public, Scaleway's is available on request. No other QueryVision supplier accesses data entrusted to the platform. Any change to this list is notified to affected clients before it takes effect.</p>
     </article>
   </div>
 </section>
@@ -153,10 +165,10 @@
         <h3>Security owned directly by the CTO.</h3>
         <p>It covers authentication and permission management (SSO, MFA, RBAC), encryption of data in transit and at rest, environment isolation, and continuous audit and traceability. The full detail of the measures (authentication, encryption, audit) is available through our Security Assurance Plan.</p>
       </div>
-      <div class="sov-card" id="sous-traitants">
+      <div class="sov-card">
         <span class="s-num">04 — Sub-processors &amp; cloud partners</span>
-        <h3>A limited number of sub-processors, all located in the EU.</h3>
-        <p>Hosting and AI inference are entrusted to sub-processors bound by strict contractual confidentiality and security clauses. Any change is notified to the affected clients before it takes effect. The exhaustive register (roles, purposes, certifications) and the DPA are available on request.</p>
+        <h3>Two sub-processors, named, both in the EU.</h3>
+        <p>Scaleway for hosting, Mistral AI for API-based inference where the client enables it. The <a href="#sous-traitants" style="color: var(--green)">named list is published</a> — roles, locations, certifications — rather than provided on request. Any change is notified to the affected clients before it takes effect. The DPA remains available on request.</p>
       </div>
       <div class="sov-card" id="ia">
         <span class="s-num">06 — Responsible AI</span>
@@ -194,6 +206,7 @@
           <tr><td><strong>NIS 2</strong></td><td>In progress</td><td>NIS 2 impact analysis under way; compliance planned as part of the 2026 security roadmap.</td></tr>
         </tbody>
       </table>
+      <p>Scaleway's ISO/IEC 27001 and HDS certificates are published by the hosting provider at <a href="https://security.scaleway.com/" target="_blank" rel="noopener">security.scaleway.com</a> and included in our security pack on request. They cover the hosting provider; QueryVision, as the software publisher, holds no certification to date.</p>
     </article>
   </div>
 </section>
@@ -216,7 +229,7 @@
           <tr><td>Response time — blocking issue</td><td>24 business hours</td></tr>
           <tr><td>Resolution time — blocking issue</td><td>48 business hours</td></tr>
           <tr><td>Data residency</td><td>European Union only</td></tr>
-          <tr><td>Contract term</td><td>12 months, non-renewing</td></tr>
+          <tr><td>Contract term</td><td>12 months, tacitly renewed for successive 12-month terms, 3 months' notice</td></tr>
         </tbody>
       </table>
       <p>Response time: guaranteed time to intervention · Resolution time: guaranteed time to recovery</p>
@@ -251,10 +264,11 @@
       </table>
       <h3>Documents available on request</h3>
       <ul>
-        <li>Security Assurance Plan (SAP) — v0.2, June 2026</li>
-        <li>Data Processing Agreement (DPA / GDPR DPA)</li>
-        <li>External security audit reports (NDA required)</li>
-        <li>Full list of sub-processors with DPA</li>
+        <li>Security Assurance Plan (SAP) — current version</li>
+        <li>Data Processing Agreement (DPA) and privacy policy</li>
+        <li>AI governance and data usage note</li>
+        <li>Architecture diagram and data location</li>
+        <li>Business continuity and disaster recovery plan — summary</li>
         <li>ISO/IEC 27001 and HDS certificates of the hosting provider Scaleway</li>
       </ul>
       <p>Every documentation request is handled within 24 business hours by our security team: <a href="mailto:security@query.vision">security@query.vision</a>.</p>

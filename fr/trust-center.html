@@ -80,7 +80,7 @@
   <div class="wrap">
     <p class="kicker center rv">Confiance — Trust Center</p>
     <h1 class="rv d1">La confiance n'est pas une promesse. <span class="hl-g">C'est une architecture.</span></h1>
-    <p class="doc-meta rv d1">Dernière mise à jour — 4 août 2026 · v0.2</p>
+    <p class="doc-meta rv d1">Dernière mise à jour — 5 août 2026</p>
     <p class="hero-sub rv d2">QueryVision est conçu dès l'origine pour les équipes exigeantes en matière de sécurité, de conformité et de souveraineté des données. Ce document rassemble l'ensemble de nos engagements techniques, organisationnels et contractuels.</p>
     <div class="hero-meta rv d3" style="justify-content:center">
       <span><span class="tick">✓</span> Hébergement souverain UE</span>
@@ -137,6 +137,18 @@
         </tbody>
       </table>
       <p>Aucun transfert de données clients hors de l'Espace économique européen n'est effectué par défaut. La souveraineté repose sur un hébergeur qualifié ANSSI SecNumCloud Scope 3.2 J2 (Scaleway) et sur les référentiels EBIOS RM et HDS.</p>
+      <h3 id="sous-traitants">Sous-traitants du périmètre client</h3>
+      <p>Deux sous-traitants ultérieurs interviennent sur les données confiées à la plateforme. Il n'y en a pas d'autre. La liste est publiée ici&nbsp;: elle ne se demande pas.</p>
+      <table>
+        <thead>
+          <tr><th>Sous-traitant</th><th>Rôle</th><th>Localisation</th><th>Certifications</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Scaleway S.A.S.</strong></td><td>Hébergement de l'infrastructure dédiée et inférence auto-hébergée</td><td>France</td><td>ISO/IEC 27001, HDS, SecNumCloud 3.2 J2</td></tr>
+          <tr><td><strong>Mistral AI S.A.S.</strong></td><td>Inférence par interface applicative, uniquement si le client active expressément cette option</td><td>Union européenne</td><td>ISO/IEC 27001</td></tr>
+        </tbody>
+      </table>
+      <p>Les accords de protection des données de ces deux sous-traitants sont incorporés à nos contrats de services&nbsp;: <a href="https://legal.mistral.ai/terms/data-processing-addendum" target="_blank" rel="noopener">celui de Mistral AI</a> est public, celui de Scaleway est communicable. Aucun autre prestataire de QueryVision n'accède aux données confiées à la plateforme. Toute évolution de cette liste est notifiée aux clients concernés avant sa prise d'effet.</p>
     </article>
   </div>
 </section>
@@ -153,10 +165,10 @@
         <h3>Une sécurité placée sous la responsabilité du CTO.</h3>
         <p>Elle couvre l'authentification et la gestion des habilitations (SSO, MFA, RBAC), le chiffrement des données en transit et au repos, l'isolation des environnements, ainsi que l'audit et la traçabilité continus. Le détail complet des mesures (authentification, chiffrement, audit) est accessible via notre PAS.</p>
       </div>
-      <div class="sov-card" id="sous-traitants">
+      <div class="sov-card">
         <span class="s-num">04 — Sous-traitants &amp; partenaires cloud</span>
-        <h3>Un nombre limité de sous-traitants, tous localisés en UE.</h3>
-        <p>Hébergement et inférence IA sont confiés à des sous-traitants soumis à des clauses contractuelles de confidentialité et de sécurité strictes. Toute évolution est notifiée aux clients concernés avant prise d'effet. Le registre exhaustif (rôles, finalités, certifications) et le DPA sont disponibles sur demande.</p>
+        <h3>Deux sous-traitants, nommés, tous deux dans l'UE.</h3>
+        <p>Scaleway pour l'hébergement, Mistral AI pour l'inférence par interface applicative lorsque le client l'active. La <a href="#sous-traitants" style="color: var(--green)">liste nominative est publiée</a> — rôles, localisations, certifications — et non fournie sur demande. Toute évolution est notifiée aux clients concernés avant prise d'effet. Le DPA reste disponible sur demande.</p>
       </div>
       <div class="sov-card" id="ia">
         <span class="s-num">06 — IA responsable</span>
@@ -194,6 +206,7 @@
           <tr><td><strong>NIS 2</strong></td><td>En cours</td><td>Analyse d'impact NIS 2 en cours&nbsp;; mise en conformité planifiée dans le cadre de la roadmap sécurité 2026.</td></tr>
         </tbody>
       </table>
+      <p>Les certificats ISO/IEC 27001 et HDS de Scaleway sont publiés par l'hébergeur sur <a href="https://security.scaleway.com/" target="_blank" rel="noopener">security.scaleway.com</a> et joints à notre pack sécurité sur demande. Ils portent sur l'hébergeur&nbsp;; QueryVision, en tant qu'éditeur, ne détient aucune certification à ce jour.</p>
     </article>
   </div>
 </section>
@@ -216,7 +229,7 @@
           <tr><td>GTI anomalie bloquante</td><td>24 h ouvrables</td></tr>
           <tr><td>GTR anomalie bloquante</td><td>48 h ouvrables</td></tr>
           <tr><td>Résidence des données</td><td>Union européenne uniquement</td></tr>
-          <tr><td>Durée contrat</td><td>12 mois non renouvelable</td></tr>
+          <tr><td>Durée contrat</td><td>12 mois, reconduction tacite par périodes de 12 mois, préavis de 3 mois</td></tr>
         </tbody>
       </table>
       <p>GTI&nbsp;: Garantie de Temps d'Intervention · GTR&nbsp;: Garantie de Temps de Rétablissement</p>
@@ -251,10 +264,11 @@
       </table>
       <h3>Documents disponibles sur demande</h3>
       <ul>
-        <li>Plan d'Assurance Sécurité (PAS) — v0.2, juin 2026</li>
-        <li>Data Processing Agreement (DPA / DPA RGPD)</li>
-        <li>Rapports d'audit de sécurité externes (NDA requis)</li>
-        <li>Liste complète des sous-traitants avec DPA</li>
+        <li>Plan d'Assurance Sécurité (PAS) — version en vigueur</li>
+        <li>Accord de sous-traitance (DPA) et politique de confidentialité</li>
+        <li>Note de gouvernance de l'IA et d'usage des données</li>
+        <li>Schéma d'architecture et localisation des données</li>
+        <li>Synthèse du plan de continuité et de reprise d'activité</li>
         <li>Certificats ISO/IEC 27001 et HDS de l'hébergeur Scaleway</li>
       </ul>
       <p>Toute demande de documentation est traitée sous 24&nbsp;h ouvrées par notre équipe sécurité&nbsp;: <a href="mailto:security@query.vision">security@query.vision</a>.</p>

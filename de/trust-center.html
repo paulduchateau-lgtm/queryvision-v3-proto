@@ -80,7 +80,7 @@
   <div class="wrap">
     <p class="kicker center rv">Vertrauen — Trust Center</p>
     <h1 class="rv d1">Vertrauen ist kein Versprechen. <span class="hl-g">Es ist eine Architektur.</span></h1>
-    <p class="doc-meta rv d1">Letzte Aktualisierung — 4. August 2026 · v0.2</p>
+    <p class="doc-meta rv d1">Letzte Aktualisierung — 5. August 2026</p>
     <p class="hero-sub rv d2">QueryVision ist von Grund auf für Teams mit hohen Anforderungen an Sicherheit, Compliance und Datensouveränität konzipiert. Dieses Dokument fasst sämtliche unserer technischen, organisatorischen und vertraglichen Verpflichtungen zusammen.</p>
     <div class="hero-meta rv d3" style="justify-content:center">
       <span><span class="tick">✓</span> Souveränes EU-Hosting</span>
@@ -137,6 +137,18 @@
         </tbody>
       </table>
       <p>Standardmäßig findet kein Transfer von Kundendaten außerhalb des Europäischen Wirtschaftsraums statt. Die Souveränität stützt sich auf einen nach ANSSI SecNumCloud Scope 3.2 J2 qualifizierten Hoster (Scaleway) sowie auf die Referenzrahmen EBIOS RM und HDS.</p>
+      <h3 id="sous-traitants">Auftragsverarbeiter im Kundenperimeter</h3>
+      <p>Zwei Auftragsverarbeiter wirken an den der Plattform anvertrauten Daten mit. Weitere gibt es nicht. Die Liste ist hier veröffentlicht — sie muss nicht angefragt werden.</p>
+      <table>
+        <thead>
+          <tr><th>Auftragsverarbeiter</th><th>Rolle</th><th>Standort</th><th>Zertifizierungen</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Scaleway S.A.S.</strong></td><td>Hosting der dedizierten Kundeninfrastruktur und selbst gehostete Inferenz</td><td>Frankreich</td><td>ISO/IEC 27001, HDS, SecNumCloud 3.2 J2</td></tr>
+          <tr><td><strong>Mistral AI S.A.S.</strong></td><td>Inferenz über Programmierschnittstelle, ausschließlich wenn der Kunde diese Option ausdrücklich aktiviert</td><td>Europäische Union</td><td>ISO/IEC 27001</td></tr>
+        </tbody>
+      </table>
+      <p>Die Auftragsverarbeitungsvereinbarungen beider Auftragsverarbeiter sind Bestandteil unserer Dienstleistungsverträge: <a href="https://legal.mistral.ai/terms/data-processing-addendum" target="_blank" rel="noopener">die von Mistral AI</a> ist öffentlich, die von Scaleway auf Anfrage verfügbar. Kein weiterer Dienstleister von QueryVision greift auf die der Plattform anvertrauten Daten zu. Jede Änderung dieser Liste wird den betroffenen Kunden vor Inkrafttreten mitgeteilt.</p>
     </article>
   </div>
 </section>
@@ -153,10 +165,10 @@
         <h3>Sicherheit in der Verantwortung des CTO.</h3>
         <p>Sie umfasst Authentifizierung und Berechtigungsverwaltung (SSO, MFA, RBAC), Verschlüsselung der Daten bei Übertragung und im Ruhezustand, Isolation der Umgebungen sowie kontinuierliches Auditing und Nachvollziehbarkeit. Die vollständigen Details der Maßnahmen (Authentifizierung, Verschlüsselung, Audit) sind über unser PAS zugänglich.</p>
       </div>
-      <div class="sov-card" id="sous-traitants">
+      <div class="sov-card">
         <span class="s-num">04 — Auftragsverarbeiter &amp; Cloud-Partner</span>
-        <h3>Eine begrenzte Zahl von Auftragsverarbeitern, alle in der EU.</h3>
-        <p>Hosting und KI-Inferenz sind Auftragsverarbeitern anvertraut, die strengen vertraglichen Vertraulichkeits- und Sicherheitsklauseln unterliegen. Jede Änderung wird den betroffenen Kunden vor Inkrafttreten mitgeteilt. Das vollständige Verzeichnis (Rollen, Zwecke, Zertifizierungen) und der AVV sind auf Anfrage verfügbar.</p>
+        <h3>Zwei Auftragsverarbeiter, namentlich genannt, beide in der EU.</h3>
+        <p>Scaleway für das Hosting, Mistral AI für die Inferenz über Programmierschnittstelle, sofern der Kunde sie aktiviert. Die <a href="#sous-traitants" style="color: var(--green)">namentliche Liste ist veröffentlicht</a> — Rollen, Standorte, Zertifizierungen — und wird nicht auf Anfrage bereitgestellt. Jede Änderung wird den betroffenen Kunden vor Inkrafttreten mitgeteilt. Der AVV bleibt auf Anfrage verfügbar.</p>
       </div>
       <div class="sov-card" id="ia">
         <span class="s-num">06 — Verantwortungsvolle KI</span>
@@ -194,6 +206,7 @@
           <tr><td><strong>NIS 2</strong></td><td>Laufend</td><td>NIS-2-Auswirkungsanalyse läuft; Herstellung der Konformität im Rahmen der Sicherheits-Roadmap 2026 geplant.</td></tr>
         </tbody>
       </table>
+      <p>Die ISO/IEC-27001- und HDS-Zertifikate von Scaleway werden vom Hoster unter <a href="https://security.scaleway.com/" target="_blank" rel="noopener">security.scaleway.com</a> veröffentlicht und auf Anfrage unserem Sicherheitspaket beigefügt. Sie betreffen den Hoster; QueryVision hält als Softwarehersteller bislang keine Zertifizierung.</p>
     </article>
   </div>
 </section>
@@ -216,7 +229,7 @@
           <tr><td>Reaktionszeit (GTI) — blockierende Störung</td><td>24 Stunden (werktags)</td></tr>
           <tr><td>Wiederherstellungszeit (GTR) — blockierende Störung</td><td>48 Stunden (werktags)</td></tr>
           <tr><td>Datenresidenz</td><td>Ausschließlich Europäische Union</td></tr>
-          <tr><td>Vertragslaufzeit</td><td>12 Monate, ohne automatische Verlängerung</td></tr>
+          <tr><td>Vertragslaufzeit</td><td>12 Monate, stillschweigende Verlängerung um jeweils 12 Monate, Kündigungsfrist 3 Monate</td></tr>
         </tbody>
       </table>
       <p>GTI: garantierte Reaktionszeit (Garantie de Temps d'Intervention) · GTR: garantierte Wiederherstellungszeit (Garantie de Temps de Rétablissement)</p>
@@ -251,10 +264,11 @@
       </table>
       <h3>Auf Anfrage verfügbare Dokumente</h3>
       <ul>
-        <li>Sicherheitskonzept (PAS) — v0.2, Juni 2026</li>
-        <li>Data Processing Agreement (DPA / AVV nach DSGVO)</li>
-        <li>Externe Sicherheitsauditberichte (NDA erforderlich)</li>
-        <li>Vollständige Liste der Auftragsverarbeiter mit AVV</li>
+        <li>Sicherheitskonzept (PAS) — aktuelle Fassung</li>
+        <li>Auftragsverarbeitungsvereinbarung (AVV) und Datenschutzerklärung</li>
+        <li>Hinweis zur KI-Governance und Datennutzung</li>
+        <li>Architekturschema und Datenstandorte</li>
+        <li>Zusammenfassung des Notfall- und Wiederanlaufplans</li>
         <li>ISO/IEC-27001- und HDS-Zertifikate des Hosters Scaleway</li>
       </ul>
       <p>Jede Dokumentationsanfrage wird von unserem Sicherheitsteam innerhalb von 24 Stunden (werktags) bearbeitet: <a href="mailto:security@query.vision">security@query.vision</a>.</p>

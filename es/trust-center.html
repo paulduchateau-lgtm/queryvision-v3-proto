@@ -80,7 +80,7 @@
   <div class="wrap">
     <p class="kicker center rv">Confianza — Trust Center</p>
     <h1 class="rv d1">La confianza no es una promesa. <span class="hl-g">Es una arquitectura.</span></h1>
-    <p class="doc-meta rv d1">Última actualización — 4 de agosto de 2026 · v0.2</p>
+    <p class="doc-meta rv d1">Última actualización — 5 de agosto de 2026</p>
     <p class="hero-sub rv d2">QueryVision está concebido desde su origen para los equipos exigentes en materia de seguridad, cumplimiento y soberanía de los datos. Este documento reúne el conjunto de nuestros compromisos técnicos, organizativos y contractuales.</p>
     <div class="hero-meta rv d3" style="justify-content:center">
       <span><span class="tick">✓</span> Alojamiento soberano UE</span>
@@ -137,6 +137,18 @@
         </tbody>
       </table>
       <p>Por defecto no se efectúa ninguna transferencia de datos de clientes fuera del Espacio Económico Europeo. La soberanía se apoya en un proveedor de alojamiento cualificado ANSSI SecNumCloud Scope 3.2 J2 (Scaleway) y en los referenciales EBIOS RM y HDS.</p>
+      <h3 id="sous-traitants">Subcontratistas del perímetro del cliente</h3>
+      <p>Dos subcontratistas ulteriores intervienen sobre los datos confiados a la plataforma. No hay ningún otro. La lista se publica aquí: no hay que solicitarla.</p>
+      <table>
+        <thead>
+          <tr><th>Subcontratista</th><th>Función</th><th>Localización</th><th>Certificaciones</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Scaleway S.A.S.</strong></td><td>Alojamiento de la infraestructura dedicada del cliente e inferencia autoalojada</td><td>Francia</td><td>ISO/IEC 27001, HDS, SecNumCloud 3.2 J2</td></tr>
+          <tr><td><strong>Mistral AI S.A.S.</strong></td><td>Inferencia por interfaz de programación, únicamente si el cliente activa expresamente esta opción</td><td>Unión Europea</td><td>ISO/IEC 27001</td></tr>
+        </tbody>
+      </table>
+      <p>Los acuerdos de tratamiento de datos de ambos subcontratistas están incorporados a nuestros contratos de servicios: <a href="https://legal.mistral.ai/terms/data-processing-addendum" target="_blank" rel="noopener">el de Mistral AI</a> es público y el de Scaleway está disponible bajo demanda. Ningún otro proveedor de QueryVision accede a los datos confiados a la plataforma. Toda modificación de esta lista se notifica a los clientes afectados antes de su entrada en vigor.</p>
     </article>
   </div>
 </section>
@@ -153,10 +165,10 @@
         <h3>Una seguridad bajo la responsabilidad del CTO.</h3>
         <p>Cubre la autenticación y la gestión de las habilitaciones (SSO, MFA, RBAC), el cifrado de los datos en tránsito y en reposo, el aislamiento de los entornos, así como la auditoría y la trazabilidad continuas. El detalle completo de las medidas (autenticación, cifrado, auditoría) es accesible a través de nuestro PAS.</p>
       </div>
-      <div class="sov-card" id="sous-traitants">
+      <div class="sov-card">
         <span class="s-num">04 — Subcontratistas y socios cloud</span>
-        <h3>Un número limitado de subcontratistas, todos localizados en la UE.</h3>
-        <p>El alojamiento y la inferencia de IA se confían a subcontratistas sujetos a cláusulas contractuales de confidencialidad y seguridad estrictas. Toda evolución se notifica a los clientes afectados antes de su entrada en vigor. El registro exhaustivo (roles, finalidades, certificaciones) y el DPA están disponibles bajo demanda.</p>
+        <h3>Dos subcontratistas, nombrados, ambos en la UE.</h3>
+        <p>Scaleway para el alojamiento y Mistral AI para la inferencia por interfaz de programación cuando el cliente la activa. La <a href="#sous-traitants" style="color: var(--green)">lista nominativa está publicada</a> — funciones, localizaciones, certificaciones — y no se facilita bajo demanda. Toda evolución se notifica a los clientes afectados antes de su entrada en vigor. El DPA sigue disponible bajo demanda.</p>
       </div>
       <div class="sov-card" id="ia">
         <span class="s-num">06 — IA responsable</span>
@@ -194,6 +206,7 @@
           <tr><td><strong>NIS 2</strong></td><td>En curso</td><td>Análisis de impacto NIS 2 en curso; puesta en conformidad planificada en el marco de la hoja de ruta de seguridad 2026.</td></tr>
         </tbody>
       </table>
+      <p>Los certificados ISO/IEC 27001 y HDS de Scaleway los publica el proveedor de alojamiento en <a href="https://security.scaleway.com/" target="_blank" rel="noopener">security.scaleway.com</a> y se adjuntan a nuestro paquete de seguridad bajo demanda. Se refieren al proveedor de alojamiento; QueryVision, como editor, no posee ninguna certificación a día de hoy.</p>
     </article>
   </div>
 </section>
@@ -216,7 +229,7 @@
           <tr><td>GTI anomalía bloqueante</td><td>24 horas laborables</td></tr>
           <tr><td>GTR anomalía bloqueante</td><td>48 horas laborables</td></tr>
           <tr><td>Residencia de los datos</td><td>Únicamente Unión Europea</td></tr>
-          <tr><td>Duración del contrato</td><td>12 meses no renovable</td></tr>
+          <tr><td>Duración del contrato</td><td>12 meses, prórroga tácita por períodos de 12 meses, preaviso de 3 meses</td></tr>
         </tbody>
       </table>
       <p>GTI: garantía de tiempo de intervención · GTR: garantía de tiempo de restablecimiento</p>
@@ -251,10 +264,11 @@
       </table>
       <h3>Documentos disponibles bajo demanda</h3>
       <ul>
-        <li>Plan de Aseguramiento de la Seguridad (PAS) — v0.2, junio de 2026</li>
-        <li>Data Processing Agreement (DPA / DPA RGPD)</li>
-        <li>Informes de auditoría de seguridad externos (NDA requerido)</li>
-        <li>Lista completa de los subcontratistas con DPA</li>
+        <li>Plan de Aseguramiento de la Seguridad (PAS) — versión vigente</li>
+        <li>Acuerdo de encargo de tratamiento (DPA) y política de confidencialidad</li>
+        <li>Nota de gobernanza de la IA y uso de los datos</li>
+        <li>Esquema de arquitectura y localización de los datos</li>
+        <li>Síntesis del plan de continuidad y recuperación de actividad</li>
         <li>Certificados ISO/IEC 27001 y HDS del proveedor de alojamiento Scaleway</li>
       </ul>
       <p>Toda solicitud de documentación es tratada en 24 horas laborables por nuestro equipo de seguridad: <a href="mailto:security@query.vision">security@query.vision</a>.</p>
