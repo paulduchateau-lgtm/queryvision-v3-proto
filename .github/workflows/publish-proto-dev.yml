@@ -4,9 +4,9 @@
 # depuis main. main et la production ne sont pas touchées : seul
 # l'environnement dev change d'image.
 #
-# Fait ce que publish-dev.yml ne fait pas : REDÉPLOYER le conteneur. Pousser
-# l'image au registre ne suffit pas — c'est pourquoi dev servait encore
-# l'image du 5 août alors que la CI était verte.
+# Le déploiement est en GitOps : pousser l'image au registre ne suffit pas,
+# c'est le champ `newTag` de queryvision-ai/kube-apps qui décide de ce que
+# sert le cluster. On reprend donc le mécanisme de publish-dev.yml.
 name: Publish proto to dev
 
 on:
@@ -57,11 +57,22 @@ jobs:
           environment-url: ${{ vars.WEBSITE_URL }}
           environment: dev
 
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          repositories: kube-apps
+
       - name: Install the Scaleway CLI
         uses: scaleway/action-scw@v0
         with:
           version: ${{ env.SCW_CLI_VERSION }}
 
+      # Pas de tag `latest` : l'application React et le site statique
+      # partagent ce dépôt d'images. Le préfixe proto- les distingue, un
+      # `latest` partagé les confondrait.
       - name: Build and push docker image
         id: build
         run: |
@@ -72,40 +83,51 @@ jobs:
           REF="${ENDPOINT}/${{ vars.IMAGE_NAME }}"
 
           scw registry login program=docker
-          docker buildx build -t "${REF}:${IMAGE_TAG}" -t "${REF}:latest" .
+          docker buildx build -t "${REF}:${IMAGE_TAG}" .
           docker push "${REF}:${IMAGE_TAG}"
-          docker push "${REF}:latest"
 
-          echo "image-ref=${REF}" >> "$GITHUB_OUTPUT"
           echo "image-tag=${IMAGE_TAG}" >> "$GITHUB_OUTPUT"
 
-      # Pousser l'image ne change rien tant que le conteneur n'est pas
-      # redéployé. On le retrouve par l'image qu'il sert, et on échoue
-      # bruyamment s'il est introuvable : un « succès » qui ne déploie
+      - name: Checkout kube-apps
+        uses: actions/checkout@v6
+        with:
+          repository: queryvision-ai/kube-apps
+          token: ${{ steps.app-token.outputs.token }}
+          path: .kube-apps
+
+      # Pousser l'image ne change rien : c'est ce champ qui décide de ce
+      # que sert le cluster. On vérifie que la substitution a bien eu lieu
+      # plutôt que de faire confiance à sed — un « succès » qui ne déploie
       # rien est pire qu'un échec.
-      - name: Redeploy the dev container
+      - name: Update newTag
+        working-directory: .kube-apps
         run: |
           set -euo pipefail
-          REF="${{ steps.build.outputs.image-ref }}"
+          FILE=overlays/dev/shared/official-website/kustomization.yaml
+          TAG="${{ steps.build.outputs.image-tag }}"
 
-          CONTAINER_ID=$(scw container container list --output=json \
-            | jq -r --arg ref "$REF" \
-                '.[] | select(.registry_image // "" | startswith($ref)) | .id' \
-            | head -1)
+          sed -i "s|newTag: \".*\"|newTag: \"${TAG}\"|" "$FILE"
 
-          if [ -z "$CONTAINER_ID" ]; then
-            echo "::error::Aucun Serverless Container ne sert ${REF}."
-            echo "Conteneurs visibles avec cette clé d'API :"
-            scw container container list --output=json \
-              | jq -r '.[] | "  \(.name)  \(.registry_image)  \(.domain_name)"'
-            echo ""
-            echo "Si dev.query.vision n'est pas un Serverless Container"
-            echo "(instance, Kubernetes, autre projet), adapter cette étape."
+          if ! grep -q "newTag: \"${TAG}\"" "$FILE"; then
+            echo "::error::newTag n'a pas été mis à jour dans ${FILE}."
+            cat "$FILE"
             exit 1
           fi
+          grep -n "newTag" "$FILE"
 
-          echo "Redéploiement du conteneur $CONTAINER_ID"
-          scw container container deploy "$CONTAINER_ID"
+      - name: Commit and push
+        working-directory: .kube-apps
+        run: |
+          set -euo pipefail
+          git config user.name "QueryVisionBot"
+          git config user.email "queryvision-bot@github.com"
+          git add overlays/dev/shared/official-website/kustomization.yaml
+          if git diff --cached --quiet; then
+            echo "dev sert déjà cette image, rien à pousser."
+            exit 0
+          fi
+          git commit -m "chore(official-website): bascule dev sur le site statique ${{ steps.build.outputs.image-tag }}"
+          git push origin HEAD
 
       - name: Update deployment status (success)
         if: success()
