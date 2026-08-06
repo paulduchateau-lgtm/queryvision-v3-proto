@@ -5,3 +5,6 @@
 **/.DS_Store
 Dockerfile
 .dockerignore
+
+# Outillage de développement : n'a rien à faire dans l'image servie.
+tools

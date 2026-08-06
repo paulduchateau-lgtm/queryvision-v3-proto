@@ -1,0 +1,126 @@
+# Bascule de dev.query.vision sur le site statique (branche proto/website-v3).
+#
+# Volontairement SÉPARÉ de publish-dev.yml, qui construit l'application React
+# depuis main. main et la production ne sont pas touchées : seul
+# l'environnement dev change d'image.
+#
+# Fait ce que publish-dev.yml ne fait pas : REDÉPLOYER le conteneur. Pousser
+# l'image au registre ne suffit pas — c'est pourquoi dev servait encore
+# l'image du 5 août alors que la CI était verte.
+name: Publish proto to dev
+
+on:
+  push:
+    branches: [proto/website-v3]
+  workflow_dispatch:
+
+env:
+  SCW_CLI_VERSION: v2.60.0
+  GIT_SHA: ${{ github.sha }}
+  SCW_ACCESS_KEY: ${{ secrets.SCW_ACCESS_KEY_ID }}
+  SCW_SECRET_KEY: ${{ secrets.SCW_ACCESS_KEY_SECRET }}
+  SCW_DEFAULT_PROJECT_ID: ${{ secrets.SCW_DEFAULT_PROJECT_ID }}
+  SCW_DEFAULT_ORGANIZATION_ID: ${{ secrets.SCW_DEFAULT_ORGANIZATION_ID }}
+
+jobs:
+  check:
+    name: Check
+    # Le miroir personnel n'a ni secrets Scaleway ni environnement `dev`.
+    if: github.repository == 'queryvision-ai/official-website'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Liens, ancres, hreflang, canonical
+        run: python3 tools/check_site.py
+
+  deploy:
+    name: Deploy proto to dev
+    needs: check
+    environment: dev
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+      contents: read
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: chrnorm/deployment-action@v2
+        name: Create GitHub deployment
+        id: deployment
+        with:
+          token: '${{ github.token }}'
+          environment-url: ${{ vars.WEBSITE_URL }}
+          environment: dev
+
+      - name: Install the Scaleway CLI
+        uses: scaleway/action-scw@v0
+        with:
+          version: ${{ env.SCW_CLI_VERSION }}
+
+      - name: Build and push docker image
+        id: build
+        run: |
+          set -euo pipefail
+          IMAGE_TAG="proto-${GIT_SHA:0:7}"
+          ENDPOINT=$(scw registry namespace list name=${{ vars.REGISTRY_NAME }} \
+            --output=json | jq -r '.[0].endpoint')
+          REF="${ENDPOINT}/${{ vars.IMAGE_NAME }}"
+
+          scw registry login program=docker
+          docker buildx build -t "${REF}:${IMAGE_TAG}" -t "${REF}:latest" .
+          docker push "${REF}:${IMAGE_TAG}"
+          docker push "${REF}:latest"
+
+          echo "image-ref=${REF}" >> "$GITHUB_OUTPUT"
+          echo "image-tag=${IMAGE_TAG}" >> "$GITHUB_OUTPUT"
+
+      # Pousser l'image ne change rien tant que le conteneur n'est pas
+      # redéployé. On le retrouve par l'image qu'il sert, et on échoue
+      # bruyamment s'il est introuvable : un « succès » qui ne déploie
+      # rien est pire qu'un échec.
+      - name: Redeploy the dev container
+        run: |
+          set -euo pipefail
+          REF="${{ steps.build.outputs.image-ref }}"
+
+          CONTAINER_ID=$(scw container container list --output=json \
+            | jq -r --arg ref "$REF" \
+                '.[] | select(.registry_image // "" | startswith($ref)) | .id' \
+            | head -1)
+
+          if [ -z "$CONTAINER_ID" ]; then
+            echo "::error::Aucun Serverless Container ne sert ${REF}."
+            echo "Conteneurs visibles avec cette clé d'API :"
+            scw container container list --output=json \
+              | jq -r '.[] | "  \(.name)  \(.registry_image)  \(.domain_name)"'
+            echo ""
+            echo "Si dev.query.vision n'est pas un Serverless Container"
+            echo "(instance, Kubernetes, autre projet), adapter cette étape."
+            exit 1
+          fi
+
+          echo "Redéploiement du conteneur $CONTAINER_ID"
+          scw container container deploy "$CONTAINER_ID"
+
+      - name: Update deployment status (success)
+        if: success()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: '${{ github.token }}'
+          environment-url: ${{ steps.deployment.outputs.environment_url }}
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: 'success'
+
+      - name: Update deployment status (failure)
+        if: failure()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: '${{ github.token }}'
+          environment-url: ${{ steps.deployment.outputs.environment_url }}
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: 'failure'
