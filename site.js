@@ -13,10 +13,20 @@
     de: { invalid: 'Bitte prüfen Sie Ihren Namen und Ihre E-Mail-Adresse.', sending: 'Wird gesendet…', sent: 'Nachricht gesendet — wir melden uns innerhalb von 48 Stunden.', failed: 'Senden fehlgeschlagen. Schreiben Sie uns an ' }
   };
 
+  // `sep` : le français prend une espace insécable avant le deux-points,
+  // pas les trois autres langues.
+  const MAIL_MSG_ALL = {
+    fr: { copied: 'Adresse copiée', address: 'Notre adresse', sep: ' : ' },
+    en: { copied: 'Address copied', address: 'Our address', sep: ': ' },
+    es: { copied: 'Dirección copiada', address: 'Nuestra dirección', sep: ': ' },
+    de: { copied: 'Adresse kopiert', address: 'Unsere Adresse', sep: ': ' }
+  };
+
   // Préfixe vers la racine du site (déduit du lien site.css) + langue courante
   const cssLink = document.querySelector('link[href$="site.css"]');
   const rootPrefix = cssLink ? cssLink.getAttribute('href').replace('site.css', '') : '';
   const curLang = (document.documentElement.lang || 'fr').slice(0, 2);
+  const MAIL_MSG = MAIL_MSG_ALL[curLang] || MAIL_MSG_ALL.fr;
 
   // ── Sélecteur de langue ──
   function treePath() {
@@ -33,8 +43,16 @@
     alternates[l.getAttribute('hreflang')] = l.getAttribute('href');
   });
   function langHref(code) {
-    if (alternates[code]) return alternates[code];
-    return rootPrefix + code + '/' + treePath();
+    // Les hreflang sont des URLs absolues de production (exigence Google).
+    // On n'en garde que le chemin : sinon le sélecteur de langue fait sortir
+    // du site courant — sur dev, il renverrait vers www.queryvision.ai.
+    if (alternates[code]) {
+      try { return new URL(alternates[code], location.href).pathname; }
+      catch (e) { return alternates[code]; }
+    }
+    // Repli : l'accueil de la langue, toujours valide, plutôt qu'un chemin
+    // profond reconstruit à tort.
+    return code === 'fr' ? '/' : '/' + code + '/';
   }
   const navInner = document.querySelector('.nav-inner');
   if (navInner) {
@@ -103,6 +121,45 @@
       btn.disabled = false;
     });
   }
+  // ── Filet pour les liens email ──
+  // Beaucoup de visiteurs n'ont aucun client mail par défaut (webmail,
+  // Chrome sans gestionnaire mailto:) : le clic « ne fait rien ». On copie
+  // l'adresse et on l'affiche, sans bloquer le mailto natif pour ceux qui
+  // ont bien un client. Même filet que le site en production (bf9c89f).
+  let toastTimer = null;
+  function showMailToast(email, copied) {
+    let el = document.getElementById('mail-toast');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'mail-toast';
+      el.className = 'mail-toast';
+      el.setAttribute('role', 'status');
+      el.setAttribute('aria-live', 'polite');
+      document.body.appendChild(el);
+    }
+    el.innerHTML = '<span class="mt-dot" aria-hidden="true"></span>' +
+      (copied ? MAIL_MSG.copied : MAIL_MSG.address) + MAIL_MSG.sep + email;
+    // Reflow forcé plutôt que requestAnimationFrame : rAF ne s'exécute pas
+    // dans un onglet non rendu, et le toast resterait alors invisible.
+    void el.offsetHeight;
+    el.classList.add('in');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('in'), 2600);
+  }
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+    if (!a) return;
+    const email = a.getAttribute('href').slice(7).split('?')[0];
+    if (!email) return;
+    showMailToast(email, false);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email)
+        .then(() => showMailToast(email, true))
+        .catch(() => {});
+    }
+    // pas de preventDefault : le client mail s'ouvre s'il existe
+  });
+
   // Nav : densification au scroll
   const nav = document.getElementById('nav');
   if (nav) addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 24), { passive: true });
