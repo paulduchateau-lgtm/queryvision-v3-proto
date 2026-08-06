@@ -1,0 +1,61 @@
+<svg width="680" height="440" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+  <title>Tableau de bord RH</title>
+  <desc>Dashboard RH temps réel avec 4 métriques clés et mini graphique de turnover par BU</desc>
+
+  <!-- Card background -->
+  <rect x="40" y="24" width="600" height="392" rx="16" fill="#1C2431" stroke="#303B4D" stroke-width="1"/>
+  <!-- Header title -->
+  <text x="70" y="58" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#EDF1F4">HR dashboard</text>
+  <!-- Tag top-right -->
+  <text x="610" y="58" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="1.5" fill="#03CF65" text-anchor="end">REAL TIME</text>
+  <!-- Separator -->
+  <line x1="70" y1="78" x2="610" y2="78" stroke="#2B3543" stroke-width="1"/>
+
+  <!-- Card 1: EFFECTIFS ACTIFS -->
+  <rect x="70" y="90" width="258" height="110" rx="8" fill="#18242F" stroke="#263040" stroke-width="1"/>
+  <text x="86" y="110" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#8C99A8">ACTIVE HEADCOUNT</text>
+  <text x="86" y="148" font-family="Georgia,'Times New Roman',serif" font-size="30" fill="#EDF1F4">2,847</text>
+  <text x="86" y="168" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#8C99A8">−23 vs prev. month</text>
+
+  <!-- Card 2: TURNOVER ANNUALISÉ -->
+  <rect x="352" y="90" width="258" height="110" rx="8" fill="#18242F" stroke="#263040" stroke-width="1"/>
+  <text x="368" y="110" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#8C99A8">ANNUALISED TURNOVER</text>
+  <text x="368" y="148" font-family="Georgia,'Times New Roman',serif" font-size="30" fill="#EDF1F4">12.4%</text>
+  <text x="368" y="168" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#D07070">+0.8 pts  ↑</text>
+
+  <!-- Card 3: TAUX D'ABSENTÉISME -->
+  <rect x="70" y="212" width="258" height="110" rx="8" fill="#18242F" stroke="#263040" stroke-width="1"/>
+  <text x="86" y="232" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#8C99A8">ABSENTEEISM RATE</text>
+  <text x="86" y="270" font-family="Georgia,'Times New Roman',serif" font-size="30" fill="#EDF1F4">4.1%</text>
+  <text x="86" y="290" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#03CF65">−0.3 pts  ↓</text>
+
+  <!-- Card 4: POSTES VACANTS -->
+  <rect x="352" y="212" width="258" height="110" rx="8" fill="#18242F" stroke="#263040" stroke-width="1"/>
+  <text x="368" y="232" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1" fill="#8C99A8">OPEN ROLES</text>
+  <text x="368" y="270" font-family="Georgia,'Times New Roman',serif" font-size="30" fill="#EDF1F4">34</text>
+  <text x="368" y="290" font-family="-apple-system,'Inter',sans-serif" font-size="11" fill="#C89432">8 business-critical</text>
+
+  <!-- Separator before mini chart -->
+  <line x1="70" y1="336" x2="610" y2="336" stroke="#2B3543" stroke-width="1"/>
+  <!-- Mini bar chart: Turnover by BU -->
+  <text x="70" y="352" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">Turnover by BU (%)</text>
+  <!-- France bar -->
+  <rect x="70" y="358" width="72" height="10" rx="2" fill="#8C84D8" fill-opacity="0.8"/>
+  <text x="70" y="384" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">France</text>
+  <!-- Allemagne bar -->
+  <rect x="172" y="358" width="55" height="10" rx="2" fill="#8C84D8" fill-opacity="0.7"/>
+  <text x="172" y="384" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">Germany</text>
+  <!-- Espagne bar -->
+  <rect x="266" y="358" width="48" height="10" rx="2" fill="#8C84D8" fill-opacity="0.6"/>
+  <text x="266" y="384" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">Spain</text>
+  <!-- Benelux bar -->
+  <rect x="362" y="358" width="40" height="10" rx="2" fill="#8C84D8" fill-opacity="0.5"/>
+  <text x="362" y="384" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">Benelux</text>
+  <!-- UK bar -->
+  <rect x="450" y="358" width="60" height="10" rx="2" fill="#8C84D8" fill-opacity="0.8"/>
+  <text x="450" y="384" font-family="'JetBrains Mono',monospace" font-size="9" fill="#67737F">UK</text>
+
+  <!-- Footer -->
+  <line x1="70" y1="392" x2="610" y2="392" stroke="#2B3543" stroke-width="1"/>
+  <text x="70" y="409" font-family="'JetBrains Mono',monospace" font-size="10" fill="#67737F">Connected to Workday · sync 08:00 · 06/24/2025</text>
+</svg>

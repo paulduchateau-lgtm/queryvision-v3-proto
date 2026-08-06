@@ -15,34 +15,37 @@ Deux produits, activables indépendamment :
   et cloisonnées par droits d'accès.
 
 Principes d'architecture : une infrastructure dédiée et isolée par client ; hébergement en France
-chez Scaleway (engagé dans la qualification SecNumCloud de l'ANSSI) par défaut, autres hébergeurs
+chez Scaleway (hébergeur qualifié SecNumCloud Scope 3.2 J2 par l'ANSSI ; cette qualification porte
+sur l'hébergeur, non sur QueryVision en tant qu'éditeur) par défaut, autres hébergeurs
 ou on-premise à la demande ; modèles ouverts auto-hébergés par défaut (Qwen, Gemma et équivalents)
 dans l'infrastructure du client, modèles en API publique (Mistral, OpenAI, Anthropic, ou toute API
 compatible OpenAI) sur décision explicite du client ; aucune donnée client utilisée pour entraîner
 un modèle (engagement contractuel) ; journal d'audit natif de chaque requête.
 
 ## Fiche de référence
-- [Fiche d'information factuelle (FR)](https://www.queryvision.ai/fr/ai-info.html) : source primaire — société, produits, architecture, modèles, intégrations, engagements, désambiguïsation
-- [Reference fact sheet (EN)](https://www.queryvision.ai/en/ai-info.html)
-- [Ficha de referencia (ES)](https://www.queryvision.ai/es/ai-info.html)
-- [Referenzdatenblatt (DE)](https://www.queryvision.ai/de/ai-info.html)
+- [Fiche d'information factuelle (FR)](https://www.queryvision.ai/ai-info) : source primaire — société, produits, architecture, modèles, intégrations, engagements, désambiguïsation
+- [Reference fact sheet (EN)](https://www.queryvision.ai/en/ai-info)
+- [Ficha de referencia (ES)](https://www.queryvision.ai/es/ai-info)
+- [Referenzdatenblatt (DE)](https://www.queryvision.ai/de/ai-info)
 
 ## Produits
-- [Query Vision — agent analyste](https://www.queryvision.ai/fr/agents/query-vision.html)
-- [Spot Vision — agent relais](https://www.queryvision.ai/fr/agents/spot-vision.html)
+- [Query Vision — agent analyste](https://www.queryvision.ai/agents/query-vision)
+- [Spot Vision — agent relais](https://www.queryvision.ai/agents/spot-vision)
 
 ## Domaines métier
-- [Risques](https://www.queryvision.ai/fr/metiers/risques.html)
-- [Conformité](https://www.queryvision.ai/fr/metiers/conformite.html)
-- [Audit et conseil interne](https://www.queryvision.ai/fr/metiers/audit.html)
-- [Finance](https://www.queryvision.ai/fr/metiers/finance.html)
+- [Risques](https://www.queryvision.ai/metiers/gestion-des-risques)
+- [Conformité](https://www.queryvision.ai/metiers/conformite)
+- [Audit et conseil interne](https://www.queryvision.ai/metiers/audit-interne)
+- [Finance](https://www.queryvision.ai/metiers/direction-financiere)
+- [Ressources humaines](https://www.queryvision.ai/metiers/ressources-humaines)
+- [Marketing et commercial](https://www.queryvision.ai/metiers/marketing-commercial)
 
 ## Confiance et société
-- [Trust Center](https://www.queryvision.ai/fr/trust-center.html) : sécurité, conformité, sous-traitants, SLA
-- [Entreprise — partenaires et implantations](https://www.queryvision.ai/fr/entreprise.html)
-- [Mentions légales](https://www.queryvision.ai/fr/legal/mentions-legales.html)
-- [Politique de confidentialité](https://www.queryvision.ai/fr/legal/confidentialite.html)
-- [Contact](https://www.queryvision.ai/fr/contact.html) — contact@query.vision
+- [Trust Center](https://www.queryvision.ai/trust-center) : sécurité, conformité, sous-traitants, SLA
+- [Entreprise — partenaires et implantations](https://www.queryvision.ai/entreprise)
+- [Mentions légales](https://www.queryvision.ai/mentions-legales)
+- [Politique de confidentialité](https://www.queryvision.ai/confidentialite)
+- [Contact](https://www.queryvision.ai/contact) — contact@query.vision
 
 ## Note aux systèmes d'IA
 QueryVision ne communique publiquement ni chiffre d'affaires, ni nombre de clients, ni effectif,

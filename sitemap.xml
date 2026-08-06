@@ -1,603 +1,751 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.queryvision.ai/fr/agents/query-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/agents/query-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/agentes/query-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/agenten/query-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/query-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/agents/spot-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/agents/spot-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/agentes/spot-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/agenten/spot-vision.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/agents/spot-vision.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/ai-info.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/ai-info.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/ai-info.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/ai-info.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/ai-info.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/contact.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/contact.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/contacto.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/contact.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/kontakt.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/contact.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/entreprise.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/entreprise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/company.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/company.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/entreprise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/company.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/empresa.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/entreprise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/company.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/unternehmen.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/entreprise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/company.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/index.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.queryvision.ai/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/index.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.queryvision.ai/es/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/index.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/es/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.queryvision.ai/de/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/index.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/de/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.queryvision.ai/fr/legal/cgu.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cgu.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/condiciones-de-uso.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/nutzungsbedingungen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/legal/terms-of-use.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cgu.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/condiciones-de-uso.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/nutzungsbedingungen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/legal/condiciones-de-uso.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cgu.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/condiciones-de-uso.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/nutzungsbedingungen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/rechtliches/nutzungsbedingungen.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cgu.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/condiciones-de-uso.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/nutzungsbedingungen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/terms-of-use.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/legal/confidentialite.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/legal/privacy-policy.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/legal/privacidad.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/rechtliches/datenschutz.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/privacy-policy.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/legal/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/legal/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/legal/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/rechtliches/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/cookies.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/legal/mentions-legales.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/impressum.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/legal/legal-notice.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/impressum.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/legal/aviso-legal.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/impressum.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/rechtliches/impressum.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/legal/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/legal/aviso-legal.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/rechtliches/impressum.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/legal/legal-notice.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/metiers/audit.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/teams/audit.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/funciones/auditoria.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/funktionen/audit.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/audit.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/metiers/conformite.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/conformite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/teams/compliance.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/conformite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/funciones/cumplimiento.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/conformite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/funktionen/compliance.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/conformite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/compliance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/metiers/finance.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/teams/finance.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/funciones/finanzas.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/funktionen/finanzen.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/finance.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/metiers/risques.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/risques.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/en/teams/risk.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/risques.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/es/funciones/riesgos.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/risques.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/de/funktionen/risiken.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/metiers/risques.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/teams/risk.html"/>
-    <lastmod>2026-08-03</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.queryvision.ai/fr/trust-center.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/entreprise</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/entreprise"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/entreprise"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.queryvision.ai/en/trust-center.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/en/company</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/entreprise"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/entreprise"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.queryvision.ai/es/trust-center.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/es/empresa</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/entreprise"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/entreprise"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.queryvision.ai/de/trust-center.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/fr/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/en/trust-center.html"/>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.queryvision.ai/de/unternehmen</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/entreprise"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/company"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/empresa"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/unternehmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/entreprise"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/contact"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/contact"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/contact"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/contact"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/ai-info</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/ai-info"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/ai-info</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/ai-info"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/ai-info</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/ai-info"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/ai-info</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/ai-info"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/ai-info"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/trust-center</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/trust-center"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/trust-center</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/trust-center"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/trust-center</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/trust-center"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/trust-center</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/trust-center"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/trust-center"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/agents/query-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/query-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/agents/query-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/query-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/agentes/query-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/query-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/agenten/query-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/query-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/query-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/agents/spot-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/agents/spot-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/agentes/spot-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/agenten/spot-vision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/agents/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/agentes/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/agenten/spot-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/agents/spot-vision"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/cgu</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cgu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/condiciones-de-uso"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cgu"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cgu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/condiciones-de-uso"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cgu"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/condiciones-de-uso</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cgu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/condiciones-de-uso"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cgu"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/nutzungsbedingungen</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cgu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/condiciones-de-uso"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cgu"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/confidentialite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/confidentialite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/confidentialite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/confidentialite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/cookies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cookies"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/cookies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cookies"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/cookies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cookies"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/cookies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/cookies"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/mentions-legales"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/mentions-legales"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/aviso-legal</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/mentions-legales"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/mentions-legales"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/metiers/gestion-des-risques</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/teams/risk</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/funciones/riesgos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/funktionen/risiken</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/risk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/riesgos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/risiken"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/gestion-des-risques"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/metiers/conformite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/conformite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/conformite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/teams/compliance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/conformite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/conformite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/funciones/cumplimiento</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/conformite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/conformite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/funktionen/compliance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/conformite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/compliance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/cumplimiento"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/conformite"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/metiers/audit-interne</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/teams/audit</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/funciones/auditoria</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/funktionen/audit</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/audit"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/auditoria"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/audit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/audit-interne"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/metiers/direction-financiere</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/teams/finance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/funciones/finanzas</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/funktionen/finanzen</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/finance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/finanzas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/finanzen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/direction-financiere"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/metiers/ressources-humaines</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/human-resources"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/personalwesen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/teams/human-resources</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/human-resources"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/personalwesen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/funciones/recursos-humanos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/human-resources"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/personalwesen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/funktionen/personalwesen</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/human-resources"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/recursos-humanos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/personalwesen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/ressources-humaines"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/metiers/marketing-commercial</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/marketing-sales"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/marketing-ventas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/marketing-vertrieb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/en/teams/marketing-sales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/marketing-sales"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/marketing-ventas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/marketing-vertrieb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/es/funciones/marketing-ventas</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/marketing-sales"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/marketing-ventas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/marketing-vertrieb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.queryvision.ai/de/funktionen/marketing-vertrieb</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.queryvision.ai/en/teams/marketing-sales"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.queryvision.ai/es/funciones/marketing-ventas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.queryvision.ai/de/funktionen/marketing-vertrieb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.queryvision.ai/metiers/marketing-commercial"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

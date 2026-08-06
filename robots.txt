@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Crawlers des moteurs de réponse et modèles de langage — accès explicitement autorisé.
-# Fiche de référence factuelle : /fr/ai-info.html (et /en /es /de)
+# Fiche de référence factuelle : /ai-info (et /en/ai-info, /es/ai-info, /de/ai-info)
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot
